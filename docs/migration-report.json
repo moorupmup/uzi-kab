@@ -1,0 +1,88 @@
+{
+  "tables": {
+    "book": {
+      "rows": 1274,
+      "sha256": "1978e00f4f4ad6e85eefdd9ed3de35eb8010e5e730cc000141bcbe6b45791cde"
+    },
+    "book_users": {
+      "rows": 1105,
+      "sha256": "0ade8507ed13957515e3d10f180dd4d3b3f0be28f2bb7109c782d2e8a98eaf30"
+    },
+    "cabinets": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "container": {
+      "rows": 5,
+      "sha256": "61345acf5d8c507d7658c90e2c7ad916d7f0a7eb72bf9d78b3cc05dd9e97fdc1"
+    },
+    "groups": {
+      "rows": 2,
+      "sha256": "368196d18b5d32fc0d7082b21c9affbe9cd2f82b6dc2b0bdc17db6e8a0c0e0f7"
+    },
+    "login": {
+      "rows": 1,
+      "sha256": "f92e8b020aab57e4a8e0a189a72e4e17f963eb70dee8984169371760b9b52c1d"
+    },
+    "lpu": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "lpu_doctor": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "menu": {
+      "rows": 3,
+      "sha256": "5d4a6eb39eee4ce08caa573f2397d19d9126140c9e245fa9efe0812931736091"
+    },
+    "nomen": {
+      "rows": 15,
+      "sha256": "2e11fd0cdbfde05fbb20a17f46f4a8297adc89c4da51c08a4b8e3518ef11c5b2"
+    },
+    "pacient": {
+      "rows": 22715,
+      "sha256": "67f6840b01103de5c7aac4acd3e03aef2b8cb0000126909ffeb20f936c70d844"
+    },
+    "permits": {
+      "rows": 1,
+      "sha256": "14ba19adee2f83b165b4d894699b6c45aaadb11f73b6e4031f5f3d1d7c538ca1"
+    },
+    "price": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "price_name": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "protocol": {
+      "rows": 72019,
+      "sha256": "1298e31d4d903da2e267c82ef32b735fb396ef75fd932e4a826ede7fd19ed4a7"
+    },
+    "research": {
+      "rows": 10,
+      "sha256": "7b4859e6397d29595f12e3c28b501c53d91dca82b4f999d8397947d495505377"
+    },
+    "research_name": {
+      "rows": 14,
+      "sha256": "e7a17583cc5ee3a33742fbfac51711caea6bdc2e325f2632c2597005c685602d"
+    },
+    "sootvet_price": {
+      "rows": 14,
+      "sha256": "1834426a2dfee0cbd1efee00f550b696c946298f0363092beae9111ecfb627b1"
+    },
+    "user_ip": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "users": {
+      "rows": 7,
+      "sha256": "ab54c8e05964f36f5cac424261900e34d3d36bbf792d556a5138b2aca4cbc7b3"
+    }
+  },
+  "decoded_protocols": 72019,
+  "unparsed_protocols": 0,
+  "orphan_studies": 5070,
+  "integrity_check": "ok"
+}

@@ -1,0 +1,21 @@
+{
+  "firstRun": true,
+  "pageSizes": true,
+  "unknownBirthdate": true,
+  "formSaveCalculation": true,
+  "lockPreservesForm": true,
+  "nativeMedia": true,
+  "bundle": true,
+  "hideRestore": true,
+  "manualLink": true,
+  "statistics": true,
+  "permissions": true,
+  "backupRestore": true,
+  "pageErrors": [],
+  "videoPlaybackSeekExport": true,
+  "statisticsAppliedPeriod": true,
+  "statisticsErrorClearsReport": true,
+  "bundleErrorClearsDocument": true,
+  "bundleNavigationRecovery": true,
+  "finalPageErrors": []
+}

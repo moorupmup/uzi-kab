@@ -1,0 +1,10 @@
+{
+  "draftRoundtrip": true,
+  "templateVersionPersisted": true,
+  "configuredVersion11Persisted": true,
+  "staleOutputRemoved": true,
+  "pendingSurvivesReopen": true,
+  "finalizationBlockedUntilRecalculation": true,
+  "emptyMeasurementsResolved": true,
+  "pageErrors": 0
+}

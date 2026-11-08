@@ -1,0 +1,46 @@
+{
+  "platformTested": "Windows 11 x64, build 26200",
+  "targetAcceptance": "Windows 10 and physical printer: user will verify with docs/WINDOWS10-ACCEPTANCE.md",
+  "rustTests": 18,
+  "frontendTests": 15,
+  "nativeReport": "native-acceptance.json",
+  "templateParityReport": "template-parity.json",
+  "executable": {
+    "name": "Кабинет УЗИ — новая версия.exe",
+    "bytes": 11527168,
+    "sha256": "d972513dba3e36dd21bf62f23528b5ee29f0860b8f563a73022fb818d86e6117"
+  },
+  "runtime": {
+    "name": "MicrosoftEdgeWebView2RuntimeInstallerX64.exe",
+    "bytes": 214927568,
+    "sha256": "2688308af55753c62fda4e8140024e230c1ffc16b7c091b25889572f38dff6e8",
+    "signature": "Valid, Microsoft Corporation",
+    "source": "https://go.microsoft.com/fwlink/?linkid=2124701"
+  },
+  "initialDatabase": {
+    "sha256": "cb34ce0531de5ba4d251d82c806a638d44225930cae7fd1ab168cb5478acd642",
+    "sourceAndReleaseIdentical": true
+  },
+  "printPdf": {
+    "name": "Тестовый протокол.pdf",
+    "syntheticDataOnly": true,
+    "visuallyInspected": true
+  },
+  "externalServicesRequired": false,
+  "databaseEncrypted": false,
+  "lastChange": "Default patient sorting is lastStudy descending; newest studies first, missing dates last.",
+  "archiveEditingReport": "archive-edit-native-check.json",
+  "emptyCleanupReport": "empty-orphan-cleanup.json",
+  "emptyCleanupNativeCheck": "empty-cleanup-native-check.json",
+  "currentDatabase": {
+    "studies": 66949,
+    "orphanStudies": 0,
+    "preservedOriginalStudyRows": 72019
+  },
+  "lastBuild": {
+    "time": "2026-11-06T15:26:35.812515+00:00",
+    "desktopBuildPassed": true,
+    "packagedDatabaseUnchanged": true
+  },
+  "patientSortingReport": "patient-sort-native-check.json"
+}

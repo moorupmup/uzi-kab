@@ -1,0 +1,32 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "aligned": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1160,
+      "aligned": true,
+      "noOverflow": true
+    },
+    {
+      "width": 800,
+      "aligned": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "aligned": true,
+      "noOverflow": true
+    },
+    {
+      "width": 720,
+      "aligned": true,
+      "noOverflow": true
+    }
+  ],
+  "rtlNoOverflow": true,
+  "libraryOpens": true,
+  "pageErrors": []
+}

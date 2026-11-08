@@ -1,0 +1,4 @@
+[source.crates-io]
+replace-with = 'official-github-index'
+[source.official-github-index]
+registry = 'sparse+https://raw.githubusercontent.com/rust-lang/crates.io-index/master/'

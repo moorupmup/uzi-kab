@@ -1,0 +1,11 @@
+{
+  "nameBothDirections": true,
+  "birthdateBothDirections": true,
+  "lastStudyBothDirections": true,
+  "sortAppliesToWholeRegistry": true,
+  "emptyLastStudyAtEnd": true,
+  "searchPreserved": true,
+  "pageResetsOnSortChange": true,
+  "sortPreservedOnReturn": true,
+  "pageErrors": []
+}

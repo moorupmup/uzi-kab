@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T13:56:55.942451+00:00",
+  "title": "Design System: Кабинет УЗИ",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.08606 186.39)",
+          "oklch(26% 0.08606 186.39)",
+          "oklch(38% 0.08606 186.39)",
+          "oklch(49% 0.08606 186.39)",
+          "oklch(61% 0.08606 186.39)",
+          "oklch(72% 0.08606 186.39)",
+          "oklch(84% 0.08606 186.39)",
+          "oklch(95% 0.08606 186.39)"
+        ]
+      },
+      "primary-ink": {
+        "role": "primary",
+        "displayName": "primary-ink",
+        "tonalRamp": [
+          "oklch(15% 0.07855 185.32)",
+          "oklch(26% 0.07855 185.32)",
+          "oklch(38% 0.07855 185.32)",
+          "oklch(49% 0.07855 185.32)",
+          "oklch(61% 0.07855 185.32)",
+          "oklch(72% 0.07855 185.32)",
+          "oklch(84% 0.07855 185.32)",
+          "oklch(95% 0.07855 185.32)"
+        ]
+      },
+      "primary-soft": {
+        "role": "primary",
+        "displayName": "primary-soft",
+        "tonalRamp": [
+          "oklch(15% 0.01330 179.46)",
+          "oklch(26% 0.01330 179.46)",
+          "oklch(38% 0.01330 179.46)",
+          "oklch(49% 0.01330 179.46)",
+          "oklch(61% 0.01330 179.46)",
+          "oklch(72% 0.01330 179.46)",
+          "oklch(84% 0.01330 179.46)",
+          "oklch(95% 0.01330 179.46)"
+        ]
+      },
+      "primary-count": {
+        "role": "primary",
+        "displayName": "primary-count",
+        "tonalRamp": [
+          "oklch(15% 0.02265 175.93)",
+          "oklch(26% 0.02265 175.93)",
+          "oklch(38% 0.02265 175.93)",
+          "oklch(49% 0.02265 175.93)",
+          "oklch(61% 0.02265 175.93)",
+          "oklch(72% 0.02265 175.93)",
+          "oklch(84% 0.02265 175.93)",
+          "oklch(95% 0.02265 175.93)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "canvas",
+        "tonalRamp": [
+          "oklch(15% 0.00453 258.32)",
+          "oklch(26% 0.00453 258.32)",
+          "oklch(38% 0.00453 258.32)",
+          "oklch(49% 0.00453 258.32)",
+          "oklch(61% 0.00453 258.32)",
+          "oklch(72% 0.00453 258.32)",
+          "oklch(84% 0.00453 258.32)",
+          "oklch(95% 0.00453 258.32)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "paper",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(26% 0.00000 89.88)",
+          "oklch(38% 0.00000 89.88)",
+          "oklch(49% 0.00000 89.88)",
+          "oklch(61% 0.00000 89.88)",
+          "oklch(72% 0.00000 89.88)",
+          "oklch(84% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "ink",
+        "tonalRamp": [
+          "oklch(15% 0.04271 256.87)",
+          "oklch(26% 0.04271 256.87)",
+          "oklch(38% 0.04271 256.87)",
+          "oklch(49% 0.04271 256.87)",
+          "oklch(61% 0.04271 256.87)",
+          "oklch(72% 0.04271 256.87)",
+          "oklch(84% 0.04271 256.87)",
+          "oklch(95% 0.04271 256.87)"
+        ]
+      },
+      "heading": {
+        "role": "neutral",
+        "displayName": "heading",
+        "tonalRamp": [
+          "oklch(15% 0.04371 251.91)",
+          "oklch(26% 0.04371 251.91)",
+          "oklch(38% 0.04371 251.91)",
+          "oklch(49% 0.04371 251.91)",
+          "oklch(61% 0.04371 251.91)",
+          "oklch(72% 0.04371 251.91)",
+          "oklch(84% 0.04371 251.91)",
+          "oklch(95% 0.04371 251.91)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "muted",
+        "tonalRamp": [
+          "oklch(15% 0.03792 255.31)",
+          "oklch(26% 0.03792 255.31)",
+          "oklch(38% 0.03792 255.31)",
+          "oklch(49% 0.03792 255.31)",
+          "oklch(61% 0.03792 255.31)",
+          "oklch(72% 0.03792 255.31)",
+          "oklch(84% 0.03792 255.31)",
+          "oklch(95% 0.03792 255.31)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "border",
+        "tonalRamp": [
+          "oklch(15% 0.01214 247.96)",
+          "oklch(26% 0.01214 247.96)",
+          "oklch(38% 0.01214 247.96)",
+          "oklch(49% 0.01214 247.96)",
+          "oklch(61% 0.01214 247.96)",
+          "oklch(72% 0.01214 247.96)",
+          "oklch(84% 0.01214 247.96)",
+          "oklch(95% 0.01214 247.96)"
+        ]
+      },
+      "table-head": {
+        "role": "neutral",
+        "displayName": "table-head",
+        "tonalRamp": [
+          "oklch(15% 0.00286 264.54)",
+          "oklch(26% 0.00286 264.54)",
+          "oklch(38% 0.00286 264.54)",
+          "oklch(49% 0.00286 264.54)",
+          "oklch(61% 0.00286 264.54)",
+          "oklch(72% 0.00286 264.54)",
+          "oklch(84% 0.00286 264.54)",
+          "oklch(95% 0.00286 264.54)"
+        ]
+      },
+      "table-rule": {
+        "role": "neutral",
+        "displayName": "table-rule",
+        "tonalRamp": [
+          "oklch(15% 0.00744 260.73)",
+          "oklch(26% 0.00744 260.73)",
+          "oklch(38% 0.00744 260.73)",
+          "oklch(49% 0.00744 260.73)",
+          "oklch(61% 0.00744 260.73)",
+          "oklch(72% 0.00744 260.73)",
+          "oklch(84% 0.00744 260.73)",
+          "oklch(95% 0.00744 260.73)"
+        ]
+      },
+      "row-hover": {
+        "role": "neutral",
+        "displayName": "row-hover",
+        "tonalRamp": [
+          "oklch(15% 0.00686 174.38)",
+          "oklch(26% 0.00686 174.38)",
+          "oklch(38% 0.00686 174.38)",
+          "oklch(49% 0.00686 174.38)",
+          "oklch(61% 0.00686 174.38)",
+          "oklch(72% 0.00686 174.38)",
+          "oklch(84% 0.00686 174.38)",
+          "oklch(95% 0.00686 174.38)"
+        ]
+      },
+      "count-bg": {
+        "role": "neutral",
+        "displayName": "count-bg",
+        "tonalRamp": [
+          "oklch(15% 0.00515 247.88)",
+          "oklch(26% 0.00515 247.88)",
+          "oklch(38% 0.00515 247.88)",
+          "oklch(49% 0.00515 247.88)",
+          "oklch(61% 0.00515 247.88)",
+          "oklch(72% 0.00515 247.88)",
+          "oklch(84% 0.00515 247.88)",
+          "oklch(95% 0.00515 247.88)"
+        ]
+      },
+      "count-ink": {
+        "role": "neutral",
+        "displayName": "count-ink",
+        "tonalRamp": [
+          "oklch(15% 0.04054 256.42)",
+          "oklch(26% 0.04054 256.42)",
+          "oklch(38% 0.04054 256.42)",
+          "oklch(49% 0.04054 256.42)",
+          "oklch(61% 0.04054 256.42)",
+          "oklch(72% 0.04054 256.42)",
+          "oklch(84% 0.04054 256.42)",
+          "oklch(95% 0.04054 256.42)"
+        ]
+      },
+      "avatar-rose-bg": {
+        "role": "neutral",
+        "displayName": "avatar-rose-bg",
+        "tonalRamp": [
+          "oklch(15% 0.00945 352.36)",
+          "oklch(26% 0.00945 352.36)",
+          "oklch(38% 0.00945 352.36)",
+          "oklch(49% 0.00945 352.36)",
+          "oklch(61% 0.00945 352.36)",
+          "oklch(72% 0.00945 352.36)",
+          "oklch(84% 0.00945 352.36)",
+          "oklch(95% 0.00945 352.36)"
+        ]
+      },
+      "avatar-rose-ink": {
+        "role": "neutral",
+        "displayName": "avatar-rose-ink",
+        "tonalRamp": [
+          "oklch(15% 0.08567 359.73)",
+          "oklch(26% 0.08567 359.73)",
+          "oklch(38% 0.08567 359.73)",
+          "oklch(49% 0.08567 359.73)",
+          "oklch(61% 0.08567 359.73)",
+          "oklch(72% 0.08567 359.73)",
+          "oklch(84% 0.08567 359.73)",
+          "oklch(95% 0.08567 359.73)"
+        ]
+      },
+      "avatar-blue-bg": {
+        "role": "neutral",
+        "displayName": "avatar-blue-bg",
+        "tonalRamp": [
+          "oklch(15% 0.01311 251.56)",
+          "oklch(26% 0.01311 251.56)",
+          "oklch(38% 0.01311 251.56)",
+          "oklch(49% 0.01311 251.56)",
+          "oklch(61% 0.01311 251.56)",
+          "oklch(72% 0.01311 251.56)",
+          "oklch(84% 0.01311 251.56)",
+          "oklch(95% 0.01311 251.56)"
+        ]
+      },
+      "avatar-blue-ink": {
+        "role": "neutral",
+        "displayName": "avatar-blue-ink",
+        "tonalRamp": [
+          "oklch(15% 0.09111 253.26)",
+          "oklch(26% 0.09111 253.26)",
+          "oklch(38% 0.09111 253.26)",
+          "oklch(49% 0.09111 253.26)",
+          "oklch(61% 0.09111 253.26)",
+          "oklch(72% 0.09111 253.26)",
+          "oklch(84% 0.09111 253.26)",
+          "oklch(95% 0.09111 253.26)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Заголовок страницы",
+        "purpose": "28px desktop; 24px at max-width 800px."
+      },
+      "caption": {
+        "displayName": "Подпись",
+        "purpose": "Screen minimum is 14px, including Tailwind xs/sm aliases; not a small-print role."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "index-row-hover",
+        "value": "background-color 100ms ease-out",
+        "purpose": "Patient table row background."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation:none!important;transition:none!important;scroll-behavior:auto!important",
+        "purpose": "Applies globally when prefers-reduced-motion:reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1200px"
+      },
+      {
+        "name": "single-column",
+        "value": "800px"
+      },
+      {
+        "name": "library-md",
+        "value": "48rem"
+      }
+    ],
+    "focus": {
+      "value": "outline:2px solid var(--ui-primary,#0f766e);outline-offset:3px;",
+      "purpose": "Global keyboard focus; Nuxt UI variants may add a ring."
+    },
+    "print": {
+      "page": "A4",
+      "margin": "18mm",
+      "hidden": [
+        "navigation",
+        "topbar",
+        "page heading",
+        "back link",
+        "buttons",
+        "editing fields"
+      ],
+      "document": "Full text in print-only sections; no sheet border, padding or rounding; preserve newlines; avoid splitting signature and archive field rows.",
+      "bundle": "Documents are cleared when loading/changing bundle or on failure; print is disabled during loading, on error or empty result. Each subsequent study starts on a new printed page.",
+      "attachments": "Only explicitly selected images print, on a new page; figure avoids a split, image maximum height is 220mm. Interactive attachment section and login are hidden.",
+      "clinicalNotices": "Source-unit caveats, draft status, source-deleted status and pending recalculation notices remain visible in ProtocolDocument."
+    },
+    "provenance": {
+      "sources": [
+        "PRODUCT.md",
+        "index.html",
+        "src/style.css",
+        "src/App.vue",
+        "src/views/*.vue",
+        "src/components/*.vue",
+        "node_modules/.nuxt-ui/ui/button.ts",
+        "node_modules/.nuxt-ui/ui/input.ts"
+      ],
+      "mode": "code-first scan",
+      "ramps": "Synthesized OKLCH preview ramps; these are not additional application tokens.",
+      "privacy": "Synthetic labels only. No patient data or screenshots."
+    },
+    "density": {
+      "minimumScreenText": "14px",
+      "inputMinimumHeight": "44px",
+      "patientAndStudyInputMinimumHeight": "46px",
+      "buttonMinimumHeight": "40px",
+      "checkboxMinimumSize": "20px",
+      "pageSizes": [
+        50,
+        100,
+        200,
+        500
+      ],
+      "defaultPageSize": 50,
+      "behavior": "Page-size change resets page to 1 and preserves search/filter; loading disables pagination and size control."
+    },
+    "states": {
+      "auth": "Initial setup, loading, connection failure, login and lock share LoginScreen. Lock hides the mounted app, retaining unsaved forms in memory; login name is readonly while locked.",
+      "permissions": "Viewer, archival record or another doctor record uses ProtocolDocument readonly. Mutating attachment controls are hidden; role-specific admin navigation is conditionally shown.",
+      "statistics": "Applied period is displayed explicitly. Changed dates block CSV pending Show. Load clears stats and applied period; CSV is disabled before successful load, during load, after load failure, in preview and during export. Export failure permits retry of the retained report.",
+      "bundles": "Bundle and studies reset before route load; stale requests ignored. Error leaves no previous documents. Print disabled while loading, errored or empty.",
+      "restoration": "Warning dialog, current administrator password and explicit typed confirmation required; busy dialog is not dismissible.",
+      "attachments": "Readonly preserves media/export; add/remove require editable state, removal requires confirmation, image print inclusion is per item."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Nuxt UI solid primary, lg; label contains no patient data.",
+      "html": "<button class=\"ds-primary\">Новое исследование</button>",
+      "css": ".ds-primary{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);background:var(--ui-primary,#0f766e);color:white;border:0;border-radius:calc(var(--ui-radius,.45rem)*1);padding:.5rem .75rem;font-size:.875rem;font-weight:500;line-height:1.25rem;cursor:pointer;transition:background-color 150ms cubic-bezier(.4,0,.2,1)}.ds-primary:hover,.ds-primary:active{background:color-mix(in oklab,var(--ui-primary,#0f766e) 75%,transparent)}.ds-primary:focus-visible{outline:2px solid var(--ui-primary,#0f766e);outline-offset:3px;}.ds-primary:disabled{opacity:.75;cursor:not-allowed}.ds-primary{min-height:40px;font-size:14px;line-height:1.5}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "description": "Existing neutral outline action; literal fallback uses Nuxt UI neutral theme.",
+      "html": "<button class=\"ds-secondary\">Изменить карточку</button>",
+      "css": ".ds-secondary{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);background:transparent;color:var(--ui-text,#18181b);border:0;box-shadow:inset 0 0 0 1px var(--ui-border-accented,#d4d4d8);border-radius:var(--ui-radius,.45rem);padding:.375rem .625rem;font-size:.875rem;font-weight:500;cursor:pointer;transition:background-color 150ms}.ds-secondary:hover,.ds-secondary:active{background:var(--ui-bg-elevated,#f4f4f5)}.ds-secondary:focus-visible{outline:2px solid var(--ui-primary,#0f766e);outline-offset:3px;}.ds-secondary:disabled{opacity:.75;cursor:not-allowed}.ds-secondary{min-height:40px;font-size:14px;line-height:1.5}"
+    },
+    {
+      "name": "Search field",
+      "kind": "input",
+      "description": "Nuxt UI outline field, lg; accessible label and no patient data.",
+      "html": "<input class=\"ds-search\" aria-label=\"Поиск пациентов\" placeholder=\"Найти по ФИО или номеру карточки\">",
+      "css": ".ds-search{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);background:var(--ui-bg,#fff);color:var(--ui-text,#18181b);border:0;box-shadow:inset 0 0 0 1px var(--ui-border-accented,#d4d4d8);border-radius:var(--ui-radius,.45rem);padding:.5rem .75rem;font-size:.875rem;line-height:1.25rem;caret-color:var(--ui-primary,#0f766e)}.ds-search:focus-visible{outline:2px solid var(--ui-primary,#0f766e);outline-offset:3px;box-shadow:inset 0 0 0 1px var(--ui-primary,#0f766e)}.ds-search:disabled{opacity:.75;cursor:not-allowed}.ds-search{min-height:44px;font-size:14px;line-height:1.5}"
+    },
+    {
+      "name": "Active navigation",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Current section with a count; no framework runtime needed.",
+      "html": "<a class=\"ds-nav\" href=\"#patients\" aria-current=\"page\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/></svg>Пациенты<span class=\"ds-nav-count\">—</span></a>",
+      "css": ".ds-nav{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);display:flex;align-items:center;gap:11px;min-height:46px;padding:0 12px;color:#09665e;background:#e7f3f0;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none}.ds-nav:hover{background:#e7f3f0;color:#09665e}.ds-nav:focus-visible{outline:2px solid var(--ui-primary,#0f766e);outline-offset:3px;}.ds-nav-count{margin-left:auto;background:#d6eae4;padding:2px 5px;border-radius:4px;font-size:14px;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Study count",
+      "kind": "chip",
+      "refersTo": "count-badge",
+      "description": "Passive numeric badge.",
+      "html": "<span class=\"ds-count\">0</span>",
+      "css": ".ds-count{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);display:inline-block;min-width:28px;padding:3px 7px;text-align:center;background:#f0f3f6;border-radius:5px;color:#526278;font-size:14px;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Index panel",
+      "kind": "card",
+      "refersTo": "table-panel",
+      "description": "Ruled index header and empty state, with no patient rows.",
+      "html": "<section class=\"ds-panel\"><div class=\"ds-table-head\">Пациент</div><div class=\"ds-empty\"><strong>Пациенты не найдены</strong><p>Проверьте ФИО или попробуйте убрать фильтр.</p></div></section>",
+      "css": ".ds-panel{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);border:1px solid #dfe6ed;background:#fff;border-radius:12px;overflow:hidden;color:#253449}.ds-table-head{font-size:14px;font-weight:600;color:#617186;background:#f9fafc;padding:15px 20px;border-bottom:1px solid #e3e9ef}.ds-empty{display:flex;flex-direction:column;align-items:center;text-align:center;padding:70px 20px;gap:14px}.ds-empty strong{font-size:17px;font-weight:600}.ds-empty p{font-size:14px;color:#647287;max-width:46ch;margin:0}"
+    },
+    {
+      "name": "Document sheet",
+      "kind": "custom",
+      "refersTo": "document-sheet",
+      "description": "Static document skeleton, free of clinical data.",
+      "html": "<article class=\"ds-sheet\"><header class=\"ds-doc-header\">Кабинет УЗИ</header><h2>Исследование</h2><section class=\"ds-doc-section\"><h3>Заключение</h3><p>Раздел документа</p></section></article>",
+      "css": ".ds-sheet{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);background:#fff;color:#253449;border:1px solid #dfe6ed;border-radius:12px;padding:36px 40px;min-width:0}.ds-doc-header{font-size:14px;color:#65758a;padding-bottom:24px;border-bottom:1px solid #e3e9ef}.ds-sheet h2{font-size:22px;font-weight:600;letter-spacing:-.015em;margin:26px 0 23px;color:#20364a}.ds-doc-section{margin-top:32px}.ds-doc-section h3{font-size:15px;font-weight:600;margin-bottom:14px}.ds-doc-section p{font-size:14px;line-height:1.8}"
+    },
+    {
+      "name": "Locked session panel",
+      "kind": "card",
+      "refersTo": "login-panel",
+      "description": "Login panel in lock state; mounted working forms remain hidden in memory.",
+      "html": "<section class=\"ds-login\"><span class=\"ds-login-mark\" aria-hidden=\"true\">＋</span><h1>Сеанс заблокирован</h1><p>Войдите снова, чтобы продолжить. Несохранённая форма остаётся на месте.</p><label>Логин<input readonly aria-label=\"Логин\" placeholder=\"Текущая учётная запись\"></label><label>Пароль<input type=\"password\" aria-label=\"Пароль\" autocomplete=\"current-password\"></label><button>Войти</button></section>",
+      "css": ".ds-login{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);width:min(100%,480px);padding:34px;background:white;border:1px solid #dfe6ed;border-radius:16px;display:flex;flex-direction:column;gap:22px;color:#253449;font-size:14px}.ds-login-mark{display:grid;place-items:center;width:46px;height:46px;background:var(--ui-primary,#0f766e);color:white;border-radius:12px;font-size:28px}.ds-login h1{font-size:24px;font-weight:650;line-height:1.25;letter-spacing:-.025em;margin:0}.ds-login p{font-size:14px;line-height:1.7;color:#65758a;margin:0}.ds-login label{display:grid;gap:7px;font-weight:500}.ds-login input{min-height:44px;padding:0 12px;font-size:14px;border:1px solid #d4d4d8;border-radius:var(--ui-radius,.45rem);background:white}.ds-login button{min-height:40px;border:0;border-radius:var(--ui-radius,.45rem);background:var(--ui-primary,#0f766e);color:white;font-size:14px;font-weight:500;cursor:pointer}.ds-login button:hover,.ds-login button:active{background:color-mix(in oklab,var(--ui-primary,#0f766e) 75%,transparent)}.ds-login input:focus-visible,.ds-login button:focus-visible{outline:2px solid var(--ui-primary,#0f766e);outline-offset:3px}@media(max-width:800px){.ds-login{padding:26px 22px}}"
+    },
+    {
+      "name": "Applied report period",
+      "kind": "custom",
+      "description": "Changed dates require applying; export remains unavailable until report data matches.",
+      "html": "<section class=\"ds-period\"><form class=\"ds-date-filter\"><label>С<input type=\"date\"></label><label>По<input type=\"date\"></label><button type=\"button\">Показать</button></form><p>Период изменён. Нажмите «Показать», чтобы обновить отчёт и разрешить выгрузку.</p><button class=\"ds-csv\" disabled>Сохранить CSV</button></section>",
+      "css": ".ds-period{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);font-size:14px;color:#253449}.ds-date-filter{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap;margin-bottom:26px}.ds-date-filter label{display:grid;gap:7px}.ds-date-filter input{min-height:44px;font-size:14px;padding:0 12px;border:1px solid #d4d4d8;border-radius:var(--ui-radius,.45rem)}.ds-period p{color:#65758a;line-height:1.5}.ds-period button{min-height:40px;padding:6px 10px;border:0;border-radius:var(--ui-radius,.45rem);background:var(--ui-primary,#0f766e);color:white;font-size:14px;cursor:pointer}.ds-period button:hover{background:color-mix(in oklab,var(--ui-primary,#0f766e) 75%,transparent)}.ds-period button:focus-visible,.ds-period input:focus-visible{outline:2px solid var(--ui-primary,#0f766e);outline-offset:3px}.ds-period button:disabled{opacity:.75;cursor:not-allowed}.ds-period .ds-csv{background:transparent;color:var(--ui-primary,#0f766e);border:1px solid currentColor}@media(max-width:800px){.ds-date-filter>*{flex:1;min-width:140px}}"
+    },
+    {
+      "name": "Attachment placeholder",
+      "kind": "card",
+      "description": "Existing AVI placeholder and export action; deliberately contains no image or filename.",
+      "html": "<article class=\"ds-attachment\"><div class=\"ds-media-placeholder\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"2\"/><path d=\"M7 2v20M17 2v20M2 7h5M2 17h5M17 7h5M17 17h5\"/></svg><p>AVI: сохраните файл для открытия во внешнем проигрывателе.</p></div><button>Сохранить файл</button></article>",
+      "css": ".ds-attachment{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);padding:18px;background:white;border:1px solid #dfe6ed;border-radius:12px;display:flex;flex-direction:column;gap:14px;min-width:0;font-size:14px}.ds-media-placeholder{height:190px;display:grid;place-items:center;gap:12px;color:#65758a;padding:20px;text-align:center}.ds-media-placeholder p{margin:0;line-height:1.5}.ds-attachment button{align-self:flex-start;min-height:40px;border:0;padding:6px 10px;border-radius:var(--ui-radius,.45rem);background:transparent;color:var(--ui-primary,#0f766e);font-size:14px;font-weight:500;cursor:pointer}.ds-attachment button:hover,.ds-attachment button:active{background:color-mix(in oklab,var(--ui-primary,#0f766e) 10%,transparent)}.ds-attachment button:focus-visible{outline:2px solid var(--ui-primary,#0f766e);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Клиническая картотека",
+    "overview": "Светлая рабочая среда: белая бумага, сланцевые чернила, бирюзовые элементы управления и таблицы с тонкой разлиновкой. Картотека открывается в историю, затем в рабочий клинический документ. Это выбранное направление из контракта в `index.html`, зафиксированное по реализованному интерфейсу.\n\nИнтерфейс рассчитан на чтение кириллицы и повседневную работу в локальном приложении Windows 10. Плотность комфортная: подписи и строки данных читаются при размере не менее 14px, заголовки и документ получают больше пространства. Используются Vue 3 и Nuxt UI; этот документ описывает собственный визуальный слой поверх библиотеки, а не заменяет её тему.",
+    "keyCharacteristics": [
+      "Светлая картотека с устойчивой навигацией.",
+      "Бирюзовый акцент для действия, выбора и фокуса.",
+      "Белые панели с тонкими границами.",
+      "Читаемый документ с отдельным печатным представлением."
+    ],
+    "rules": [
+      {
+        "name": "Action Accent",
+        "body": "Бирюза сопровождает управление и выбранное состояние; содержание документа остаётся нейтральным.",
+        "section": "colors"
+      },
+      {
+        "name": "Paper Output",
+        "body": "Печать — самостоятельное представление документа на A4 с полями 18mm. Навигация, верхняя полоса, заголовок страницы, кнопки и редактируемые секции скрываются. Печатные текстовые секции сохраняют переносы и выводят полный текст. Лист теряет границу, скругление и внешние отступы. Подпись и отдельная строка архивных полей защищены от разрыва; длинные разделы могут продолжаться на следующей странице. Каждый следующий документ объединённого протокола начинается с новой страницы. Выбранные для печати изображения выводятся отдельным блоком с новой страницы; фигура не разрывается, изображение ограничено высотой 220mm. Вход и элементы управления вложениями скрыты.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "**Do** сохранять белый лист, сланцевый текст, бирюзовое управление и тонкую разлиновку.",
+      "**Do** использовать существующие компоненты Nuxt UI для полей, кнопок, уведомлений и диалогов.",
+      "**Do** сохранять текстовые статусы, доступные подписи, видимый фокус и табличные цифры.",
+      "**Do** проверять экран до 800px и отдельную печать полного документа на A4."
+    ],
+    "donts": [
+      "**Don't** заменять существующий светлый режим произвольной тёмной темой.",
+      "**Don't** добавлять декоративные тени и градиенты к плоским рабочим панелям.",
+      "**Don't** передавать статус только цветом или скрывать служебное предупреждение внутри placeholder.",
+      "**Don't** использовать реальные сведения пациентов в демонстрационных компонентах и дизайн-документации."
+    ]
+  }
+}

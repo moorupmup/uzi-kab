@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS app_users(id INTEGER PRIMARY KEY,username TEXT NOT NULL UNIQUE COLLATE NOCASE,display_name TEXT NOT NULL,password_hash TEXT NOT NULL,role TEXT NOT NULL CHECK(role IN('admin','doctor','viewer')),doctor_id INTEGER,enabled INTEGER NOT NULL DEFAULT 1,revision INTEGER NOT NULL DEFAULT 1);
+CREATE TABLE IF NOT EXISTS access_audit(id INTEGER PRIMARY KEY,actor_id INTEGER,action TEXT NOT NULL,entity_id INTEGER,details TEXT NOT NULL DEFAULT '',created_at TEXT NOT NULL DEFAULT(datetime('now')));
+CREATE TABLE IF NOT EXISTS attachments(id INTEGER PRIMARY KEY,study_id INTEGER NOT NULL REFERENCES studies(id),name TEXT NOT NULL,mime TEXT NOT NULL,content BLOB NOT NULL,sha256 TEXT NOT NULL,deleted INTEGER NOT NULL DEFAULT 0,created_at TEXT NOT NULL DEFAULT(datetime('now')),actor_id INTEGER);
+CREATE INDEX IF NOT EXISTS attachments_study ON attachments(study_id);
+CREATE TABLE IF NOT EXISTS study_bundles(id INTEGER PRIMARY KEY,patient_id INTEGER NOT NULL REFERENCES patients(id),name TEXT NOT NULL,created_at TEXT NOT NULL DEFAULT(datetime('now')),actor_id INTEGER);
+CREATE TABLE IF NOT EXISTS bundle_items(bundle_id INTEGER NOT NULL REFERENCES study_bundles(id),study_id INTEGER NOT NULL REFERENCES studies(id),position INTEGER NOT NULL,PRIMARY KEY(bundle_id,study_id));

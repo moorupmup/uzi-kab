@@ -1,0 +1,72 @@
+# JavaScript dependencies, build output and caches
+node_modules/
+/dist/
+.vite/
+.cache/
+*.tsbuildinfo
+/auto-imports.d.ts
+/components.d.ts
+
+# Rust / Tauri generated files (keep Cargo.lock)
+/target/
+/src-tauri/target/
+/src-tauri/gen/
+**/*.rs.bk
+
+# Packaged application and local tools
+/release/
+/.tools/
+/.impeccable/review/
+/.impeccable/mocks/
+
+# Local databases, SQLite sidecars and backups
+*.db
+*.db-*
+*.db3
+*.db3-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+/data/backups/
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Test output
+coverage/
+playwright-report/
+test-results/
+blob-report/
+
+# Local environment settings and secrets (keep example files)
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.template
+*.local
+
+# Logs and temporary files
+*.log
+*.pid
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Editor and operating system files
+.idea/
+.vscode/
+.vs/
+.DS_Store
+Thumbs.db
+Desktop.ini

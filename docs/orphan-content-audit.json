@@ -1,0 +1,40 @@
+{
+  "counts": {
+    "total": 5070,
+    "nonempty_conclusion": 0,
+    "nonempty_addition": 0,
+    "items": 357194,
+    "nonblank_xml_values": 0,
+    "values_with_children": 0,
+    "nonblank_xml_text_outside_name_type": 0
+  },
+  "conclusionAdditionLengths": {
+    "(0, 0)": 5070
+  },
+  "itemTags": {
+    "name": 357194,
+    "type": 357194,
+    "value": 357194
+  },
+  "valueTypes": {
+    "string": 153582,
+    "select": 124573,
+    "textarea_users": 39760,
+    "checkbox": 38072,
+    "string ": 1207
+  },
+  "recordsByParameterCount": {
+    "36": 1183,
+    "19": 348,
+    "37": 190,
+    "147": 1207,
+    "65": 42,
+    "57": 466,
+    "1": 276,
+    "79": 87,
+    "89": 7,
+    "90": 73,
+    "67": 1187,
+    "93": 4
+  }
+}

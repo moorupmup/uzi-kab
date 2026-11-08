@@ -1,0 +1,9 @@
+{
+  "nativeLaunch": true,
+  "patientCreated": true,
+  "studySaved": true,
+  "unlinkedStudyReadable": true,
+  "backupCreated": true,
+  "pageErrors": 0,
+  "testDatabase": ".tools/smoke/uzi.db"
+}

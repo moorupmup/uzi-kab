@@ -1,0 +1,15 @@
+{
+  "archiveEditableByOtherDoctor": true,
+  "originalDoctorPreserved": true,
+  "warningRemoved": true,
+  "additionalFieldsRoundtrip": true,
+  "legacyTemplateVersionPreserved": true,
+  "originalRawUnchanged": true,
+  "previousValuesAudited": true,
+  "archiveCalculationInvalidation": true,
+  "archiveAttachments": true,
+  "orphanWithUnknownReferencesEditable": true,
+  "hiddenPatientStudyEditable": true,
+  "viewerStillReadOnly": true,
+  "pageErrors": []
+}

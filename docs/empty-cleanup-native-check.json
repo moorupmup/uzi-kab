@@ -1,0 +1,8 @@
+{
+  "startupCleanup": true,
+  "nonemptyRecordRetained": true,
+  "verifiedBackupContainsDeletedStub": true,
+  "cleanupRunsOnce": true,
+  "tabRemoved": true,
+  "oldRouteRedirectsToStudies": true
+}
