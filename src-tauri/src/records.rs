@@ -4,7 +4,6 @@ use serde_json::{Value,json};
 use sha2::{Digest,Sha256};
 use std::{io::{Read,Write},path::Path};
 
-fn date(s:&str)->Result<(),String>{chrono::NaiveDate::parse_from_str(s,"%Y-%m-%d").map_err(|_|"Некорректная дата".to_string())?;Ok(())}
 fn sniff(data:&[u8])->Option<&'static str>{
     if data.starts_with(b"\x89PNG\r\n\x1a\n"){Some("image/png")}
     else if data.starts_with(b"\xff\xd8\xff"){Some("image/jpeg")}
@@ -23,33 +22,34 @@ impl Database{
         tx.execute("INSERT INTO audit(entity,entity_id,previous_json,saved_at) VALUES('patient',?,?,datetime('now'))",params![id,previous.to_string()]).map_err(err)?;
         tx.execute("INSERT INTO access_audit(actor_id,action,entity_id) VALUES(?,?,?)",params![actor,if hidden{"hide_patient"}else{"restore_patient"},id]).map_err(err)?;tx.commit().map_err(err)?;Ok(())
     }
-    pub fn statistics(&self,from:&str,to:&str)->Result<Value,String>{
-        date(from)?;date(to)?;if from>to{return Err("Начало периода позже окончания".into())}
-        let c=self.open()?;let end=chrono::NaiveDate::parse_from_str(to,"%Y-%m-%d").map_err(err)?.succ_opt().ok_or("Конец периода за пределами календаря")?.format("%Y-%m-%d").to_string();let begin=from.to_string();
-        let filter="WHERE s.date>=?1 AND s.date<?2 AND s.status IN('final','legacy:1') AND s.patient_id<>0";
-        let summary=rows(&c,&format!("SELECT count(*) AS studies,count(distinct patient_id) AS patients FROM studies s {filter}"),params![begin,end])?.pop().unwrap();
-        Ok(json!({"summary":summary,"byType":rows(&c,&format!("SELECT s.title AS name,count(*) AS count FROM studies s {filter} GROUP BY s.template_id,s.title ORDER BY count DESC"),params![begin,end])?,"byDoctor":rows(&c,&format!("SELECT COALESCE(d.name,'Не указан') AS name,count(*) AS count FROM studies s LEFT JOIN doctors d ON d.id=s.doctor_id {filter} GROUP BY s.doctor_id ORDER BY count DESC"),params![begin,end])?,"byMonth":rows(&c,&format!("SELECT substr(s.date,1,7) AS name,count(*) AS count FROM studies s {filter} GROUP BY substr(s.date,1,7) ORDER BY name"),params![begin,end])?}))
-    }
-    pub fn export_statistics(&self,path:&str,from:&str,to:&str)->Result<(),String>{
-        let stats=self.statistics(from,to)?;let mut csv=String::from("\u{feff}Раздел;Наименование;Количество\r\n");
-        fn cell(s:&str)->String{let guarded=if s.starts_with(['=','+','-','@']){format!("'{s}")}else{s.into()};format!("\"{}\"",guarded.replace('"',"\"\""))}
-        for (key,title) in [("byType","Исследование"),("byDoctor","Врач"),("byMonth","Месяц")] {for row in stats[key].as_array().unwrap(){csv.push_str(&format!("{};{};{}\r\n",cell(title),cell(row["name"].as_str().unwrap_or("")),row["count"]));}}
-        let mut file=std::fs::OpenOptions::new().write(true).create_new(true).open(path).map_err(|e|format!("Не удалось создать новый файл (существующий не перезаписывается): {e}"))?;file.write_all(csv.as_bytes()).map_err(err)?;file.sync_all().map_err(err)?;Ok(())
-    }
+    #[cfg(test)]
+    pub fn statistics(&self,from:&str,to:&str)->Result<Value,String>{self.statistics_filtered(from,to,&crate::reports::ReportFilter::default())}
+    #[cfg(test)]
+    pub fn export_statistics(&self,path:&str,from:&str,to:&str)->Result<(),String>{self.export_statistics_filtered(path,from,to,&crate::reports::ReportFilter::default())}
     pub fn create_bundle(&self,patient:i64,name:&str,ids:Vec<i64>,actor:i64)->Result<i64,String>{
         if name.trim().is_empty()||name.len()>200||ids.len()<2||ids.len()>20{return Err("Укажите название и от 2 до 20 исследований одного пациента".into())}
         let unique=ids.iter().collect::<std::collections::HashSet<_>>();if unique.len()!=ids.len(){return Err("Исследования не должны повторяться".into())}
         let mut c=self.open()?;let tx=c.transaction().map_err(err)?;
         for id in &ids{let owner:Option<(i64,String)>=tx.query_row("SELECT patient_id,status FROM studies WHERE id=?",[id],|r|Ok((r.get(0)?,r.get(1)?))).optional().map_err(err)?;if !matches!(owner,Some((p,ref status)) if p==patient&&p!=0&&["final","legacy:1"].contains(&status.as_str())){return Err("Объединять можно только завершённые исследования одного пациента".into())}}
+        crate::lifecycle::tables(&tx)?;
         tx.execute("INSERT INTO study_bundles(patient_id,name,actor_id) VALUES(?,?,?)",params![patient,name.trim(),actor]).map_err(err)?;let id=tx.last_insert_rowid();
         for (index,study) in ids.iter().enumerate(){tx.execute("INSERT INTO bundle_items VALUES(?,?,?)",params![id,study,index as i64]).map_err(err)?;}
+        tx.execute("INSERT INTO bundle_state(bundle_id) VALUES(?)",[id]).map_err(err)?;
+        tx.execute("INSERT INTO bundle_item_revisions SELECT i.bundle_id,i.study_id,s.revision FROM bundle_items i JOIN studies s ON s.id=i.study_id WHERE i.bundle_id=?",[id]).map_err(err)?;
         tx.execute("INSERT INTO access_audit(actor_id,action,entity_id) VALUES(?,'create_bundle',?)",params![actor,id]).map_err(err)?;tx.commit().map_err(err)?;Ok(id)
     }
-    pub fn patient_bundles(&self,patient:i64)->Result<Value,String>{Ok(json!(rows(&self.open()?,"SELECT b.id,b.name,b.created_at AS createdAt,(SELECT count(*) FROM bundle_items i WHERE i.bundle_id=b.id) AS count FROM study_bundles b WHERE b.patient_id=? ORDER BY b.id DESC",[patient])?))}
+    pub fn patient_bundles(&self,patient:i64)->Result<Value,String>{let c=self.open()?;let mut bundles=rows(&c,"SELECT b.id,b.name,b.created_at AS createdAt,(SELECT count(*) FROM bundle_items i WHERE i.bundle_id=b.id) AS count FROM study_bundles b WHERE b.patient_id=? ORDER BY b.id DESC",[patient])?;for b in &mut bundles{let state=Self::bundle_state(&c,b["id"].as_i64().unwrap())?;for (key,value) in state.as_object().unwrap(){b[key]=value.clone()}}Ok(json!(bundles))}
     pub fn bundle(&self,id:i64)->Result<Value,String>{
-        let c=self.open()?;let bundle=rows(&c,"SELECT b.*,p.name AS patientName FROM study_bundles b JOIN patients p ON p.id=b.patient_id WHERE b.id=?",[id])?.pop().ok_or("Объединённый протокол не найден")?;
-        let ids=rows(&c,"SELECT study_id AS id FROM bundle_items WHERE bundle_id=? ORDER BY position",[id])?;
-        let mut studies=Vec::new();for row in ids{studies.push(self.study(row["id"].as_i64().unwrap())?)}Ok(json!({"bundle":bundle,"studies":studies}))
+        let c=self.open()?;let mut bundle=rows(&c,"SELECT b.*,p.name AS patientName FROM study_bundles b JOIN patients p ON p.id=b.patient_id WHERE b.id=?",[id])?.pop().ok_or("Объединённый протокол не найден")?;
+        let state=Self::bundle_state(&c,id)?;for (key,value) in state.as_object().unwrap(){bundle[key]=value.clone()}
+        let ids=rows(&c,"SELECT study_id AS id FROM bundle_items WHERE bundle_id=? ORDER BY position,study_id",[id])?;let mut issues=Vec::new();let mut studies=Vec::new();let mut can_print=bundle["deleted"]!=true&&!ids.is_empty();
+        for row in ids{let study_id=row["id"].as_i64().unwrap();match self.study(study_id){Ok(s)=>{
+         if s["patient_id"]!=bundle["patient_id"]{can_print=false;issues.push(json!({"studyId":study_id,"message":"Пациент исследования не совпадает с пациентом комплекта."}))}
+         let status=s["status"].as_str().unwrap_or("");if crate::lifecycle::deleted(status){can_print=false;issues.push(json!({"studyId":study_id,"message":"Исследование удалено. Для печати восстановите его либо создайте другой комплект."}))}else if !["final","legacy:1"].contains(&status){if bundle["origin"]!="legacy"{can_print=false}issues.push(json!({"studyId":study_id,"message":"Исследование не завершено. Архивный состав сохранён; документ имеет отметку черновика."}))}
+         if crate::lifecycle::exists(&c,"bundle_item_revisions")?{let original=c.query_row("SELECT revision FROM bundle_item_revisions WHERE bundle_id=? AND study_id=?",params![id,study_id],|r|r.get::<_,i64>(0)).optional().map_err(err)?;if original.is_some_and(|v|s["revision"]!=v){issues.push(json!({"studyId":study_id,"message":"Исследование изменено после формирования комплекта. Проверьте текущий документ."}))}}
+         studies.push(s)
+        },Err(e)=>{can_print=false;issues.push(json!({"studyId":study_id,"message":format!("Документ не удалось открыть: {e}")}))}}}
+        Ok(json!({"bundle":bundle,"studies":studies,"issues":issues,"canPrint":can_print}))
     }
     pub fn attachments(&self,study:i64)->Result<Value,String>{Ok(json!(rows(&self.open()?,"SELECT id,name,mime,length(content) AS bytes,created_at AS createdAt FROM attachments WHERE study_id=? AND deleted=0 ORDER BY id",[study])?))}
     pub fn import_attachment(&self,study:i64,path:&str,actor:i64)->Result<i64,String>{
@@ -96,7 +96,7 @@ impl Database{
 
 
 // The migration retained source strings as Windows-1251 BLOBs.
-fn book_text(value:rusqlite::types::ValueRef<'_>)->String {
+pub(crate) fn book_text(value:rusqlite::types::ValueRef<'_>)->String {
     match value {
         rusqlite::types::ValueRef::Text(v)=>String::from_utf8_lossy(v).into_owned(),
         rusqlite::types::ValueRef::Blob(v)=>v.iter().map(|b|if *b<128{*b as char}else{CP1251.chars().nth((*b-128) as usize).unwrap()}).collect(),
@@ -105,14 +105,47 @@ fn book_text(value:rusqlite::types::ValueRef<'_>)->String {
 }
 const CP1251:&str="ЂЃ‚ѓ„…†‡€‰Љ‹ЊЌЋЏђ‘’“”•–—�™љ›њќћџ ЎўЈ¤Ґ¦§Ё©Є«¬­®Ї°±Ііґµ¶·ё№є»јЅѕїАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя";
 impl Database {
-    pub fn user_templates(&self)->Result<Value,String>{
-        let c=self.open()?;
+    pub fn user_templates(&self)->Result<Value,String>{Ok(json!(Self::user_templates_from(&self.open()?)?))}
+    pub(crate) fn source_user_templates_from(c:&rusqlite::Connection)->Result<Vec<Value>,String>{
         let exists:i64=c.query_row("SELECT count(*) FROM sqlite_master WHERE type='table' AND name='legacy_book_users'",[],|r|r.get(0)).map_err(err)?;
-        if exists==0{return Ok(json!([]))}
+        let entries=if exists==0{vec![]}else{
         let mut st=c.prepare("SELECT id,research_id,name,key_name,level_id,position,status_hidden,status_root,value FROM legacy_book_users ORDER BY position,id").map_err(err)?;
-        let entries=st.query_map([],|r|Ok(json!({"id":r.get::<_,i64>(0)?,"templateId":r.get::<_,i64>(1)?,"name":book_text(r.get_ref(2)?),"key":book_text(r.get_ref(3)?),"parentId":r.get::<_,i64>(4)?,"hidden":r.get::<_,i64>(6)?!=0,"folder":r.get::<_,i64>(7)?!=0,"value":book_text(r.get_ref(8)?)}))).map_err(err)?.collect::<Result<Vec<_>,_>>().map_err(err)?;
-        Ok(json!(entries))
+        let entries=st.query_map([],|r|Ok(json!({"id":r.get::<_,i64>(0)?,"templateId":r.get::<_,i64>(1)?,"name":book_text(r.get_ref(2)?),"key":book_text(r.get_ref(3)?),"parentId":r.get::<_,i64>(4)?,"position":r.get::<_,i64>(5)?,"hidden":r.get::<_,i64>(6)?!=0,"folder":r.get::<_,i64>(7)?!=0,"value":book_text(r.get_ref(8)?),"revision":0,"deleted":false}))).map_err(err)?.collect::<Result<Vec<_>,_>>().map_err(err)?;
+        entries
+        };
+        Ok(entries)
     }
+    pub(crate) fn user_templates_from(c:&rusqlite::Connection)->Result<Vec<Value>,String>{
+        let mut entries=Self::source_user_templates_from(c)?;
+        let native:i64=c.query_row("SELECT count(*) FROM sqlite_master WHERE type='table' AND name='user_template_entries'",[],|r|r.get(0)).map_err(err)?;
+        if native!=0 {
+            let mut added=rows(&c,"SELECT n.id,n.template_id AS templateId,n.parent_id AS parentId,c.text AS name,c.text AS value,c.revision,c.deleted,'' AS key,0 AS hidden,0 AS folder FROM user_template_entries n JOIN user_template_changes c ON c.id=n.id ORDER BY n.id",[])?;
+            for entry in &mut added{entry["hidden"]=json!(false);entry["folder"]=json!(false);entry["deleted"]=json!(entry["deleted"]==1);}
+            added.extend(entries);entries=added;
+        }
+        let overrides:i64=c.query_row("SELECT count(*) FROM sqlite_master WHERE type='table' AND name='user_template_changes'",[],|r|r.get(0)).map_err(err)?;
+        if overrides!=0 {
+            for change in rows(&c,"SELECT * FROM user_template_changes",[])? {
+                if let Some(entry)=entries.iter_mut().find(|e|e["id"]==change["id"]){entry["value"]=change["text"].clone();entry["deleted"]=json!(change["deleted"]==1);entry["revision"]=change["revision"].clone();}
+            }
+        }
+        let has_tree:i64=c.query_row("SELECT count(*) FROM sqlite_master WHERE type='table' AND name='user_template_tree'",[],|r|r.get(0)).map_err(err)?;
+        if has_tree!=0 {for change in rows(c,"SELECT node_json FROM user_template_tree",[])?{let node:Value=serde_json::from_str(change["node_json"].as_str().ok_or("Повреждена запись справочника")?).map_err(err)?;if let Some(e)=entries.iter_mut().find(|e|e["id"]==node["id"]){*e=node}else{entries.push(node)}}}
+        entries.sort_by_key(|e|(e["position"].as_i64().unwrap_or(0),e["id"].as_i64().unwrap_or(0)));
+        Ok(entries)
+    }
+    pub fn create_user_template(&self,template_id:i64,parent_id:i64,text:&str)->Result<Value,String>{
+        let result=self.mutate_template_tree(crate::template_tree::TreeInput{action:"create".into(),id:None,revision:None,parent_id:Some(parent_id),template_id:Some(template_id),text:Some(text.into()),folder:Some(false),direction:None,deleted:None})?;
+        Ok(result["entry"].clone())
+    }
+    pub fn save_user_template(&self,id:i64,revision:i64,text:&str,deleted:bool)->Result<Value,String>{
+        let entries=Self::user_templates_from(&self.open()?)?;
+        let node=entries.iter().find(|e|e["id"]==id).ok_or("Заготовка не найдена")?;
+        if node["folder"]==true{return Err("Разделы изменяются в управлении разделами.".into())}
+        let result=self.mutate_template_tree(crate::template_tree::TreeInput{action:"edit".into(),id:Some(id),revision:Some(revision),parent_id:None,template_id:None,text:Some(text.into()),folder:None,direction:None,deleted:Some(deleted)})?;
+        Ok(json!({"id":id,"text":result["entry"]["value"],"deleted":result["entry"]["deleted"],"revision":result["entry"]["revision"]}))
+    }
+
 }
 
 #[cfg(test)]mod template_tests {
@@ -126,6 +159,26 @@ impl Database {
         c.execute_batch("CREATE TABLE legacy_book_users(id,research_id,name,key_name,level_id,position,status_hidden,status_root,value); INSERT INTO legacy_book_users VALUES(1,80,X'CFE5F7E5EDFC','',0,1,0,1,''),(2,80,'Текст заготовки','',1,2,1,0,'');").unwrap();
         let entries=db.user_templates().unwrap();assert_eq!(entries[0]["name"],"Печень");assert_eq!(entries[1]["name"],"Текст заготовки");assert_eq!(entries[1]["parentId"],1);assert_eq!(entries[1]["hidden"],true);
         assert_eq!(c.query_row("SELECT hex(name) FROM legacy_book_users WHERE id=1",[],|r|r.get::<_,String>(0)).unwrap(),"CFE5F7E5EDFC");
+        assert!(db.save_user_template(1,0,"Раздел",false).is_err());
+        assert!(db.save_user_template(999,0,"Нет записи",false).is_err());
+        assert!(db.save_user_template(2,0," ",false).is_err());
+        let first=db.save_user_template(2,0,"Новый текст\nВторая строка",false).unwrap();assert_eq!(first["revision"],1);
+        assert!(db.save_user_template(2,0,"Затереть новую правку",false).unwrap_err().contains("изменилась"));
+        let reopened=db.user_templates().unwrap();assert_eq!(reopened[1]["value"],"Новый текст\nВторая строка");assert_eq!(reopened[1]["revision"],1);
+        db.save_user_template(2,1,"Новый текст\nВторая строка",true).unwrap();assert_eq!(db.user_templates().unwrap()[1]["deleted"],true);
+        db.save_user_template(2,2,"Новый текст\nВторая строка",false).unwrap();assert_eq!(db.user_templates().unwrap()[1]["deleted"],false);
+        assert_eq!(c.query_row("SELECT name FROM legacy_book_users WHERE id=2",[],|r|r.get::<_,String>(0)).unwrap(),"Текст заготовки");
+        assert_eq!(c.query_row("SELECT count(*) FROM audit WHERE entity='user_template'",[],|r|r.get::<_,i64>(0)).unwrap(),3);
+        let backup=db.backup().unwrap();let copy=rusqlite::Connection::open(backup).unwrap();assert_eq!(copy.query_row("SELECT text FROM user_template_changes WHERE id=2",[],|r|r.get::<_,String>(0)).unwrap(),"Новый текст\nВторая строка");drop(copy);
+        c.execute_batch("INSERT INTO templates VALUES(80,'Тестовое УЗИ','test'),(18,'Другое УЗИ','other');").unwrap();
+        assert!(db.create_user_template(999,1,"Текст").is_err());assert!(db.create_user_template(80,2,"Текст").is_err());assert!(db.create_user_template(18,1,"Текст").is_err());assert!(db.create_user_template(80,1," ").is_err());
+        let created=db.create_user_template(80,1,"Новая заготовка").unwrap();assert_eq!(created["id"],-1);assert_eq!(created["parentId"],1);
+        let second=db.create_user_template(80,1,"Вторая заготовка").unwrap();assert_eq!(second["id"],-2);
+        let reopened=db.user_templates().unwrap();assert_eq!(reopened[0]["id"],-2);assert_eq!(reopened[1]["value"],"Новая заготовка");
+        db.save_user_template(-1,1,"Новая после правки",false).unwrap();db.save_user_template(-1,2,"Новая после правки",true).unwrap();assert_eq!(db.user_templates().unwrap()[1]["deleted"],true);
+        db.save_user_template(-1,3,"Новая после правки",false).unwrap();assert_eq!(db.user_templates().unwrap()[1]["deleted"],false);
+        assert_eq!(c.query_row("SELECT count(*) FROM legacy_book_users",[],|r|r.get::<_,i64>(0)).unwrap(),2);
+        let backup=db.backup().unwrap();let copy=rusqlite::Connection::open(backup).unwrap();assert_eq!(copy.query_row("SELECT template_id FROM user_template_entries WHERE id=-1",[],|r|r.get::<_,i64>(0)).unwrap(),80);drop(copy);
         drop(c);std::fs::remove_dir_all(root).unwrap();
     }
 }

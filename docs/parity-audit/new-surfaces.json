@@ -1,0 +1,506 @@
+{
+  "routes": [
+    "/",
+    "/patients/:id",
+    "/studies",
+    "/studies/new/:patientId",
+    "/studies/:id",
+    "/database",
+    "/account",
+    "/templates",
+    "/statistics",
+    "/users",
+    "/orphans",
+    "/bundles/:id"
+  ],
+  "modals": [
+    {
+      "file": "src/components/ArchiveMaintenance.vue",
+      "line": 13,
+      "title": "Скрытые карточки",
+      "state": "hiddenOpen"
+    },
+    {
+      "file": "src/components/ArchiveMaintenance.vue",
+      "line": 13,
+      "title": "Журнал действий",
+      "state": "auditOpen"
+    },
+    {
+      "file": "src/components/Attachments.vue",
+      "line": 18,
+      "title": "Убрать вложение из исследования?",
+      "state": "Boolean(removing)"
+    },
+    {
+      "file": "src/components/BackupManager.vue",
+      "line": 14,
+      "title": "Восстановить базу?",
+      "state": "restoreOpen"
+    },
+    {
+      "file": "src/components/PatientForm.vue",
+      "line": 12,
+      "title": "patient?'Редактировать карточку':'Новый пациент'",
+      "state": "open"
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 47,
+      "title": "Новая заготовка",
+      "state": "createOpen"
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 48,
+      "title": "Изменить заготовку",
+      "state": "Boolean(editing)"
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 49,
+      "title": "Удалить заготовку?",
+      "state": "Boolean(deleting)"
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 24,
+      "title": "Объединить исследования для печати",
+      "state": "bundleOpen"
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 24,
+      "title": "Скрыть карточку из общего списка?",
+      "state": "hideOpen"
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 94,
+      "title": "Справочник шаблонов",
+      "state": "showLibrary"
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 95,
+      "title": "Сменить вид исследования?",
+      "state": "confirmTemplate"
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 96,
+      "title": "Остались несохранённые изменения",
+      "state": "confirmLeave"
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "title": "form.id?'Изменить учётную запись':'Новый пользователь'",
+      "state": "show"
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "title": "Добавить врача",
+      "state": "doctorShow"
+    }
+  ],
+  "buttons": [
+    {
+      "file": "src/App.vue",
+      "line": 30,
+      "action": "logout",
+      "label": ""
+    },
+    {
+      "file": "src/App.vue",
+      "line": 36,
+      "action": "db.load",
+      "label": ""
+    },
+    {
+      "file": "src/components/ArchiveMaintenance.vue",
+      "line": 13,
+      "action": "showHidden",
+      "label": ""
+    },
+    {
+      "file": "src/components/ArchiveMaintenance.vue",
+      "line": 13,
+      "action": "showAudit",
+      "label": ""
+    },
+    {
+      "file": "src/components/ArchiveMaintenance.vue",
+      "line": 13,
+      "action": "restorePatient(p)",
+      "label": ""
+    },
+    {
+      "file": "src/components/Attachments.vue",
+      "line": 18,
+      "action": "add",
+      "label": ""
+    },
+    {
+      "file": "src/components/Attachments.vue",
+      "line": 18,
+      "action": "exportFile(item)",
+      "label": ""
+    },
+    {
+      "file": "src/components/Attachments.vue",
+      "line": 18,
+      "action": "removing=item",
+      "label": "Убрать вложение"
+    },
+    {
+      "file": "src/components/Attachments.vue",
+      "line": 18,
+      "action": "removing=undefined",
+      "label": ""
+    },
+    {
+      "file": "src/components/Attachments.vue",
+      "line": 18,
+      "action": "remove",
+      "label": ""
+    },
+    {
+      "file": "src/components/BackupManager.vue",
+      "line": 14,
+      "action": "backup",
+      "label": ""
+    },
+    {
+      "file": "src/components/BackupManager.vue",
+      "line": 14,
+      "action": "importCopy",
+      "label": ""
+    },
+    {
+      "file": "src/components/BackupManager.vue",
+      "line": 14,
+      "action": "prepare(item)",
+      "label": ""
+    },
+    {
+      "file": "src/components/BackupManager.vue",
+      "line": 14,
+      "action": "restoreOpen=false",
+      "label": ""
+    },
+    {
+      "file": "src/components/BackupManager.vue",
+      "line": 14,
+      "action": "submit restore-form",
+      "label": ""
+    },
+    {
+      "file": "src/components/LoginScreen.vue",
+      "line": 9,
+      "action": "auth.init",
+      "label": ""
+    },
+    {
+      "file": "src/components/LoginScreen.vue",
+      "line": 9,
+      "action": "submit ",
+      "label": ""
+    },
+    {
+      "file": "src/components/PatientForm.vue",
+      "line": 14,
+      "action": "emit('update:open',false)",
+      "label": ""
+    },
+    {
+      "file": "src/components/PatientForm.vue",
+      "line": 14,
+      "action": "submit patient-form",
+      "label": ""
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 33,
+      "action": "load",
+      "label": ""
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 33,
+      "action": "beginCreate",
+      "label": ""
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 38,
+      "action": "emit('select',entry)",
+      "label": "Вставить"
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 40,
+      "action": "edit(entry)",
+      "label": "Изменить"
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 41,
+      "action": "requestDelete(entry)",
+      "label": "Удалить"
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 43,
+      "action": "save(entry,entry.value||entry.name,false)",
+      "label": "Восстановить"
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 47,
+      "action": "createOpen=false",
+      "label": ""
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 47,
+      "action": "create",
+      "label": ""
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 48,
+      "action": "editing=undefined",
+      "label": ""
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 48,
+      "action": "editing&&save(editing,editText,false)",
+      "label": ""
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 49,
+      "action": "deleting=undefined",
+      "label": ""
+    },
+    {
+      "file": "src/components/TemplateLibrary.vue",
+      "line": 49,
+      "action": "deleting&&save(deleting,deleting.value||deleting.name,true)",
+      "label": ""
+    },
+    {
+      "file": "src/views/AccountSettings.vue",
+      "line": 9,
+      "action": "submit ",
+      "label": ""
+    },
+    {
+      "file": "src/views/BundleView.vue",
+      "line": 12,
+      "action": "print",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 21,
+      "action": "hideOpen=true",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 21,
+      "action": "edit=true",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 21,
+      "action": "",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 23,
+      "action": "selectionMode=true",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 23,
+      "action": "bundleOpen=true",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 23,
+      "action": "selectionMode=false;selected=[]",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 24,
+      "action": "bundleOpen=false",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 24,
+      "action": "createBundle",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 24,
+      "action": "hideOpen=false",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientDetail.vue",
+      "line": 24,
+      "action": "hide",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientIndex.vue",
+      "line": 28,
+      "action": "create=true",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientIndex.vue",
+      "line": 29,
+      "action": "store.query='';store.gender='all'",
+      "label": ""
+    },
+    {
+      "file": "src/views/PatientIndex.vue",
+      "line": 31,
+      "action": "store.load",
+      "label": ""
+    },
+    {
+      "file": "src/views/Statistics.vue",
+      "line": 17,
+      "action": "exportCsv",
+      "label": ""
+    },
+    {
+      "file": "src/views/Statistics.vue",
+      "line": 17,
+      "action": "submit ",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 74,
+      "action": "copy",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 74,
+      "action": "print",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 74,
+      "action": "save('draft')",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 74,
+      "action": "save('final')",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 85,
+      "action": "showLibrary=true",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 91,
+      "action": "recalculate",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 91,
+      "action": "print",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 95,
+      "action": "confirmTemplate=false",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 95,
+      "action": "changeTemplate",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 96,
+      "action": "cancelLeave",
+      "label": ""
+    },
+    {
+      "file": "src/views/StudyEditor.vue",
+      "line": 96,
+      "action": "discard",
+      "label": ""
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "action": "doctorShow=true",
+      "label": ""
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "action": "edit()",
+      "label": ""
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "action": "edit(user)",
+      "label": ""
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "action": "show=false",
+      "label": ""
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "action": "submit user-form",
+      "label": ""
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "action": "doctorShow=false",
+      "label": ""
+    },
+    {
+      "file": "src/views/Users.vue",
+      "line": 17,
+      "action": "submit doctor-form",
+      "label": ""
+    }
+  ]
+}

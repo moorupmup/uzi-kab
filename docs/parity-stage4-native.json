@@ -1,0 +1,22 @@
+{
+  "nativeSqlite": true,
+  "legacyBundles": 5,
+  "legacyLinks": 10,
+  "migrationIdempotent": true,
+  "sourceOrder": true,
+  "fullPreview": true,
+  "previewEqualsSavedPrint": true,
+  "deleteRestoreViaUi": true,
+  "deletedFilter": true,
+  "draftFilter": true,
+  "deletedPrintBlocked": true,
+  "deletedMemberBlocksBundle": true,
+  "staleBundlePrintBlocked": true,
+  "changedMemberRequiresReview": true,
+  "reviewedPrint": true,
+  "bundleDeleteRestoreViaUi": true,
+  "studiesPreserved": true,
+  "doctorOwnOnlyIncludingArchive": true,
+  "viewerDenied": true,
+  "pageErrors": []
+}

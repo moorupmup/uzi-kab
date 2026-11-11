@@ -1,0 +1,9 @@
+{
+  "httpReadOnlyPreview": true,
+  "referenceOptions": true,
+  "allAggregateTotalsMatch": true,
+  "detailsMatchSummary": true,
+  "typeAndDoctorFilters": true,
+  "filteredDetailsMatch": true,
+  "sourceSha256Unchanged": true
+}

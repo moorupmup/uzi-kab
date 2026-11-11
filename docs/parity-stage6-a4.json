@@ -1,0 +1,37 @@
+{
+  "syntheticNativePrint": true,
+  "pages": 4,
+  "a4PageSize": true,
+  "all24ParagraphsExactlyOnce": true,
+  "noEditorControls": true,
+  "signaturePresent": true,
+  "imageAspectRatioPreserved": true,
+  "imagePage": 4,
+  "pagesTextBounds": [
+    {
+      "page": 1,
+      "width": 594.96,
+      "height": 841.92,
+      "textSpans": 26
+    },
+    {
+      "page": 2,
+      "width": 594.96,
+      "height": 841.92,
+      "textSpans": 23
+    },
+    {
+      "page": 3,
+      "width": 594.96,
+      "height": 841.92,
+      "textSpans": 14
+    },
+    {
+      "page": 4,
+      "width": 594.96,
+      "height": 841.92,
+      "textSpans": 1
+    }
+  ],
+  "physicalPrinterPending": true
+}

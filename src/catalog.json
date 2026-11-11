@@ -5528,6 +5528,13 @@
       "group": "Селезенка"
     },
     {
+      "key": "sel_vena",
+      "label": "Селезёночная вена, мм",
+      "kind": "getSizeInput",
+      "valueType": "string",
+      "group": "Селезенка"
+    },
+    {
       "key": "sel_kon",
       "label": "Контуры",
       "kind": "getSelect",
@@ -5823,6 +5830,13 @@
           "value": "177"
         }
       ],
+      "group": "Правая почка"
+    },
+    {
+      "key": "r_chash_size",
+      "label": "Размер чашечек справа, мм",
+      "kind": "getSizeInput",
+      "valueType": "string",
       "group": "Правая почка"
     },
     {
@@ -12325,6 +12339,13 @@
     {
       "key": "matka_sh",
       "label": "ширина",
+      "kind": "getSizeInput",
+      "valueType": "string",
+      "group": "Культя"
+    },
+    {
+      "key": "matka_ob",
+      "label": "Объём матки, см³",
       "kind": "getSizeInput",
       "valueType": "string",
       "group": "Культя"
@@ -33195,6 +33216,13 @@
           "value": "908"
         }
       ],
+      "group": "Правая почка"
+    },
+    {
+      "key": "r_chash_size",
+      "label": "Размер чашечек справа, мм",
+      "kind": "getSizeInput",
+      "valueType": "string",
       "group": "Правая почка"
     },
     {

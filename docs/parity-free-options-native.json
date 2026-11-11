@@ -1,0 +1,14 @@
+{
+  "nativeSqlite": true,
+  "freeOptionsCreatedViaUi": true,
+  "noOriginalMeaningRequired": true,
+  "freeSelectionsViaUi": true,
+  "directPrint": true,
+  "supplementaryPrint": true,
+  "organCaption": true,
+  "previewEqualsPrint": true,
+  "snapshotAfterDictionaryRename": true,
+  "snapshotAfterEdit": true,
+  "newRecordsUseNewLabels": true,
+  "pageErrors": []
+}

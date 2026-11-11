@@ -1,0 +1,30 @@
+{
+  "mode": "before",
+  "geometry": {
+    "width": 255,
+    "controls": [
+      {
+        "width": 255,
+        "height": 44,
+        "padding": "8.75px"
+      },
+      {
+        "width": 255,
+        "height": 44,
+        "padding": "8.75px"
+      },
+      {
+        "width": 255,
+        "height": 44,
+        "padding": "8.75px"
+      },
+      {
+        "width": 255,
+        "height": 44,
+        "padding": "18px"
+      }
+    ]
+  },
+  "nativeSqlite": true,
+  "pageErrors": []
+}

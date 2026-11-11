@@ -1,0 +1,3476 @@
+{
+  "isBlank": [
+    {
+      "file": "jsp/find_pacient.jsp",
+      "line": 28
+    },
+    {
+      "file": "jsp/search/search_main.jsp",
+      "line": 14
+    }
+  ],
+  "validInput": [
+    {
+      "file": "jsp/find_pacient.jsp",
+      "line": 35
+    }
+  ],
+  "setMainMenuAction": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 16
+    }
+  ],
+  "setAction": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 19
+    },
+    {
+      "file": "jsp/protocol_form/header.jsp",
+      "line": 11
+    },
+    {
+      "file": "jsp/protocol_view/header Николаеву.jsp",
+      "line": 19
+    },
+    {
+      "file": "jsp/protocol_view/header.jsp",
+      "line": 12
+    },
+    {
+      "file": "jsp/protocol_view/header19092010.jsp",
+      "line": 19
+    },
+    {
+      "file": "php/headers_footers.php",
+      "line": 15
+    },
+    {
+      "file": "php/headers_footers.php",
+      "line": 50
+    },
+    {
+      "file": "php/headers_footers.php",
+      "line": 100
+    },
+    {
+      "file": "php/html/registration/pacient_registration.html",
+      "line": 152
+    },
+    {
+      "file": "php/modules/statistic/html/header.html",
+      "line": 11
+    },
+    {
+      "file": "php/research_header.php",
+      "line": 17
+    },
+    {
+      "file": "php/research_user.php",
+      "line": 129
+    }
+  ],
+  "checkDate": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 22
+    },
+    {
+      "file": "jsp/protocol_form/header.jsp",
+      "line": 56
+    }
+  ],
+  "checkDateBirthdate": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 48
+    }
+  ],
+  "keyHook": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 74
+    },
+    {
+      "file": "jsp/protocol_form/header.jsp",
+      "line": 27
+    },
+    {
+      "file": "jsp/protocol_view/header Николаеву.jsp",
+      "line": 43
+    },
+    {
+      "file": "jsp/protocol_view/header.jsp",
+      "line": 48
+    },
+    {
+      "file": "jsp/protocol_view/header19092010.jsp",
+      "line": 43
+    }
+  ],
+  "todayDate": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 81
+    }
+  ],
+  "prepareDate": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 92
+    }
+  ],
+  "prepareDateBirthdate": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 104
+    }
+  ],
+  "fioUpper": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 117
+    },
+    {
+      "file": "php/headers_footers.php",
+      "line": 109
+    }
+  ],
+  "birthdayCheck": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 140
+    }
+  ],
+  "fioCheck": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 149
+    },
+    {
+      "file": "php/headers_footers.php",
+      "line": 150
+    }
+  ],
+  "validInputSearchFio": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 161
+    }
+  ],
+  "fn": [
+    {
+      "file": "jsp/header.jsp",
+      "line": 178
+    },
+    {
+      "file": "jsp/protocol_form/header.jsp",
+      "line": 39
+    }
+  ],
+  "DeleteConfirm": [
+    {
+      "file": "jsp/not_saved_research.jsp",
+      "line": 37
+    },
+    {
+      "file": "jsp/protocol_view/footer.jsp",
+      "line": 34
+    },
+    {
+      "file": "jsp/protocol_view/footer19092010.jsp",
+      "line": 34
+    },
+    {
+      "file": "jsp/protocol_view/protocol.jsp",
+      "line": 100
+    },
+    {
+      "file": "jsp/protocol_view/protocol19092010.jsp",
+      "line": 68
+    },
+    {
+      "file": "jsp/search/results_fio_search.jsp",
+      "line": 37
+    },
+    {
+      "file": "jsp/search/results_protocol_search.jsp",
+      "line": 73
+    }
+  ],
+  "checkResearch": [
+    {
+      "file": "jsp/prepare_protocol.jsp",
+      "line": 34
+    }
+  ],
+  "prepareOpenWindow": [
+    {
+      "file": "jsp/prepare_protocol.jsp",
+      "line": 46
+    }
+  ],
+  "openWindow": [
+    {
+      "file": "jsp/prepare_protocol.jsp",
+      "line": 54
+    },
+    {
+      "file": "php/registration.php",
+      "line": 337
+    }
+  ],
+  "point": [
+    {
+      "file": "jsp/protocol_form/berem14_1.jsp",
+      "line": 16
+    },
+    {
+      "file": "jsp/protocol_form/first_1.jsp",
+      "line": 14
+    },
+    {
+      "file": "jsp/protocol_form/first_2.jsp",
+      "line": 14
+    },
+    {
+      "file": "jsp/protocol_form/first_3.jsp",
+      "line": 14
+    },
+    {
+      "file": "jsp/protocol_form/first_4.jsp",
+      "line": 14
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_2.jsp",
+      "line": 14
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_3.jsp",
+      "line": 14
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_4.jsp",
+      "line": 14
+    },
+    {
+      "file": "jsp/protocol_form/moloch_2.jsp",
+      "line": 12
+    },
+    {
+      "file": "jsp/protocol_form/punc_molgrud_1.jsp",
+      "line": 12
+    },
+    {
+      "file": "jsp/protocol_form/second_1.jsp",
+      "line": 13
+    },
+    {
+      "file": "jsp/protocol_form/second_2.jsp",
+      "line": 13
+    },
+    {
+      "file": "jsp/protocol_form/second_3.jsp",
+      "line": 13
+    },
+    {
+      "file": "jsp/protocol_form/second_4.jsp",
+      "line": 13
+    },
+    {
+      "file": "jsp/protocol_form/third_1.jsp",
+      "line": 13
+    },
+    {
+      "file": "jsp/protocol_form/third_2.jsp",
+      "line": 13
+    },
+    {
+      "file": "jsp/protocol_form/third_3.jsp",
+      "line": 13
+    },
+    {
+      "file": "jsp/protocol_form/third_4.jsp",
+      "line": 13
+    },
+    {
+      "file": "jsp/protocol_form/third_5.jsp",
+      "line": 18
+    }
+  ],
+  "changeHidden2": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 97
+    },
+    {
+      "file": "jsp/protocol_form/poz_sheja_1.jsp",
+      "line": 166
+    }
+  ],
+  "changeHidden3": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 146
+    },
+    {
+      "file": "jsp/protocol_form/punc_chitgel_1.jsp",
+      "line": 142
+    },
+    {
+      "file": "jsp/protocol_form/schit_3.jsp",
+      "line": 138
+    },
+    {
+      "file": "jsp/protocol_form/schit_4.jsp",
+      "line": 142
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 142
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 142
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 142
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 142
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_1.jsp",
+      "line": 141
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 141
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 141
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 141
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 141
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 141
+    }
+  ],
+  "changeHidden1": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 160
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_1.jsp",
+      "line": 125
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 127
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_5.jsp",
+      "line": 125
+    },
+    {
+      "file": "jsp/protocol_form/pos_pojas_1.jsp",
+      "line": 56
+    },
+    {
+      "file": "jsp/protocol_form/poz_sheja_1.jsp",
+      "line": 48
+    },
+    {
+      "file": "jsp/protocol_form/punc_chitgel_1.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/schit_3.jsp",
+      "line": 104
+    },
+    {
+      "file": "jsp/protocol_form/schit_4.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_1.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 107
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 107
+    }
+  ],
+  "changeHidden4": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 229
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_1.jsp",
+      "line": 162
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 164
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_5.jsp",
+      "line": 162
+    },
+    {
+      "file": "jsp/protocol_form/koleno_1.jsp",
+      "line": 41
+    },
+    {
+      "file": "jsp/protocol_form/punc_chitgel_1.jsp",
+      "line": 175
+    },
+    {
+      "file": "jsp/protocol_form/schit_3.jsp",
+      "line": 170
+    },
+    {
+      "file": "jsp/protocol_form/schit_4.jsp",
+      "line": 175
+    },
+    {
+      "file": "jsp/protocol_form/shit_1.jsp",
+      "line": 91
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 175
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 175
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 175
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 175
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_1.jsp",
+      "line": 174
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 174
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 174
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 174
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 174
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 174
+    }
+  ],
+  "changeHidden6": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 290
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_1.jsp",
+      "line": 181
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 183
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_5.jsp",
+      "line": 181
+    }
+  ],
+  "changeHidden14": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 346
+    }
+  ],
+  "changeHidden9": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 404
+    },
+    {
+      "file": "jsp/protocol_form/pochki_1.jsp",
+      "line": 52
+    }
+  ],
+  "changeHidden12": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 465
+    },
+    {
+      "file": "jsp/protocol_form/koleno_1.jsp",
+      "line": 160
+    },
+    {
+      "file": "jsp/protocol_form/pochki_1.jsp",
+      "line": 116
+    }
+  ],
+  "ObemJP": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 490
+    }
+  ],
+  "ObemSel": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 506
+    }
+  ],
+  "StrToFloat": [
+    {
+      "file": "jsp/protocol_form/brooho_1.jsp",
+      "line": 522
+    },
+    {
+      "file": "jsp/protocol_form/eho_kg_1.jsp",
+      "line": 160
+    },
+    {
+      "file": "jsp/protocol_form/eho_kg_2.jsp",
+      "line": 160
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_1.jsp",
+      "line": 349
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 391
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_5.jsp",
+      "line": 349
+    },
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 592
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 592
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 633
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 572
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 556
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 556
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 565
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 577
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 591
+    },
+    {
+      "file": "jsp/protocol_form/shit_1.jsp",
+      "line": 163
+    }
+  ],
+  "changeHidden60": [
+    {
+      "file": "jsp/protocol_form/brooho_2.jsp",
+      "line": 554
+    },
+    {
+      "file": "jsp/protocol_form/brooho_3.jsp",
+      "line": 560
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_1.jsp",
+      "line": 115
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_2.jsp",
+      "line": 115
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 607
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 607
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 609
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 687
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 687
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 687
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 687
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 691
+    }
+  ],
+  "changeHidden61": [
+    {
+      "file": "jsp/protocol_form/brooho_2.jsp",
+      "line": 848
+    },
+    {
+      "file": "jsp/protocol_form/brooho_3.jsp",
+      "line": 875
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_1.jsp",
+      "line": 231
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_2.jsp",
+      "line": 231
+    }
+  ],
+  "changeHidden100": [
+    {
+      "file": "jsp/protocol_form/brooho_3.jsp",
+      "line": 576
+    },
+    {
+      "file": "jsp/protocol_form/pochki_3.jsp",
+      "line": 297
+    },
+    {
+      "file": "jsp/protocol_form/punc_lechpoch_1.jsp",
+      "line": 297
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_1.jsp",
+      "line": 284
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 284
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 284
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 284
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 289
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 293
+    }
+  ],
+  "changeHidden101": [
+    {
+      "file": "jsp/protocol_form/brooho_3.jsp",
+      "line": 889
+    },
+    {
+      "file": "jsp/protocol_form/pochki_3.jsp",
+      "line": 600
+    },
+    {
+      "file": "jsp/protocol_form/punc_lechpoch_1.jsp",
+      "line": 600
+    }
+  ],
+  "F_kdo": [
+    {
+      "file": "jsp/protocol_form/eho_kg_1.jsp",
+      "line": 87
+    },
+    {
+      "file": "jsp/protocol_form/eho_kg_2.jsp",
+      "line": 87
+    }
+  ],
+  "F_kso": [
+    {
+      "file": "jsp/protocol_form/eho_kg_1.jsp",
+      "line": 101
+    },
+    {
+      "file": "jsp/protocol_form/eho_kg_2.jsp",
+      "line": 101
+    }
+  ],
+  "F_fv": [
+    {
+      "file": "jsp/protocol_form/eho_kg_1.jsp",
+      "line": 114
+    },
+    {
+      "file": "jsp/protocol_form/eho_kg_2.jsp",
+      "line": 114
+    }
+  ],
+  "F_fy": [
+    {
+      "file": "jsp/protocol_form/eho_kg_1.jsp",
+      "line": 132
+    },
+    {
+      "file": "jsp/protocol_form/eho_kg_2.jsp",
+      "line": 132
+    }
+  ],
+  "F_massa": [
+    {
+      "file": "jsp/protocol_form/eho_kg_1.jsp",
+      "line": 145
+    },
+    {
+      "file": "jsp/protocol_form/eho_kg_2.jsp",
+      "line": 145
+    }
+  ],
+  "check_decision": [
+    {
+      "file": "jsp/protocol_form/footer.jsp",
+      "line": 19
+    }
+  ],
+  "changeHidden8": [
+    {
+      "file": "jsp/protocol_form/ginekol_1.jsp",
+      "line": 234
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 236
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_5.jsp",
+      "line": 234
+    }
+  ],
+  "changeHidden10": [
+    {
+      "file": "jsp/protocol_form/ginekol_1.jsp",
+      "line": 291
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 293
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_5.jsp",
+      "line": 291
+    }
+  ],
+  "ObemR": [
+    {
+      "file": "jsp/protocol_form/ginekol_1.jsp",
+      "line": 317
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 341
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_5.jsp",
+      "line": 317
+    }
+  ],
+  "ObemL": [
+    {
+      "file": "jsp/protocol_form/ginekol_1.jsp",
+      "line": 333
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 357
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_5.jsp",
+      "line": 333
+    }
+  ],
+  "ObemM": [
+    {
+      "file": "jsp/protocol_form/ginekol_11.jsp",
+      "line": 373
+    }
+  ],
+  "executeRange1": [
+    {
+      "file": "jsp/protocol_form/ginekol_3.jsp",
+      "line": 238
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_3.jsp",
+      "line": 340
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_4.jsp",
+      "line": 238
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_4.jsp",
+      "line": 340
+    },
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 348
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1071
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1178
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1073
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1180
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1079
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1186
+    }
+  ],
+  "cut": [
+    {
+      "file": "jsp/protocol_form/ginekol_3.jsp",
+      "line": 251
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_3.jsp",
+      "line": 353
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_4.jsp",
+      "line": 251
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_4.jsp",
+      "line": 353
+    },
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 377
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_1.jsp",
+      "line": 564
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_2.jsp",
+      "line": 564
+    },
+    {
+      "file": "jsp/protocol_form/punc_chitgel_1.jsp",
+      "line": 250
+    },
+    {
+      "file": "jsp/protocol_form/punc_predstat_1.jsp",
+      "line": 250
+    },
+    {
+      "file": "jsp/protocol_form/schit_1.jsp",
+      "line": 108
+    },
+    {
+      "file": "jsp/protocol_form/schit_2.jsp",
+      "line": 108
+    },
+    {
+      "file": "jsp/protocol_form/schit_3.jsp",
+      "line": 244
+    },
+    {
+      "file": "jsp/protocol_form/schit_4.jsp",
+      "line": 250
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 733
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 979
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 981
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 988
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_1.jsp",
+      "line": 611
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 860
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 1064
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1084
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1191
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1309
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1086
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1193
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1311
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1092
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1199
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1319
+    }
+  ],
+  "notFloat": [
+    {
+      "file": "jsp/protocol_form/ginekol_3.jsp",
+      "line": 261
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_3.jsp",
+      "line": 363
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_4.jsp",
+      "line": 261
+    },
+    {
+      "file": "jsp/protocol_form/ginekol_4.jsp",
+      "line": 363
+    },
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 387
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_1.jsp",
+      "line": 574
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_2.jsp",
+      "line": 574
+    },
+    {
+      "file": "jsp/protocol_form/punc_chitgel_1.jsp",
+      "line": 260
+    },
+    {
+      "file": "jsp/protocol_form/punc_predstat_1.jsp",
+      "line": 260
+    },
+    {
+      "file": "jsp/protocol_form/schit_1.jsp",
+      "line": 118
+    },
+    {
+      "file": "jsp/protocol_form/schit_2.jsp",
+      "line": 118
+    },
+    {
+      "file": "jsp/protocol_form/schit_3.jsp",
+      "line": 254
+    },
+    {
+      "file": "jsp/protocol_form/schit_4.jsp",
+      "line": 260
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 743
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 989
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 991
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 998
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_1.jsp",
+      "line": 621
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 870
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 1074
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1094
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1201
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1319
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1096
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1203
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1321
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1102
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1209
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1329
+    }
+  ],
+  "clickHandler": [
+    {
+      "file": "jsp/protocol_form/header.jsp",
+      "line": 14
+    }
+  ],
+  "resizeArea": [
+    {
+      "file": "jsp/protocol_form/header.jsp",
+      "line": 81
+    }
+  ],
+  "tab": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 410
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 410
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 450
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 389
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 373
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 373
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 382
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 393
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 404
+    }
+  ],
+  "ExecutChss": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 413
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 413
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 453
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 392
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 376
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 376
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 385
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 396
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 407
+    }
+  ],
+  "ExecutKdo": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 430
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 430
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 470
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 409
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 393
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 393
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 402
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 413
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 424
+    }
+  ],
+  "ExecutKco": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 444
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 444
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 484
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 423
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 407
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 407
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 416
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 428
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 439
+    }
+  ],
+  "Exect": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 457
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 457
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 497
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 436
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 420
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 420
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 429
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 441
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 452
+    }
+  ],
+  "NullKcr": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 468
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 468
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 508
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 447
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 431
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 431
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 440
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 452
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 463
+    }
+  ],
+  "NullKdr": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 476
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 476
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 516
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 455
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 439
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 439
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 448
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 460
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 471
+    }
+  ],
+  "frakciy": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 484
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 484
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 524
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 463
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 447
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 447
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 456
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 468
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 479
+    }
+  ],
+  "frakciy_ykor": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 491
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 491
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 531
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 470
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 454
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 454
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 463
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 475
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 486
+    }
+  ],
+  "ExecutMpj": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 498
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 498
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 538
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 477
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 461
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 461
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 470
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 482
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 493
+    }
+  ],
+  "ExecutZs": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 505
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 505
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 545
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 484
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 468
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 468
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 477
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 489
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 500
+    }
+  ],
+  "massa": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 513
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 513
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 553
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 492
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 476
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 476
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 485
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 497
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 508
+    }
+  ],
+  "ExecutSsap": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 523
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 523
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 564
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 503
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 487
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 487
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 496
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 508
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 519
+    }
+  ],
+  "ExecutSspp": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 539
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 539
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 580
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 519
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 503
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 503
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 512
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 524
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 535
+    }
+  ],
+  "ExecutSdmp": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 556
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 556
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 597
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 536
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 520
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 520
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 529
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 541
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 552
+    }
+  ],
+  "ExecutSshp": [
+    {
+      "file": "jsp/protocol_form/kardio_1.jsp",
+      "line": 576
+    },
+    {
+      "file": "jsp/protocol_form/kardio_2.jsp",
+      "line": 576
+    },
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 617
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 556
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 540
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 540
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 549
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 561
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 574
+    }
+  ],
+  "F_index": [
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 416
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 355
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 339
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 339
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 348
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 359
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 370
+    }
+  ],
+  "F_ploshad": [
+    {
+      "file": "jsp/protocol_form/kardio_3.jsp",
+      "line": 433
+    },
+    {
+      "file": "jsp/protocol_form/kardio_4.jsp",
+      "line": 372
+    },
+    {
+      "file": "jsp/protocol_form/kardio_5.jsp",
+      "line": 356
+    },
+    {
+      "file": "jsp/protocol_form/kardio_6.jsp",
+      "line": 356
+    },
+    {
+      "file": "jsp/protocol_form/kardio_7.jsp",
+      "line": 365
+    },
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 376
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 387
+    }
+  ],
+  "F_ots_lj": [
+    {
+      "file": "jsp/protocol_form/kardio_8.jsp",
+      "line": 589
+    },
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 603
+    }
+  ],
+  "F_dav_lp": [
+    {
+      "file": "jsp/protocol_form/kardio_9.jsp",
+      "line": 614
+    }
+  ],
+  "changeRmenisk": [
+    {
+      "file": "jsp/protocol_form/koleno2_1.jsp",
+      "line": 94
+    },
+    {
+      "file": "jsp/protocol_form/koleno2_2.jsp",
+      "line": 94
+    },
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 130
+    }
+  ],
+  "changeLmenisk": [
+    {
+      "file": "jsp/protocol_form/koleno2_1.jsp",
+      "line": 201
+    },
+    {
+      "file": "jsp/protocol_form/koleno2_2.jsp",
+      "line": 201
+    },
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 295
+    }
+  ],
+  "change21": [
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 29
+    }
+  ],
+  "change23": [
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 160
+    }
+  ],
+  "change22": [
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 194
+    }
+  ],
+  "change24": [
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 325
+    }
+  ],
+  "executeRange2": [
+    {
+      "file": "jsp/protocol_form/koleno2_3.jsp",
+      "line": 362
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 748
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 994
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 996
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 1003
+    }
+  ],
+  "changeHidden200": [
+    {
+      "file": "jsp/protocol_form/mazctchis_2.jsp",
+      "line": 155
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 682
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 928
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 930
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 937
+    }
+  ],
+  "changeHidden62": [
+    {
+      "file": "jsp/protocol_form/mochepol_1.jsp",
+      "line": 314
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_2.jsp",
+      "line": 314
+    }
+  ],
+  "changeHidden63": [
+    {
+      "file": "jsp/protocol_form/mochepol_1.jsp",
+      "line": 479
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_2.jsp",
+      "line": 479
+    },
+    {
+      "file": "jsp/protocol_form/punc_predstat_1.jsp",
+      "line": 165
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 667
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 913
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 915
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 922
+    }
+  ],
+  "executeRange": [
+    {
+      "file": "jsp/protocol_form/mochepol_1.jsp",
+      "line": 551
+    },
+    {
+      "file": "jsp/protocol_form/mochepol_2.jsp",
+      "line": 551
+    },
+    {
+      "file": "jsp/protocol_form/punc_chitgel_1.jsp",
+      "line": 229
+    },
+    {
+      "file": "jsp/protocol_form/punc_predstat_1.jsp",
+      "line": 237
+    },
+    {
+      "file": "jsp/protocol_form/schit_1.jsp",
+      "line": 87
+    },
+    {
+      "file": "jsp/protocol_form/schit_2.jsp",
+      "line": 87
+    },
+    {
+      "file": "jsp/protocol_form/schit_3.jsp",
+      "line": 223
+    },
+    {
+      "file": "jsp/protocol_form/schit_4.jsp",
+      "line": 229
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 712
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 958
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 960
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 967
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_1.jsp",
+      "line": 590
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 839
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 1043
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 1288
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 1290
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 1298
+    }
+  ],
+  "viewPacientProtocols": [
+    {
+      "file": "jsp/protocol_form/passport_1.jsp",
+      "line": 49
+    }
+  ],
+  "changeHidden5": [
+    {
+      "file": "jsp/protocol_form/punc_chitgel_1.jsp",
+      "line": 208
+    },
+    {
+      "file": "jsp/protocol_form/schit_3.jsp",
+      "line": 202
+    },
+    {
+      "file": "jsp/protocol_form/schit_4.jsp",
+      "line": 208
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_1.jsp",
+      "line": 208
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 208
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 208
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 208
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_1.jsp",
+      "line": 207
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 207
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 207
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 207
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 207
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 207
+    }
+  ],
+  "changeHidden33": [
+    {
+      "file": "jsp/protocol_form/second_2.jsp",
+      "line": 539
+    },
+    {
+      "file": "jsp/protocol_form/second_3.jsp",
+      "line": 539
+    },
+    {
+      "file": "jsp/protocol_form/second_4.jsp",
+      "line": 715
+    },
+    {
+      "file": "jsp/protocol_form/third_2.jsp",
+      "line": 539
+    },
+    {
+      "file": "jsp/protocol_form/third_3.jsp",
+      "line": 539
+    },
+    {
+      "file": "jsp/protocol_form/third_4.jsp",
+      "line": 539
+    },
+    {
+      "file": "jsp/protocol_form/third_5.jsp",
+      "line": 719
+    }
+  ],
+  "changeHidden36": [
+    {
+      "file": "jsp/protocol_form/second_4.jsp",
+      "line": 606
+    },
+    {
+      "file": "jsp/protocol_form/third_5.jsp",
+      "line": 610
+    }
+  ],
+  "ExecutRv1": [
+    {
+      "file": "jsp/protocol_form/shit_1.jsp",
+      "line": 125
+    }
+  ],
+  "ExecutLv2": [
+    {
+      "file": "jsp/protocol_form/shit_1.jsp",
+      "line": 141
+    }
+  ],
+  "ExecutSum": [
+    {
+      "file": "jsp/protocol_form/shit_1.jsp",
+      "line": 155
+    }
+  ],
+  "changeHidden160": [
+    {
+      "file": "jsp/protocol_form/skrin_m_2.jsp",
+      "line": 731
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_3.jsp",
+      "line": 731
+    },
+    {
+      "file": "jsp/protocol_form/skrin_m_4.jsp",
+      "line": 733
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_2.jsp",
+      "line": 811
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_3.jsp",
+      "line": 811
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_4.jsp",
+      "line": 811
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_5.jsp",
+      "line": 811
+    },
+    {
+      "file": "jsp/protocol_form/skrin_w_6.jsp",
+      "line": 815
+    }
+  ],
+  "preparePrint": [
+    {
+      "file": "jsp/protocol_view/footer.jsp",
+      "line": 39
+    },
+    {
+      "file": "jsp/protocol_view/footer19092010.jsp",
+      "line": 39
+    },
+    {
+      "file": "jsp/protocol_view/protocol.jsp",
+      "line": 105
+    },
+    {
+      "file": "jsp/protocol_view/protocol19092010.jsp",
+      "line": 73
+    }
+  ],
+  "printProtocol": [
+    {
+      "file": "jsp/protocol_view/footer.jsp",
+      "line": 43
+    },
+    {
+      "file": "jsp/protocol_view/footer19092010.jsp",
+      "line": 43
+    },
+    {
+      "file": "jsp/protocol_view/protocol.jsp",
+      "line": 124
+    },
+    {
+      "file": "jsp/protocol_view/protocol19092010.jsp",
+      "line": 77
+    }
+  ],
+  "close_protocol": [
+    {
+      "file": "jsp/protocol_view/footer.jsp",
+      "line": 47
+    },
+    {
+      "file": "jsp/protocol_view/footer19092010.jsp",
+      "line": 47
+    },
+    {
+      "file": "jsp/protocol_view/protocol.jsp",
+      "line": 128
+    },
+    {
+      "file": "jsp/protocol_view/protocol19092010.jsp",
+      "line": 81
+    }
+  ],
+  "hideElements": [
+    {
+      "file": "jsp/protocol_view/header Николаеву.jsp",
+      "line": 22
+    },
+    {
+      "file": "jsp/protocol_view/header.jsp",
+      "line": 15
+    },
+    {
+      "file": "jsp/protocol_view/header19092010.jsp",
+      "line": 22
+    }
+  ],
+  "showElements": [
+    {
+      "file": "jsp/protocol_view/header Николаеву.jsp",
+      "line": 33
+    },
+    {
+      "file": "jsp/protocol_view/header.jsp",
+      "line": 26
+    },
+    {
+      "file": "jsp/protocol_view/header19092010.jsp",
+      "line": 33
+    }
+  ],
+  "changeView": [
+    {
+      "file": "jsp/protocol_view/header.jsp",
+      "line": 36
+    }
+  ],
+  "hiddenFieldView": [
+    {
+      "file": "jsp/protocol_view/protocol.jsp",
+      "line": 131
+    }
+  ],
+  "hiddenField": [
+    {
+      "file": "jsp/protocol_view/protocol19092010.jsp",
+      "line": 84
+    }
+  ],
+  "create_protocol_id_lst": [
+    {
+      "file": "jsp/search/results_protocol_search.jsp",
+      "line": 79
+    }
+  ],
+  "isDigit": [
+    {
+      "file": "jsp/search/search_main.jsp",
+      "line": 20
+    }
+  ],
+  "isInteger": [
+    {
+      "file": "jsp/search/search_main.jsp",
+      "line": 27
+    }
+  ],
+  "inspection": [
+    {
+      "file": "jsp/search/search_main.jsp",
+      "line": 33
+    }
+  ],
+  "submitKey": [
+    {
+      "file": "jsp/select_research.jsp",
+      "line": 29
+    },
+    {
+      "file": "php/html/tools/select_research.html",
+      "line": 27
+    }
+  ],
+  "show_main_administration": [
+    {
+      "file": "php/administration.php",
+      "line": 3
+    }
+  ],
+  "show_edit_groups": [
+    {
+      "file": "php/administration.php",
+      "line": 11
+    }
+  ],
+  "show_add_groups": [
+    {
+      "file": "php/administration.php",
+      "line": 46
+    }
+  ],
+  "do_add_group": [
+    {
+      "file": "php/administration.php",
+      "line": 60
+    }
+  ],
+  "delete_group": [
+    {
+      "file": "php/administration.php",
+      "line": 68
+    }
+  ],
+  "show_edit_group_name": [
+    {
+      "file": "php/administration.php",
+      "line": 76
+    }
+  ],
+  "save_edit_group": [
+    {
+      "file": "php/administration.php",
+      "line": 93
+    }
+  ],
+  "show_edit_users": [
+    {
+      "file": "php/administration.php",
+      "line": 102
+    }
+  ],
+  "show_add_users": [
+    {
+      "file": "php/administration.php",
+      "line": 130
+    }
+  ],
+  "do_add_user": [
+    {
+      "file": "php/administration.php",
+      "line": 156
+    }
+  ],
+  "delete_user": [
+    {
+      "file": "php/administration.php",
+      "line": 165
+    }
+  ],
+  "show_edit_user_name": [
+    {
+      "file": "php/administration.php",
+      "line": 172
+    }
+  ],
+  "save_edit_user": [
+    {
+      "file": "php/administration.php",
+      "line": 201
+    }
+  ],
+  "show_edit_permits": [
+    {
+      "file": "php/administration.php",
+      "line": 210
+    }
+  ],
+  "save_edit_permits": [
+    {
+      "file": "php/administration.php",
+      "line": 252
+    }
+  ],
+  "window_opener_reload": [
+    {
+      "file": "php/administration.php",
+      "line": 265
+    }
+  ],
+  "show_edit_lpu": [
+    {
+      "file": "php/administration.php",
+      "line": 279
+    }
+  ],
+  "add_lpu": [
+    {
+      "file": "php/administration.php",
+      "line": 353
+    }
+  ],
+  "add_lpu_doctor": [
+    {
+      "file": "php/administration.php",
+      "line": 360
+    }
+  ],
+  "delete_lpu_doctor": [
+    {
+      "file": "php/administration.php",
+      "line": 367
+    }
+  ],
+  "delete_lpu": [
+    {
+      "file": "php/administration.php",
+      "line": 374
+    }
+  ],
+  "save_edit_lpu": [
+    {
+      "file": "php/administration.php",
+      "line": 382
+    }
+  ],
+  "save_edit_lpu_doctor": [
+    {
+      "file": "php/administration.php",
+      "line": 389
+    }
+  ],
+  "show_edit_cabinets": [
+    {
+      "file": "php/administration.php",
+      "line": 396
+    }
+  ],
+  "show_add_cabinets": [
+    {
+      "file": "php/administration.php",
+      "line": 424
+    }
+  ],
+  "do_add_cabinet": [
+    {
+      "file": "php/administration.php",
+      "line": 437
+    }
+  ],
+  "delete_cabinet": [
+    {
+      "file": "php/administration.php",
+      "line": 445
+    }
+  ],
+  "show_prepare_edit_decision": [
+    {
+      "file": "php/books.php",
+      "line": 4
+    }
+  ],
+  "setLevelId": [
+    {
+      "file": "php/books.php",
+      "line": 82
+    },
+    {
+      "file": "reference.js",
+      "line": 287
+    }
+  ],
+  "show_add_decision": [
+    {
+      "file": "php/books.php",
+      "line": 92
+    }
+  ],
+  "do_add_decision": [
+    {
+      "file": "php/books.php",
+      "line": 114
+    }
+  ],
+  "show_edit_decision": [
+    {
+      "file": "php/books.php",
+      "line": 132
+    }
+  ],
+  "do_save_edit_decision": [
+    {
+      "file": "php/books.php",
+      "line": 157
+    }
+  ],
+  "delete_research_decision": [
+    {
+      "file": "php/books.php",
+      "line": 171
+    }
+  ],
+  "prepare_book_users": [
+    {
+      "file": "php/books.php",
+      "line": 177
+    }
+  ],
+  "set_position": [
+    {
+      "file": "php/books.php",
+      "line": 278
+    }
+  ],
+  "put_administration_header": [
+    {
+      "file": "php/headers_footers.php",
+      "line": 3
+    }
+  ],
+  "put_research_header": [
+    {
+      "file": "php/headers_footers.php",
+      "line": 37
+    },
+    {
+      "file": "php/research_header.php",
+      "line": 2
+    }
+  ],
+  "new_interface_footer": [
+    {
+      "file": "php/headers_footers.php",
+      "line": 69
+    }
+  ],
+  "put_footer": [
+    {
+      "file": "php/headers_footers.php",
+      "line": 79
+    },
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 16
+    }
+  ],
+  "put_header": [
+    {
+      "file": "php/headers_footers.php",
+      "line": 88
+    },
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 4
+    }
+  ],
+  "setNextAction": [
+    {
+      "file": "php/headers_footers.php",
+      "line": 104
+    },
+    {
+      "file": "php/modules/statistic/html/header.html",
+      "line": 15
+    }
+  ],
+  "checkDateBirthday": [
+    {
+      "file": "php/headers_footers.php",
+      "line": 132
+    }
+  ],
+  "addressCheck": [
+    {
+      "file": "php/headers_footers.php",
+      "line": 160
+    }
+  ],
+  "deleteCabinet": [
+    {
+      "file": "php/html/administration/show_cabinets.html",
+      "line": 18
+    }
+  ],
+  "deleteGroups": [
+    {
+      "file": "php/html/administration/show_groups_users.html",
+      "line": 12
+    }
+  ],
+  "deleteUsers": [
+    {
+      "file": "php/html/administration/show_lpu.html",
+      "line": 41
+    },
+    {
+      "file": "php/html/administration/show_users.html",
+      "line": 20
+    }
+  ],
+  "addDoctor": [
+    {
+      "file": "php/html/administration/show_lpu.html",
+      "line": 47
+    }
+  ],
+  "deleteDoctor": [
+    {
+      "file": "php/html/administration/show_lpu.html",
+      "line": 56
+    }
+  ],
+  "deleteLpu": [
+    {
+      "file": "php/html/administration/show_lpu.html",
+      "line": 62
+    }
+  ],
+  "edit": [
+    {
+      "file": "php/html/administration/show_lpu.html",
+      "line": 68
+    }
+  ],
+  "addLpu": [
+    {
+      "file": "php/html/administration/show_lpu.html",
+      "line": 75
+    }
+  ],
+  "set": [
+    {
+      "file": "php/html/research/edit_book.html",
+      "line": 47
+    },
+    {
+      "file": "php/html/research_user/edit_book_user.html",
+      "line": 47
+    }
+  ],
+  "selectAll": [
+    {
+      "file": "php/html/statistic/prepare_napr_lpu.html",
+      "line": 39
+    },
+    {
+      "file": "php/html/statistic/prepare_vyrabotka.html",
+      "line": 39
+    },
+    {
+      "file": "php/modules/statistic/html/prepare_napr_lpu.html",
+      "line": 40
+    },
+    {
+      "file": "php/modules/statistic/html/prepare_reg_records.html",
+      "line": 37
+    },
+    {
+      "file": "php/modules/statistic/html/prepare_research_decision.html",
+      "line": 43
+    },
+    {
+      "file": "php/modules/statistic/html/prepare_vyrabotka.html",
+      "line": 40
+    },
+    {
+      "file": "php/modules/statistic/html/show_prepare_statistic.html",
+      "line": 35
+    }
+  ],
+  "lpuFun": [
+    {
+      "file": "php/html/statistic/prepare_napr_lpu.html",
+      "line": 44
+    },
+    {
+      "file": "php/modules/statistic/html/prepare_napr_lpu.html",
+      "line": 45
+    }
+  ],
+  "openReport": [
+    {
+      "file": "php/html/statistic/prepare_research_decision.html",
+      "line": 19
+    }
+  ],
+  "doctorFun": [
+    {
+      "file": "php/html/statistic/prepare_vyrabotka.html",
+      "line": 44
+    },
+    {
+      "file": "php/modules/statistic/html/prepare_reg_records.html",
+      "line": 42
+    },
+    {
+      "file": "php/modules/statistic/html/prepare_vyrabotka.html",
+      "line": 45
+    }
+  ],
+  "confirmDelete": [
+    {
+      "file": "php/html/tools/show_pacient_list.html",
+      "line": 44
+    }
+  ],
+  "doAction": [
+    {
+      "file": "php/html/tools/show_pacient_list.html",
+      "line": 49
+    }
+  ],
+  "show_main_karta": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 3
+    }
+  ],
+  "show_result_search_pacient": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 21
+    }
+  ],
+  "show_user_card": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 59
+    }
+  ],
+  "show_user_zakl_list": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 100
+    }
+  ],
+  "show_user_priviv_list": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 162
+    }
+  ],
+  "show_user_control_posesch": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 266
+    }
+  ],
+  "do_add_control": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 368
+    }
+  ],
+  "do_save_edit_control": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 382
+    }
+  ],
+  "delete_control_pos": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 395
+    }
+  ],
+  "show_user_stac_list": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 401
+    }
+  ],
+  "show_user_invaz_list": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 494
+    }
+  ],
+  "show_user_disp_list": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 598
+    }
+  ],
+  "show_user_rentgen_list": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 708
+    }
+  ],
+  "show_user_issled_list": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 789
+    }
+  ],
+  "show_user_first_request": [
+    {
+      "file": "php/karta_pacient.php",
+      "line": 833
+    }
+  ],
+  "show_main_menu": [
+    {
+      "file": "php/menu.php",
+      "line": 3
+    }
+  ],
+  "selectProv": [
+    {
+      "file": "php/modules/statistic/html/prepare_research_decision.html",
+      "line": 37
+    },
+    {
+      "file": "php/modules/statistic/html/show_prepare_statistic.html",
+      "line": 29
+    }
+  ],
+  "deselectAll": [
+    {
+      "file": "php/modules/statistic/html/prepare_research_decision.html",
+      "line": 50
+    },
+    {
+      "file": "php/modules/statistic/html/show_prepare_statistic.html",
+      "line": 42
+    }
+  ],
+  "main_statistic": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 24
+    },
+    {
+      "file": "php/statistic.php",
+      "line": 3
+    }
+  ],
+  "prepare_vyrabotka": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 33
+    },
+    {
+      "file": "php/statistic.php",
+      "line": 11
+    }
+  ],
+  "view_vyrabotka": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 55
+    },
+    {
+      "file": "php/statistic.php",
+      "line": 33
+    }
+  ],
+  "prepare_research_decision": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 127
+    },
+    {
+      "file": "php/statistic.php",
+      "line": 106
+    }
+  ],
+  "view_research": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 158
+    },
+    {
+      "file": "php/statistic.php",
+      "line": 128
+    }
+  ],
+  "view_decision": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 233
+    },
+    {
+      "file": "php/statistic.php",
+      "line": 172
+    }
+  ],
+  "prepare_napr_lpu": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 333
+    },
+    {
+      "file": "php/statistic.php",
+      "line": 217
+    }
+  ],
+  "view_napr_lpu": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 355
+    },
+    {
+      "file": "php/statistic.php",
+      "line": 239
+    }
+  ],
+  "prepare_z_report": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 409
+    }
+  ],
+  "show_zett_otchet": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 446
+    }
+  ],
+  "prepare_reg_records": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 865
+    }
+  ],
+  "view_reg_records": [
+    {
+      "file": "php/modules/statistic/statistic.php",
+      "line": 887
+    }
+  ],
+  "insert_research": [
+    {
+      "file": "php/r_research_book.php",
+      "line": 60
+    }
+  ],
+  "show_main_registration": [
+    {
+      "file": "php/registration.php",
+      "line": 4
+    }
+  ],
+  "show_prepare_registration": [
+    {
+      "file": "php/registration.php",
+      "line": 162
+    }
+  ],
+  "registr": [
+    {
+      "file": "php/registration.php",
+      "line": 332
+    }
+  ],
+  "get_price": [
+    {
+      "file": "php/registration.php",
+      "line": 348
+    }
+  ],
+  "search_pacient": [
+    {
+      "file": "php/registration.php",
+      "line": 418
+    }
+  ],
+  "show_pacient_list": [
+    {
+      "file": "php/registration.php",
+      "line": 443
+    }
+  ],
+  "show_add_pacient": [
+    {
+      "file": "php/registration.php",
+      "line": 537
+    }
+  ],
+  "save_registration": [
+    {
+      "file": "php/registration.php",
+      "line": 641
+    }
+  ],
+  "show_prepare_replace": [
+    {
+      "file": "php/registration.php",
+      "line": 714
+    }
+  ],
+  "delete_record": [
+    {
+      "file": "php/registration.php",
+      "line": 792
+    }
+  ],
+  "do_add_pacient": [
+    {
+      "file": "php/registration.php",
+      "line": 798
+    }
+  ],
+  "insert_pacient": [
+    {
+      "file": "php/registration.php",
+      "line": 826
+    }
+  ],
+  "show_edit_pacient": [
+    {
+      "file": "php/registration.php",
+      "line": 942
+    }
+  ],
+  "do_save_edit_pacient": [
+    {
+      "file": "php/registration.php",
+      "line": 1029
+    }
+  ],
+  "show_prepare_document": [
+    {
+      "file": "php/registration.php",
+      "line": 1101
+    }
+  ],
+  "createList": [
+    {
+      "file": "php/registration.php",
+      "line": 1163
+    }
+  ],
+  "changeParent": [
+    {
+      "file": "php/registration.php",
+      "line": 1173
+    }
+  ],
+  "show_document_list": [
+    {
+      "file": "php/registration.php",
+      "line": 1183
+    }
+  ],
+  "show_koresh_document": [
+    {
+      "file": "php/registration.php",
+      "line": 1207
+    }
+  ],
+  "show_soglas_document": [
+    {
+      "file": "php/registration.php",
+      "line": 1282
+    }
+  ],
+  "show_otkaz_document": [
+    {
+      "file": "php/registration.php",
+      "line": 1380
+    }
+  ],
+  "show_operaciya_document": [
+    {
+      "file": "php/registration.php",
+      "line": 1478
+    }
+  ],
+  "show_prepare_pay": [
+    {
+      "file": "php/registration.php",
+      "line": 1567
+    }
+  ],
+  "set_payed": [
+    {
+      "file": "php/registration.php",
+      "line": 1663
+    }
+  ],
+  "open_window_print_karta": [
+    {
+      "file": "php/registration.php",
+      "line": 1726
+    }
+  ],
+  "show_print_karta": [
+    {
+      "file": "php/registration.php",
+      "line": 1736
+    }
+  ],
+  "show_doctors_line": [
+    {
+      "file": "php/registration.php",
+      "line": 1881
+    }
+  ],
+  "show_print_doctors_line": [
+    {
+      "file": "php/registration.php",
+      "line": 1967
+    }
+  ],
+  "replace_db": [
+    {
+      "file": "php/replace_db.php",
+      "line": 3
+    }
+  ],
+  "recurse": [
+    {
+      "file": "php/replace_db.php",
+      "line": 30
+    }
+  ],
+  "select_records": [
+    {
+      "file": "php/replace_db.php",
+      "line": 58
+    }
+  ],
+  "replace_doctor": [
+    {
+      "file": "php/replace_db.php",
+      "line": 75
+    }
+  ],
+  "main_research": [
+    {
+      "file": "php/research.php",
+      "line": 3
+    }
+  ],
+  "prepare_create_research": [
+    {
+      "file": "php/research.php",
+      "line": 12
+    }
+  ],
+  "create_research": [
+    {
+      "file": "php/research.php",
+      "line": 22
+    }
+  ],
+  "prepare_edit_book": [
+    {
+      "file": "php/research.php",
+      "line": 109
+    }
+  ],
+  "prepare_copy_replace_data": [
+    {
+      "file": "php/research.php",
+      "line": 158
+    }
+  ],
+  "insert_records_book": [
+    {
+      "file": "php/research.php",
+      "line": 167
+    }
+  ],
+  "get_records_db": [
+    {
+      "file": "php/research.php",
+      "line": 197
+    }
+  ],
+  "main_research_user": [
+    {
+      "file": "php/research_user.php",
+      "line": 3
+    }
+  ],
+  "prepare_edit_book_user": [
+    {
+      "file": "php/research_user.php",
+      "line": 12
+    }
+  ],
+  "prepare_copy_replace_data_user": [
+    {
+      "file": "php/research_user.php",
+      "line": 61
+    }
+  ],
+  "insert_records_book_user": [
+    {
+      "file": "php/research_user.php",
+      "line": 70
+    }
+  ],
+  "get_records_db_user": [
+    {
+      "file": "php/research_user.php",
+      "line": 100
+    }
+  ],
+  "put_research_user_header": [
+    {
+      "file": "php/research_user.php",
+      "line": 116
+    }
+  ],
+  "ReferenceList": [
+    {
+      "file": "reference.js",
+      "line": 19
+    }
+  ],
+  "setTopLevel": [
+    {
+      "file": "reference.js",
+      "line": 50
+    }
+  ],
+  "getTopLevel": [
+    {
+      "file": "reference.js",
+      "line": 54
+    }
+  ],
+  "setKeyField": [
+    {
+      "file": "reference.js",
+      "line": 58
+    }
+  ],
+  "getKeyField": [
+    {
+      "file": "reference.js",
+      "line": 62
+    }
+  ],
+  "init": [
+    {
+      "file": "reference.js",
+      "line": 66
+    }
+  ],
+  "mark": [
+    {
+      "file": "reference.js",
+      "line": 84
+    }
+  ],
+  "nullStek": [
+    {
+      "file": "reference.js",
+      "line": 92
+    }
+  ],
+  "headerIndexOf": [
+    {
+      "file": "reference.js",
+      "line": 103
+    }
+  ],
+  "open": [
+    {
+      "file": "reference.js",
+      "line": 118
+    }
+  ],
+  "setRequestParam": [
+    {
+      "file": "reference.js",
+      "line": 132
+    }
+  ],
+  "getRequestParam": [
+    {
+      "file": "reference.js",
+      "line": 141
+    }
+  ],
+  "setData": [
+    {
+      "file": "reference.js",
+      "line": 150
+    }
+  ],
+  "getData": [
+    {
+      "file": "reference.js",
+      "line": 159
+    }
+  ],
+  "setBookMode": [
+    {
+      "file": "reference.js",
+      "line": 168
+    }
+  ],
+  "getBookMode": [
+    {
+      "file": "reference.js",
+      "line": 177
+    }
+  ],
+  "setRowIndex": [
+    {
+      "file": "reference.js",
+      "line": 187
+    }
+  ],
+  "getRowIndex": [
+    {
+      "file": "reference.js",
+      "line": 196
+    }
+  ],
+  "getRow": [
+    {
+      "file": "reference.js",
+      "line": 205
+    }
+  ],
+  "processData": [
+    {
+      "file": "reference.js",
+      "line": 214
+    }
+  ],
+  "setServer": [
+    {
+      "file": "reference.js",
+      "line": 250
+    }
+  ],
+  "getServer": [
+    {
+      "file": "reference.js",
+      "line": 259
+    }
+  ],
+  "getEditElement": [
+    {
+      "file": "reference.js",
+      "line": 269
+    }
+  ],
+  "setEditElement": [
+    {
+      "file": "reference.js",
+      "line": 278
+    }
+  ],
+  "getLevelId": [
+    {
+      "file": "reference.js",
+      "line": 296
+    }
+  ],
+  "getListHolder": [
+    {
+      "file": "reference.js",
+      "line": 305
+    }
+  ],
+  "setListHolder": [
+    {
+      "file": "reference.js",
+      "line": 314
+    }
+  ],
+  "show": [
+    {
+      "file": "reference.js",
+      "line": 323
+    }
+  ],
+  "close": [
+    {
+      "file": "reference.js",
+      "line": 367
+    }
+  ],
+  "done": [
+    {
+      "file": "reference.js",
+      "line": 377
+    }
+  ],
+  "request": [
+    {
+      "file": "reference.js",
+      "line": 445
+    }
+  ],
+  "xShowModalDialog": [
+    {
+      "file": "showmodal.js",
+      "line": 2
+    }
+  ],
+  "checkModalParentFocus": [
+    {
+      "file": "showmodal.js",
+      "line": 71
+    }
+  ]
+}

@@ -1,0 +1,2066 @@
+[
+  {
+    "id": "A01",
+    "area": "Доступ",
+    "title": "Вход под врачом / администратором",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/identify.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "WEB-INF/classes/my_pack/commands/DoIdentifyCommand.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/LoginScreen.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/security.rs",
+        "line": 69,
+        "exists": true
+      }
+    ],
+    "note": "Новая система создаёт свои учётные записи, старые пароли не переносились.",
+    "acceptance": "Успешный и неверный пароль; перезапуск; роль после входа.",
+    "verification": "Текущие Rust-тесты + UI входа"
+  },
+  {
+    "id": "A02",
+    "area": "Доступ",
+    "title": "Выход, смена врача, блокировка",
+    "status": "Изменено",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/identify.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "WEB-INF/classes/my_pack/handlers/IdentifyHandler.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/stores/auth.ts",
+        "line": 10,
+        "exists": true
+      },
+      {
+        "path": "src/App.vue",
+        "line": 11,
+        "exists": true
+      }
+    ],
+    "note": "Вместо идентификации сеанса по IP — локальная учётная запись. Добавлены выход и блокировка бездействия.",
+    "acceptance": "Выйти, войти другим врачом; блокировка сохраняет введённый текст.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "A03",
+    "area": "Доступ",
+    "title": "Группы пользователей и разрешения по модулям",
+    "status": "Частично",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/administration.php",
+        "line": 11,
+        "exists": true
+      },
+      {
+        "path": "php/administration.php",
+        "line": 210,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Users.vue",
+        "line": 10,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/security.rs",
+        "line": 22,
+        "exists": true
+      }
+    ],
+    "note": "Старые группы и матрица разрешений заменены фиксированными ролями admin/doctor/viewer. Создавать группы и назначать права на отдельные модули нельзя.",
+    "acceptance": "Согласовать нужные роли; проверить матрицу на каждом действии.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "A04",
+    "area": "Доступ",
+    "title": "Добавить, изменить, отключить пользователя",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/administration.php",
+        "line": 140,
+        "exists": true
+      },
+      {
+        "path": "php/administration.php",
+        "line": 185,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Users.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/security.rs",
+        "line": 81,
+        "exists": true
+      }
+    ],
+    "note": "Вместо физического удаления есть отключение; пароль и роль меняются.",
+    "acceptance": "Создать врача, изменить имя/пароль, отключить; последний администратор защищён.",
+    "verification": "Текущие Rust-тесты + UI страницы"
+  },
+  {
+    "id": "A05",
+    "area": "Доступ",
+    "title": "Изменить имя врача в протоколах / скрыть врача",
+    "status": "Частично",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/administration.php",
+        "line": 185,
+        "exists": true
+      },
+      {
+        "path": "php/administration.php",
+        "line": 165,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Users.vue",
+        "line": 14,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/main.rs",
+        "line": 51,
+        "exists": true
+      }
+    ],
+    "note": "Учётная запись и справочник doctors разделены. Добавление врача есть; изменения doctors.name/hidden через UI нет. Правка имени учётной записи не переименовывает врача в протоколах.",
+    "acceptance": "Добавить врача, переименовать его в справочнике и проверить старые/новые протоколы.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "P01",
+    "area": "Пациенты",
+    "title": "Картотека, список и переход в карточку",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/view_all_pacient.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "php/html/tools/show_pacient_list.html",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/PatientIndex.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/views/PatientDetail.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Есть страницы, сортировки, размеры таблицы, история.",
+    "acceptance": "Найти пациента на другой странице; открыть историю и вернуться.",
+    "verification": "Текущие Rust-тесты + UI страниц"
+  },
+  {
+    "id": "P02",
+    "area": "Пациенты",
+    "title": "Поиск по ФИО и номеру пациента",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/search/search_main.jsp",
+        "line": 7,
+        "exists": true
+      },
+      {
+        "path": "WEB-INF/classes/my_pack/commands/SearchCommand.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/PatientIndex.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/repository.rs",
+        "line": 92,
+        "exists": true
+      }
+    ],
+    "note": "Новый поиск по подстроке/точному ID. Тождественность старого фонетического алгоритма не доказана.",
+    "acceptance": "Фрагмент ФИО, ё/е, номер, отсутствие результата, специальные символы.",
+    "verification": "Текущие Rust-тесты + UI"
+  },
+  {
+    "id": "P03",
+    "area": "Пациенты",
+    "title": "Добавление пациента с ФИО, полом, адресом, датой рождения",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/add_pacient.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/PatientForm.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/repository.rs",
+        "line": 125,
+        "exists": true
+      }
+    ],
+    "note": "Все поля основной JSP-карточки перенесены; неизвестную дату можно оставить пустой.",
+    "acceptance": "Добавить карточку, переоткрыть, изменить адрес и неизвестную дату.",
+    "verification": "Текущие Rust-тесты; исторический native-acceptance"
+  },
+  {
+    "id": "P04",
+    "area": "Пациенты",
+    "title": "Редактирование карточки",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/edit_pacient.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/PatientForm.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/repository.rs",
+        "line": 125,
+        "exists": true
+      }
+    ],
+    "note": "Сохраняется предыдущая версия и проверяется revision.",
+    "acceptance": "Две копии формы: вторая не должна затирать первую.",
+    "verification": "Текущие Rust-тесты"
+  },
+  {
+    "id": "P05",
+    "area": "Пациенты",
+    "title": "Удаление / скрытие пациента",
+    "status": "Изменено",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/commands/DeletePacientCommand.class",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "php/index.php",
+        "line": 1100,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/PatientDetail.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/components/ArchiveMaintenance.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 19,
+        "exists": true
+      }
+    ],
+    "note": "В новой системе администратор скрывает карточку и может вернуть её без потери исследований.",
+    "acceptance": "Скрыть и восстановить; все исследования остаются.",
+    "verification": "Текущие Rust-тесты; исторический native-acceptance"
+  },
+  {
+    "id": "P06",
+    "area": "Пациенты",
+    "title": "Расширенные паспортные, страховые, социальные поля",
+    "status": "Нет",
+    "priority": "P3",
+    "scope": "Общая медицинская система; использование не подтверждено",
+    "old": [
+      {
+        "path": "php/html/tools/show_add_edit_pacient.html",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "php/registration.php",
+        "line": 1731,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/types.ts",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/components/PatientForm.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "В новой карточке нет документов, СНИЛС, страхования, места работы и социальных сведений. В исходной базе эти дополнительные поля семантически пусты. JSP-карточка УЗИ их также не содержит.",
+    "acceptance": "Определить, нужен ли общий регистратурный вариант карточки.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S01",
+    "area": "Исследования",
+    "title": "Выбрать вид исследования и врача",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/prepare_protocol.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/select_research.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 38,
+        "exists": true
+      }
+    ],
+    "note": "Вид и врач выбираются в новой форме; 15 записей видов импортированы.",
+    "acceptance": "Создать каждый доступный вид; проверить форму и печать.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S02",
+    "area": "Исследования",
+    "title": "Скрытые виды исследований",
+    "status": "Нет",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/handlers/BookHandler.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src-tauri/schema.sql",
+        "line": 4,
+        "exists": true
+      },
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 38,
+        "exists": true
+      },
+      {
+        "path": "tools/migrate.py",
+        "line": 71,
+        "exists": true
+      }
+    ],
+    "note": "При импорте потерян флаг скрытия вида. Старые скрытые виды id 478 и 1063 теперь предлагаются в списке, включая неподдерживаемый beremen2.",
+    "acceptance": "В новых исследованиях скрытые виды не предлагаются; старые записи продолжают открываться.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S03",
+    "area": "Исследования",
+    "title": "Ограничение вида исследования по полу пациента",
+    "status": "Частично",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/add_pacient.jsp",
+        "line": 16,
+        "exists": true
+      },
+      {
+        "path": "php/research.php",
+        "line": 53,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 38,
+        "exists": true
+      }
+    ],
+    "note": "Настройки BASE.SEX в новой форме не используются: список видов общий. Требуется сверить поведение выбора с врачом.",
+    "acceptance": "Пациенты обоих полов: согласованные предупреждения/фильтрация.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S04",
+    "area": "Исследования",
+    "title": "Заполнить структурированные поля рабочих форм",
+    "status": "Частично",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_form/brooho_1.jsp",
+        "line": 282,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/pochki_1.jsp",
+        "line": 37,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/ginekol_11.jsp",
+        "line": 55,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/catalog.json",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/components/StructuredFields.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Подтверждены отсутствующие поля: sel_vena и r_chash_size в brooho_1; r_chash_size в pochki_1; вычисляемое matka_ob в ginekol_11. Существующие значения могут появляться как дополнительные, но в новой пустой форме полей нет.",
+    "acceptance": "Сверить каждое поле каждого рабочего вида, включая скрытые ветви, не только итоговый текст.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S05",
+    "area": "Исследования",
+    "title": "Условные поля и ветви органов",
+    "status": "Частично",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_form/brooho_1.jsp",
+        "line": 95,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/shit_1.jsp",
+        "line": 89,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/legacy.ts",
+        "line": 20,
+        "exists": true
+      },
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 43,
+        "exists": true
+      }
+    ],
+    "note": "Новые активные поля выводятся из печатного шаблона, а не из полного старого JS. Полнота всех сочетаний условий не проверена. Есть переключатель «Показать все поля».",
+    "acceptance": "Для каждого селекта/чекбокса проверить раскрытие соответствующих полей и сброс/сохранение значений.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S06",
+    "area": "Исследования",
+    "title": "Расчёты щитовидной железы, ЭхоКГ, объёмов",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_form/shit_1.jsp",
+        "line": 119,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/eho_kg_2.jsp",
+        "line": 81,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/ginekol_11.jsp",
+        "line": 333,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/brooho_1.jsp",
+        "line": 483,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/calculations.ts",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/calculations.test.ts",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Четыре семейства формул перенесены. Сравнение с исходным JS есть; это не клиническая валидация. Поле matka_ob отсутствует в основном каталоге (S04).",
+    "acceptance": "Проверить полные/неполные размеры, запятую, единицы, изменение размеров.",
+    "verification": "Текущие Vitest-тесты: 120 синтетических наборов + проверки жизненного цикла"
+  },
+  {
+    "id": "S07",
+    "area": "Исследования",
+    "title": "Расчёты остальных архивных форм",
+    "status": "Частично",
+    "priority": "P2",
+    "scope": "Не настроенные в кабинете архивные формы",
+    "old": [
+      {
+        "path": "jsp/protocol_form/kardio_9.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/schit_4.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/skrin_w_6.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/calculations.ts",
+        "line": 2,
+        "exists": true
+      }
+    ],
+    "note": "В архиве больше JS-расчётов: скрининги, расширенная кардиология, другие версии. Новая функция поддерживает четыре семейства. Эти виды не настроены в текущем кабинете, но общий паритет всех исходников отсутствует.",
+    "acceptance": "При подключении каждого такого вида переносить и отдельно сверять его формулы.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S08",
+    "area": "Исследования",
+    "title": "Заключение, комментарий и свободное описание",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_form/footer.jsp",
+        "line": 4,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_form/footer.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 20,
+        "exists": true
+      }
+    ],
+    "note": "Есть заключение и дополнение; добавлено свободное описание. Обязательная привязка диагноза к узлу старого справочника снята.",
+    "acceptance": "Сохранить многострочный текст и проверить печать.",
+    "verification": "Текущие Rust-тесты + UI вставки"
+  },
+  {
+    "id": "S09",
+    "area": "Исследования",
+    "title": "Просмотр перед окончательным сохранением",
+    "status": "Изменено",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_form/footer.jsp",
+        "line": 13,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_view/footer.jsp",
+        "line": 19,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 91,
+        "exists": true
+      }
+    ],
+    "note": "Вместо отдельного перехода на JSP просмотра — предпросмотр структурированной части и печать сохранённой записи. Полный документ до сохранения не выделен отдельным действием.",
+    "acceptance": "Врач проверяет весь документ перед выдачей, включая заключение и дополнения.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S10",
+    "area": "Исследования",
+    "title": "Сохранить, завершить и повторно открыть",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/commands/SaveProtocolCommand.class",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "WEB-INF/classes/my_pack/commands/SaveAndPrintProtocolCommand.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src-tauri/src/repository.rs",
+        "line": 143,
+        "exists": true
+      },
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 64,
+        "exists": true
+      }
+    ],
+    "note": "Черновик/final; защита от устаревшей версии. «Сохранить и напечатать» разделено на два действия.",
+    "acceptance": "Сохранить, перезапустить, открыть и распечатать.",
+    "verification": "Текущие Rust-тесты; исторический native-acceptance"
+  },
+  {
+    "id": "S11",
+    "area": "Исследования",
+    "title": "Продолжить незавершённые исследования",
+    "status": "Частично",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/not_saved_research.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyIndex.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/format.ts",
+        "line": 19,
+        "exists": true
+      }
+    ],
+    "note": "Черновики видны в общей хронологии, но нет отдельного списка/фильтра. После согласованного удаления 5 070 пустых заготовок в исходном наборе остаётся 41 запись status=0.",
+    "acceptance": "Получить список всех незавершённых, в том числе без знания ФИО/номера.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S12",
+    "area": "Исследования",
+    "title": "Удалить отдельный протокол",
+    "status": "Нет",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/commands/DeleteProtocolCommand.class",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/not_saved_research.jsp",
+        "line": 16,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src-tauri/src/main.rs",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "В новой системе нет команды и действия удаления/скрытия исследования. Скрытие всей карточки пациента это не заменяет.",
+    "acceptance": "Удалить ошибочное исследование без удаления других; восстановление и журнал.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S13",
+    "area": "Исследования",
+    "title": "Найти протокол по номеру",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/search/search_main.jsp",
+        "line": 8,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyIndex.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/repository.rs",
+        "line": 111,
+        "exists": true
+      }
+    ],
+    "note": "ФИО/номер протокола перенесены на страницу исследований.",
+    "acceptance": "Один и тот же номер в картотеке и исследованиях не должен путаться.",
+    "verification": "Текущие Rust-тесты + UI страницы"
+  },
+  {
+    "id": "S14",
+    "area": "Исследования",
+    "title": "Редактировать старый протокол и неизвестные параметры",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/commands/PrepareEditProtocolCommand.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 37,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/repository.rs",
+        "line": 52,
+        "exists": true
+      }
+    ],
+    "note": "Сохраняется исходная версия, исходные таблицы и история правок; неподдерживаемые значения выводятся отдельно.",
+    "acceptance": "Открыть редкую версию; сохранить без потери неизвестных полей.",
+    "verification": "Текущие Rust-тесты"
+  },
+  {
+    "id": "S15",
+    "area": "Исследования",
+    "title": "Все 187 исторических форм как полноценные редакторы",
+    "status": "Частично",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_form/ginekol_5.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_view/second_1.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/catalog.json",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/legacy-templates.json",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/legacy.ts",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Каталог содержит 187 версий, печатный компилятор — 174. Полная экранная/условная эквивалентность не доказана; 16 использованных версий проверялись только по тексту на выборке.",
+    "acceptance": "См. полный реестр форм, затем пройти ветви и действия нужных версий.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "S16",
+    "area": "Исследования",
+    "title": "Создать на основе предыдущего исследования",
+    "status": "Добавлено",
+    "priority": "—",
+    "scope": "Дополнение новой программы",
+    "old": [
+      {
+        "path": "jsp/after_save_protocol.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 56,
+        "exists": true
+      }
+    ],
+    "note": "В новой системе есть явное копирование записи на того же пациента; это дополнение, не доказательство паритета.",
+    "acceptance": "Копия сохраняется новым ID; исходная запись не меняется.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "D01",
+    "area": "Справочники",
+    "title": "Просмотр пользовательских заготовок, поиск и фильтр",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/books.php",
+        "line": 4,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/TemplateLibrary.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 108,
+        "exists": true
+      }
+    ],
+    "note": "Источник book_users сохранён: 1 105 узлов, включая разделы и скрытые записи.",
+    "acceptance": "Найти по тексту/пути, фильтровать видом, показать скрытые.",
+    "verification": "Текущие Rust-тесты + текущие UI-сценарии"
+  },
+  {
+    "id": "D02",
+    "area": "Справочники",
+    "title": "Добавить текстовую заготовку в существующий раздел",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/books.php",
+        "line": 97,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/TemplateLibrary.vue",
+        "line": 26,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 128,
+        "exists": true
+      }
+    ],
+    "note": "Добавление реализовано в текущей сборке; исходные таблицы не перезаписываются.",
+    "acceptance": "Добавить, перезапустить, найти, вставить, отредактировать, удалить, вернуть.",
+    "verification": "Текущие Rust-тесты + текущий полный UI-цикл"
+  },
+  {
+    "id": "D03",
+    "area": "Справочники",
+    "title": "Изменить, удалить и восстановить текстовую заготовку",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/books.php",
+        "line": 141,
+        "exists": true
+      },
+      {
+        "path": "php/books.php",
+        "line": 76,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/TemplateLibrary.vue",
+        "line": 16,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 151,
+        "exists": true
+      }
+    ],
+    "note": "Есть конфликт версий и восстановление. Исследования содержат вставленную копию текста и автоматически не меняются.",
+    "acceptance": "Изменение, отмена удаления, подтверждение, повторный вход, восстановление.",
+    "verification": "Текущие Rust-тесты + текущий UI-цикл"
+  },
+  {
+    "id": "D04",
+    "area": "Справочники",
+    "title": "Создавать и изменять вложенные разделы справочника",
+    "status": "Нет",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/books.php",
+        "line": 122,
+        "exists": true
+      },
+      {
+        "path": "php/html/research_user/edit_main_book_record.html",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 158,
+        "exists": true
+      },
+      {
+        "path": "src/components/TemplateLibrary.vue",
+        "line": 23,
+        "exists": true
+      }
+    ],
+    "note": "Новая система управляет только текстовыми листьями. Старые узлы могли становиться родителями; произвольно расширять и переименовывать дерево теперь нельзя.",
+    "acceptance": "Создать подраздел внутри «Заключительные признаки», добавить дочерние тексты и переименовать раздел.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "D05",
+    "area": "Справочники",
+    "title": "Копировать / перемещать заготовки и ветви",
+    "status": "Нет",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/research_user.php",
+        "line": 70,
+        "exists": true
+      },
+      {
+        "path": "php/research.php",
+        "line": 167,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/TemplateLibrary.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Нет выбора другого раздела/вида при редактировании, нет массового копирования и переноса.",
+    "acceptance": "Перенос одной заготовки и копирование ветви между видами без потери потомков.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "D06",
+    "area": "Справочники",
+    "title": "Менять порядок заготовок",
+    "status": "Нет",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/books.php",
+        "line": 278,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 112,
+        "exists": true
+      },
+      {
+        "path": "src/components/TemplateLibrary.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Старый порядок читается, но менять его нельзя. Новые записи выводятся перед исходными.",
+    "acceptance": "Поставить часто используемую заготовку первой и проверить порядок после перезапуска.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "D07",
+    "area": "Справочники",
+    "title": "Редактор базового справочника book: названия, значения, скрытие, ключи",
+    "status": "Нет",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/book/add_book.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/book/edit_book.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "php/html/research/edit_main_book_record.html",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/catalog.json",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/legacy-dictionary.json",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Справочник стандартных вариантов и конфигурация зашиты в JSON. UI управления book и его связью с полями отсутствует.",
+    "acceptance": "Изменить вариант селекта, добавить новый, скрыть старый без нарушения архива.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "D08",
+    "area": "Справочники",
+    "title": "Создать новый вид исследования",
+    "status": "Нет",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/research.php",
+        "line": 22,
+        "exists": true
+      },
+      {
+        "path": "php/html/research/prepare_create_research.html",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src-tauri/schema.sql",
+        "line": 4,
+        "exists": true
+      },
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 38,
+        "exists": true
+      }
+    ],
+    "note": "«Новая заготовка» добавляет текст, а не новый вид исследования. В UI нет создания вида, его кода, пола, версии и структуры.",
+    "acceptance": "Создать отдельный вид и проверить форму, заготовки, печать, статистику.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "D09",
+    "area": "Справочники",
+    "title": "Выбрать версию формы и конфигурацию параметров",
+    "status": "Нет",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/research.php",
+        "line": 83,
+        "exists": true
+      },
+      {
+        "path": "php/html/research/edit_main_book_record.html",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/legacy-versions.json",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/catalog.json",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Текущие версии и наборы полей задаются в коде. Администратор не может менять их в приложении.",
+    "acceptance": "Изменить версию для новых исследований; старые продолжают использовать исходную.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "D10",
+    "area": "Справочники",
+    "title": "Обновить пользовательский справочник из базового",
+    "status": "Нет",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "php/books.php",
+        "line": 177,
+        "exists": true
+      },
+      {
+        "path": "php/index.php",
+        "line": 811,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/TemplateLibrary.vue",
+        "line": 12,
+        "exists": true
+      }
+    ],
+    "note": "Кнопка «Обновить» сейчас только перечитывает список. Старый update_book_users создавал недостающие служебные ветви из базового справочника.",
+    "acceptance": "После нового вида/поля новые ветви появляются без удаления пользовательских текстов.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "D11",
+    "area": "Справочники",
+    "title": "Подстановка в заключение, дополнения и параметры",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_form/header.jsp",
+        "line": 39,
+        "exists": true
+      },
+      {
+        "path": "reference.html",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "reference.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "php/books.php",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 21,
+        "exists": true
+      },
+      {
+        "path": "src/userTemplates.ts",
+        "line": 7,
+        "exists": true
+      }
+    ],
+    "note": "Есть общий выбор поля вставки и добавление к тексту. Старый выбор из конкретного поля и Enter заменён явной кнопкой.",
+    "acceptance": "Вставка не заменяет существующий текст; вид/раздел не путаются.",
+    "verification": "Текущие UI-сценарии вставки"
+  },
+  {
+    "id": "F01",
+    "area": "Печать и медиа",
+    "title": "Одиночный протокол и повторная печать",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_view/footer.jsp",
+        "line": 22,
+        "exists": true
+      },
+      {
+        "path": "jsp/after_save_protocol.jsp",
+        "line": 8,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/ProtocolDocument.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/views/StudyEditor.vue",
+        "line": 72,
+        "exists": true
+      }
+    ],
+    "note": "Печать A4 через WebView/Windows, PDF через системный принтер. Физический принтер не проверялся в этой сверке.",
+    "acceptance": "A4/PDF, длинный текст, переносы, подпись; затем физический принтер.",
+    "verification": "Исторический native-acceptance + код; принтер не проверен"
+  },
+  {
+    "id": "F02",
+    "area": "Печать и медиа",
+    "title": "Объединить несколько исследований в комплект",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/commands/FusionProtocolCommand.class",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_view/protocol.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/PatientDetail.vue",
+        "line": 18,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 39,
+        "exists": true
+      }
+    ],
+    "note": "Новая модель сохраняет комплект из 2–20 завершённых исследований одного пациента и печатает их страницами. Старый общий макет заменён.",
+    "acceptance": "Разный пациент/черновик/дубликат запрещены; порядок документов сохраняется.",
+    "verification": "Текущие Rust-тесты; исторический native-acceptance"
+  },
+  {
+    "id": "F03",
+    "area": "Печать и медиа",
+    "title": "Открыть уже существовавшие объединения протоколов",
+    "status": "Нет",
+    "priority": "P1",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/commands/prepareViewFusionProtocolCommand.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "tools/migrate.py",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 48,
+        "exists": true
+      }
+    ],
+    "note": "В исходной базе 5 контейнеров и 10 связей. Они сохранены как legacy_container/legacy_research, но не перенесены в study_bundles/bundle_items и не доступны как старые комплекты через UI.",
+    "acceptance": "Все 5 старых объединений доступны с исходным составом/порядком; одиночные исследования не меняются.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "F04",
+    "area": "Печать и медиа",
+    "title": "Удалить объединённый протокол / комплект",
+    "status": "Нет",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/commands/DeleteFusionProtocolCommand.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/BundleView.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/main.rs",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Создать комплект можно; удалить или изменить состав уже созданного через UI нельзя.",
+    "acceptance": "Удаление комплекта не удаляет входящие исследования.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "F05",
+    "area": "Печать и медиа",
+    "title": "Изображения: просмотр, включение в печать, удаление",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_view/footer.jsp",
+        "line": 25,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_view/protocol.jsp",
+        "line": 105,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/Attachments.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 55,
+        "exists": true
+      }
+    ],
+    "note": "Новые изображения хранятся в базе, есть экспорт и мягкое удаление. В исходном наборе нет протоколов с объявленными снимками. Старый захват с оборудования не подтверждён исходниками.",
+    "acceptance": "Добавить PNG/JPEG, экспортировать, напечатать выбранное, убрать.",
+    "verification": "Текущие Rust-тесты; исторические native-тесты на синтетических файлах"
+  },
+  {
+    "id": "F06",
+    "area": "Печать и медиа",
+    "title": "Видеоклипы AVI и другие видео",
+    "status": "Частично",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_view/protocol.jsp",
+        "line": 60,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/Attachments.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 8,
+        "exists": true
+      }
+    ],
+    "note": "Есть хранение/экспорт и поддержка WebView. AVI может требовать внешний проигрыватель. Старых заявленных клипов — 0.",
+    "acceptance": "Проверить реальные кодеки и видео с аппарата; сохранность файла важнее встраиваемого воспроизведения.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "F07",
+    "area": "Печать и медиа",
+    "title": "Точный старый бланк, шапка и компоновка объединённого документа",
+    "status": "Изменено",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_view/header.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_view/header19092010.jsp",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "jsp/protocol_view/protocol.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/ProtocolDocument.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/views/BundleView.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Текст проверялся на выборке, но бланк и компоновка адаптированы. Это не полное визуальное соответствие.",
+    "acceptance": "Сравнить образцы всех рабочих видов с врачом; физический принтер и многостраничность.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "R01",
+    "area": "Отчёты",
+    "title": "Количество исследований по видам за период",
+    "status": "Частично",
+    "priority": "P2",
+    "scope": "Модуль в архиве; ссылка в меню отсутствует",
+    "old": [
+      {
+        "path": "php/statistic.php",
+        "line": 128,
+        "exists": true
+      },
+      {
+        "path": "php/modules/statistic/statistic.php",
+        "line": 158,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Statistics.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 26,
+        "exists": true
+      }
+    ],
+    "note": "Есть агрегаты по видам и CSV. Нет старого выбора поддерева видов, детализации пациентами и отдельного печатного отчёта.",
+    "acceptance": "Совпадение итогов по одинаковому периоду/статусам; детальная расшифровка.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "R02",
+    "area": "Отчёты",
+    "title": "Выработка по врачам",
+    "status": "Частично",
+    "priority": "P2",
+    "scope": "Модуль в архиве; ссылка в меню отсутствует",
+    "old": [
+      {
+        "path": "php/statistic.php",
+        "line": 33,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Statistics.vue",
+        "line": 8,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 31,
+        "exists": true
+      }
+    ],
+    "note": "Есть количество по врачам, но нет выборки конкретного набора врачей и списка пациентов как в старом отчёте.",
+    "acceptance": "Один врач, несколько врачей, итоги и пациенты.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "R03",
+    "area": "Отчёты",
+    "title": "Отчёт по заключительным признакам / ветвям диагнозов",
+    "status": "Нет",
+    "priority": "P2",
+    "scope": "Модуль в архиве; ссылка в меню отсутствует",
+    "old": [
+      {
+        "path": "php/statistic.php",
+        "line": 172,
+        "exists": true
+      },
+      {
+        "path": "php/modules/statistic/statistic.php",
+        "line": 233,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Statistics.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/repository.rs",
+        "line": 12,
+        "exists": true
+      }
+    ],
+    "note": "Новый протокол сохраняет conclusion как текст, но не decision_id. Старый отчёт по дереву признаков нельзя точно воспроизвести только поиском по строке.",
+    "acceptance": "Сохранить связь с признаком отдельно от текста; проверить отчёт по группе.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "R04",
+    "area": "Отчёты",
+    "title": "Отчёт по направляющим ЛПУ / врачам",
+    "status": "Нет",
+    "priority": "P3",
+    "scope": "Модуль в архиве; исходные справочники пусты",
+    "old": [
+      {
+        "path": "php/statistic.php",
+        "line": 239,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Statistics.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Нет справочника и ввода направления. В исходных таблицах ЛПУ и направляющих врачей нет строк, ссылки протоколов нулевые.",
+    "acceptance": "Подтвердить необходимость направления и соответствующей отчётности.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "R05",
+    "area": "Отчёты",
+    "title": "Кассовый Z-отчёт и регистратурная отчётность",
+    "status": "Нет",
+    "priority": "P3",
+    "scope": "Архивный общий модуль; не подтверждён",
+    "old": [
+      {
+        "path": "php/modules/statistic/statistic.php",
+        "line": 446,
+        "exists": true
+      },
+      {
+        "path": "php/modules/statistic/statistic.php",
+        "line": 887,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Statistics.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Код есть в общей системе; таблиц регистрации/оплаты в перенесённом наборе нет. Не подтверждено, что модуль работал в этом кабинете.",
+    "acceptance": "Не включать в обязательный объём УЗИ без подтверждения использования.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "X01",
+    "area": "Общая система",
+    "title": "Кабинеты и направляющие учреждения",
+    "status": "Нет",
+    "priority": "P3",
+    "scope": "Административные экраны; пустые справочники",
+    "old": [
+      {
+        "path": "php/administration.php",
+        "line": 396,
+        "exists": true
+      },
+      {
+        "path": "php/administration.php",
+        "line": 279,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/Users.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "В новой программе нет этих редакторов. Исходные cabinets/lpu/lpu_doctor пусты; меню администратора их содержит.",
+    "acceptance": "Зафиксировать, нужны ли они в локальном кабинете.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "X02",
+    "area": "Общая система",
+    "title": "Расписание и запись на приём",
+    "status": "Нет",
+    "priority": "P3",
+    "scope": "Не подключено в меню; зависимости неполны",
+    "old": [
+      {
+        "path": "php/index.php",
+        "line": 35,
+        "exists": true
+      },
+      {
+        "path": "php/registration.php",
+        "line": 4,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/main.ts",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Есть маршруты/код общей системы, но таблиц schedule/registration в исходной базе нет; часть требуемых файлов не найдена.",
+    "acceptance": "Установить, использовалась ли отдельная инсталляция регистратуры.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "X03",
+    "area": "Общая система",
+    "title": "Оплаты, прайс, документы, очередь",
+    "status": "Нет",
+    "priority": "P3",
+    "scope": "Не подключено в меню; зависимости неполны",
+    "old": [
+      {
+        "path": "php/registration.php",
+        "line": 1614,
+        "exists": true
+      },
+      {
+        "path": "php/registration.php",
+        "line": 1183,
+        "exists": true
+      },
+      {
+        "path": "php/registration.php",
+        "line": 1881,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/main.ts",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "В новой программе отсутствуют. В исходном кабинете price/price_name пусты, бухгалтерских/регистрационных таблиц нет.",
+    "acceptance": "Подтвердить необходимость отдельно от задачи переноса УЗИ.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "X04",
+    "area": "Общая система",
+    "title": "Амбулаторная карта: прививки, стационар, диспансеризация, контроль посещений",
+    "status": "Нет",
+    "priority": "P3",
+    "scope": "Не подключено в меню; зависимости неполны",
+    "old": [
+      {
+        "path": "php/karta_pacient.php",
+        "line": 162,
+        "exists": true
+      },
+      {
+        "path": "php/karta_pacient.php",
+        "line": 266,
+        "exists": true
+      },
+      {
+        "path": "php/karta_pacient.php",
+        "line": 833,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/views/PatientDetail.vue",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Есть история УЗИ, но не общая амбулаторная карта. Часть старых экранов содержит статические заготовки; нужных таблиц нет.",
+    "acceptance": "Не считать эти страницы действовавшей функцией без исходной рабочей установки.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "X05",
+    "area": "Общая система",
+    "title": "Сетевой доступ с нескольких компьютеров",
+    "status": "Изменено",
+    "priority": "P2",
+    "scope": "Архитектурное различие",
+    "old": [
+      {
+        "path": "WEB-INF/classes/MainServlet.class",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "WEB-INF/classes/my_pack/handlers/IdentifyHandler.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src-tauri/src/instance.rs",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "PRODUCT.md",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Старая система клиент-серверная, новая — локальная с одним экземпляром на базу. Это архитектурная граница, а не проверенная сетевая замена.",
+    "acceptance": "Если нужен общий доступ — отдельное решение; общий файл SQLite по сети не использовать.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "B01",
+    "area": "Данные",
+    "title": "Сохранность исходных таблиц, ID и связей",
+    "status": "Есть аналог",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "WEB-INF/classes/my_pack/handlers/ProtocolHandler.class",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "tools/migrate.py",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "docs/migration-report.json",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "20 исходных таблиц сохранены как legacy_*. Предыдущая сверка значений по SHA-256 есть; это не означает, что каждая связь доступна через UI (см. F03).",
+    "acceptance": "Сверка количества/хешей; выборочный просмотр без изменения рабочей базы.",
+    "verification": "Историческая миграционная сверка + текущие агрегаты только для чтения"
+  },
+  {
+    "id": "B02",
+    "area": "Данные",
+    "title": "Пустые исходные заготовки без пациента",
+    "status": "Согласованное изменение",
+    "priority": "—",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/not_saved_research.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src-tauri/src/maintenance.rs",
+        "line": 20,
+        "exists": true
+      },
+      {
+        "path": "docs/empty-orphan-cleanup.json",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "5 070 пустых заготовок удалены по ранее принятому решению с резервной копией. Их отсутствие не является случайной потерей функции.",
+    "acceptance": "Заполненные и связанные записи не удаляются.",
+    "verification": "Текущие Rust-тесты"
+  },
+  {
+    "id": "B03",
+    "area": "Данные",
+    "title": "Резервные копии и восстановление",
+    "status": "Добавлено",
+    "priority": "—",
+    "scope": "Дополнение новой программы",
+    "old": [
+      {
+        "path": "php/replace_db.php",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/components/BackupManager.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/maintenance.rs",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "Ежедневные и ручные копии, проверка и страховочная копия перед восстановлением. replace_db.php — не аналог полноценной системы бэкапов.",
+    "acceptance": "Новая копия открывается отдельно; восстановление и ошибочные файлы.",
+    "verification": "Текущие Rust-тесты; исторический native-acceptance"
+  },
+  {
+    "id": "B04",
+    "area": "Данные",
+    "title": "История изменений и конфликт сохранения",
+    "status": "Добавлено",
+    "priority": "—",
+    "scope": "Дополнение новой программы",
+    "old": [],
+    "new": [
+      {
+        "path": "src-tauri/src/repository.rs",
+        "line": 9,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/records.rs",
+        "line": 163,
+        "exists": true
+      }
+    ],
+    "note": "Журнал и предыдущие значения есть, но нет отдельного UI возврата любой предыдущей версии записи.",
+    "acceptance": "Конфликт не теряет введённый текст; исходные значения сохранены.",
+    "verification": "Текущие Rust-тесты + UI конфликта"
+  },
+  {
+    "id": "B05",
+    "area": "Данные",
+    "title": "Доставка обновления программы",
+    "status": "Добавлено",
+    "priority": "—",
+    "scope": "Дополнение новой программы",
+    "old": [],
+    "new": [
+      {
+        "path": "src/components/AppUpdate.vue",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src-tauri/src/updater.rs",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "В новой программе есть проверка и установка обновления exe. Это новая функция, не часть паритета старого справочника.",
+    "acceptance": "Подпись/хеш и откат при неудаче; реальное обновление отдельно не запускалось.",
+    "verification": "Текущие Rust-тесты updater; реальное обновление не запускалось"
+  },
+  {
+    "id": "V01",
+    "area": "Границы проверки",
+    "title": "Скрытый beremen2 без исходной формы",
+    "status": "Требует проверки",
+    "priority": "P2",
+    "scope": "Исходная форма отсутствует",
+    "old": [
+      {
+        "path": "jsp/select_research.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "src/legacy-versions.json",
+        "line": 1,
+        "exists": true
+      },
+      {
+        "path": "src/legacy.ts",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "В базе есть скрытый вид 1063 / BEREMEN2, но соответствующей формы нет ни в архиве, ни в новом каталоге. Это не подтверждённый пропуск копирования файла; сначала убрать из новых назначений и выяснить назначение.",
+    "acceptance": "Проверить исходную рабочую папку врача, если этот вид нужен.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "V02",
+    "area": "Границы проверки",
+    "title": "Физический принтер, аппарат УЗИ, Windows 10 и реальные кодеки",
+    "status": "Требует проверки",
+    "priority": "P2",
+    "scope": "Рабочий УЗИ",
+    "old": [
+      {
+        "path": "jsp/protocol_view/protocol.jsp",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "new": [
+      {
+        "path": "docs/WINDOWS10-ACCEPTANCE.md",
+        "line": 1,
+        "exists": true
+      }
+    ],
+    "note": "В этой сверке не подключались принтер/аппарат, не запускались все старые серверные сценарии и все комбинации 187 форм.",
+    "acceptance": "Приёмка с врачом на целевом компьютере и обезличенных примерах.",
+    "verification": "Сверено по исходникам"
+  },
+  {
+    "id": "Z01",
+    "area": "Служебные части",
+    "title": "Общие шапки, подвал, ошибки, паспортная вставка",
+    "status": "Служебное",
+    "priority": "—",
+    "scope": "Общие части экранов",
+    "old": [],
+    "new": [],
+    "note": "Общие фрагменты не считаются отдельным пользовательским сценарием. Их функции сопоставляются с родительскими экранами.",
+    "acceptance": "Проверить состав родительского экрана.",
+    "verification": "Инвентаризация файлов"
+  },
+  {
+    "id": "Z02",
+    "area": "Служебные части",
+    "title": "Тестовые/пробные JSP и базовые классы команд",
+    "status": "Требует проверки",
+    "priority": "—",
+    "scope": "Технические артефакты архива",
+    "old": [],
+    "new": [],
+    "note": "Наличие файла или класса само по себе не доказывает рабочий сценарий в установленном кабинете.",
+    "acceptance": "Не включать в обязательную функциональность без подтверждения назначения.",
+    "verification": "Инвентаризация файлов"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "createRequiresTypeSectionAndText": true,
+  "failurePreservesInput": true,
+  "createdPersistsAfterReload": true,
+  "newEntryEditDeleteRestore": true,
+  "newEntryInsertedIntoStudy": true,
+  "viewerCannotCreate": true,
+  "pageErrors": []
+}

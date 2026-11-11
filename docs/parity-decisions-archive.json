@@ -1,0 +1,10 @@
+{
+  "realArchiveCopy": true,
+  "legacyStudies": 66949,
+  "storedDecisions": 66949,
+  "distinctSnapshots": 22,
+  "referenceMismatches": 0,
+  "backupCreated": true,
+  "migrationIdempotent": true,
+  "sourceSha256Unchanged": true
+}

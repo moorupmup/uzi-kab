@@ -1,0 +1,79 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "badgeHeight": 36,
+      "buttons": [
+        {
+          "text": "Сохранить черновик",
+          "padding": "18px",
+          "height": 44,
+          "sharedClass": true
+        },
+        {
+          "text": "Завершить",
+          "padding": "18px",
+          "height": 44,
+          "sharedClass": true
+        }
+      ]
+    },
+    {
+      "width": 1160,
+      "badgeHeight": 36,
+      "buttons": [
+        {
+          "text": "Сохранить черновик",
+          "padding": "18px",
+          "height": 44,
+          "sharedClass": true
+        },
+        {
+          "text": "Завершить",
+          "padding": "18px",
+          "height": 44,
+          "sharedClass": true
+        }
+      ]
+    },
+    {
+      "width": 800,
+      "badgeHeight": 36,
+      "buttons": [
+        {
+          "text": "Сохранить черновик",
+          "padding": "18px",
+          "height": 44,
+          "sharedClass": true
+        },
+        {
+          "text": "Завершить",
+          "padding": "18px",
+          "height": 44,
+          "sharedClass": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "badgeHeight": 36,
+      "buttons": [
+        {
+          "text": "Сохранить черновик",
+          "padding": "18px",
+          "height": 44,
+          "sharedClass": true
+        },
+        {
+          "text": "Завершить",
+          "padding": "18px",
+          "height": 44,
+          "sharedClass": true
+        }
+      ]
+    }
+  ],
+  "compactIconsPreserved": true,
+  "paginationNoOverflow": true,
+  "pageErrors": []
+}

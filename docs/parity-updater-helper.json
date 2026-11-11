@@ -1,0 +1,8 @@
+﻿{
+    "verifiedReplacement":  true,
+    "version":  "1.1.0",
+    "previousExeRetained":  true,
+    "waitsForParent":  true,
+    "cyrillicSpacesAndApostrophePath":  true,
+    "nativeHelper":  true
+}

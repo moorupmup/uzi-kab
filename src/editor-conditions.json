@@ -1,0 +1,4743 @@
+{
+  "universal_1": {
+    "initial": {},
+    "fields": {},
+    "rules": []
+  },
+  "shit_1": {
+    "initial": {
+      "display5": false,
+      "display6": false,
+      "display7": false,
+      "display1": false,
+      "display8": false,
+      "display3": false,
+      "display9": false
+    },
+    "fields": {
+      "del": [
+        []
+      ],
+      "del_god": [
+        [
+          "display5"
+        ]
+      ],
+      "del_loje": [
+        [
+          "display5"
+        ]
+      ],
+      "loje_text": [
+        [
+          "display5"
+        ]
+      ],
+      "del_proek": [
+        [
+          "display5"
+        ]
+      ],
+      "del_potolog": [
+        [
+          "display5"
+        ]
+      ],
+      "proek_text": [
+        [
+          "display5"
+        ]
+      ],
+      "del1": [
+        [
+          "display6"
+        ]
+      ],
+      "del2": [
+        [
+          "display6"
+        ]
+      ],
+      "del3": [
+        [
+          "display6"
+        ]
+      ],
+      "del_text": [
+        [
+          "display6"
+        ]
+      ],
+      "local": [
+        [
+          "display7"
+        ]
+      ],
+      "local_size": [
+        [
+          "display7",
+          "display1"
+        ]
+      ],
+      "r_dolya_1": [
+        [
+          "display7"
+        ]
+      ],
+      "r_dolya_2": [
+        [
+          "display7"
+        ]
+      ],
+      "r_dolya_3": [
+        [
+          "display7"
+        ]
+      ],
+      "v1": [
+        [
+          "display7"
+        ]
+      ],
+      "l_dolya_1": [
+        [
+          "display7"
+        ]
+      ],
+      "l_dolya_2": [
+        [
+          "display7"
+        ]
+      ],
+      "l_dolya_3": [
+        [
+          "display7"
+        ]
+      ],
+      "v2": [
+        [
+          "display7"
+        ]
+      ],
+      "sum": [
+        [
+          "display7"
+        ]
+      ],
+      "peresh": [
+        [
+          "display7"
+        ]
+      ],
+      "gran": [
+        [
+          "display7"
+        ]
+      ],
+      "plot": [
+        [
+          "display7"
+        ]
+      ],
+      "shit_struct": [
+        [
+          "display7"
+        ]
+      ],
+      "vkluch": [
+        [
+          "display7"
+        ]
+      ],
+      "limf": [
+        [
+          "display8"
+        ]
+      ],
+      "limf_size_do": [
+        [
+          "display8",
+          "display3"
+        ]
+      ],
+      "sim": [
+        [
+          "display9"
+        ]
+      ],
+      "usilen": [
+        [
+          "display9"
+        ]
+      ],
+      "krov_text": [
+        [
+          "display9"
+        ]
+      ]
+    },
+    "rules": [
+      {
+        "field": "del",
+        "checked": false,
+        "defaultValue": "1030",
+        "outcomes": {
+          "0": {},
+          "1030": {
+            "display5": false,
+            "display6": false,
+            "display7": true,
+            "display8": true,
+            "display9": true
+          },
+          "1031": {
+            "display5": true,
+            "display6": false,
+            "display7": false,
+            "display8": true,
+            "display9": false
+          },
+          "1032": {
+            "display5": false,
+            "display6": true,
+            "display7": true,
+            "display8": true,
+            "display9": true
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "local",
+        "equals": "47",
+        "id": "display1",
+        "defaultValue": "1047"
+      },
+      {
+        "field": "limf",
+        "equals": "58",
+        "id": "display3",
+        "defaultValue": "1051"
+      }
+    ]
+  },
+  "brooho_1": {
+    "initial": {
+      "display1": false,
+      "display2": false,
+      "display3": false,
+      "display4": false,
+      "display5": false,
+      "display6": false,
+      "display7": false,
+      "display14": false,
+      "display15": false,
+      "display8": false,
+      "display9": false,
+      "display10": false,
+      "display11": false,
+      "display12": false,
+      "display13": false
+    },
+    "fields": {
+      "pechen": [
+        []
+      ],
+      "kosoi_r": [
+        []
+      ],
+      "kosoi_l": [
+        []
+      ],
+      "tolsh_r": [
+        []
+      ],
+      "tolsh_l": [
+        []
+      ],
+      "kontur": [
+        []
+      ],
+      "struktura": [
+        []
+      ],
+      "one_o": [
+        [
+          "display1"
+        ]
+      ],
+      "one_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "eho_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "str_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "vkl_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "kontur_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "obod_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "gde_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "cdk_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r1_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r2_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r3_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "do_obraz1": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "one_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "eho_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "str_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "vkl_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "kontur_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "obod_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "gde_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "cdk_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r1_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r2_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r3_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "do_obraz2": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "one_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "eho_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "str_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "vkl_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "kontur_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "obod_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "gde_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "cdk_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r1_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r2_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "r3_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "do_obraz3": [
+        [
+          "display1",
+          "display2"
+        ]
+      ],
+      "many_o": [
+        [
+          "display1"
+        ]
+      ],
+      "m_ochag": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_obem": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_jid": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_kalc": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_gipo": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_giper": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_izo": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_aneho": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_str": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_jid_vkl": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_dolja": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_seg1": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_seg2": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_seg3": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_seg4": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_seg5": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_seg6": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_seg7": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_seg8": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_cdk": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_razot": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "m_razdo": [
+        [
+          "display1",
+          "display3"
+        ]
+      ],
+      "pechen_str_text": [
+        []
+      ],
+      "ehogen": [
+        []
+      ],
+      "jelch_prot": [
+        []
+      ],
+      "port_vena": [
+        []
+      ],
+      "port_vena_text": [
+        []
+      ],
+      "polaj_vena": [
+        []
+      ],
+      "polaj_vena1": [
+        []
+      ],
+      "polaj_vena2": [
+        []
+      ],
+      "pechen_text": [
+        []
+      ],
+      "forma_izm": [
+        []
+      ],
+      "jelch_p": [
+        [
+          "display4"
+        ]
+      ],
+      "forma": [
+        [
+          "display5"
+        ]
+      ],
+      "jelch_dl": [
+        [
+          "display5"
+        ]
+      ],
+      "jelch_sh": [
+        [
+          "display5"
+        ]
+      ],
+      "jelch_tol": [
+        [
+          "display5"
+        ]
+      ],
+      "jelch_ob": [
+        [
+          "display5"
+        ]
+      ],
+      "stenki": [
+        [
+          "display5"
+        ]
+      ],
+      "stenki_size": [
+        [
+          "display5"
+        ]
+      ],
+      "soderg": [
+        [
+          "display5"
+        ]
+      ],
+      "v_polosti": [
+        [
+          "display5"
+        ]
+      ],
+      "jelch_protok": [
+        [
+          "display5"
+        ]
+      ],
+      "protok_mm": [
+        [
+          "display5"
+        ]
+      ],
+      "pod_jel": [
+        []
+      ],
+      "jel_net": [
+        [
+          "display6"
+        ]
+      ],
+      "golov": [
+        [
+          "display7"
+        ]
+      ],
+      "telo": [
+        [
+          "display7"
+        ]
+      ],
+      "hvost": [
+        [
+          "display7"
+        ]
+      ],
+      "kontur_pod": [
+        [
+          "display7"
+        ]
+      ],
+      "struktura_pod": [
+        [
+          "display7"
+        ]
+      ],
+      "str_pod_jel": [
+        [
+          "display7"
+        ]
+      ],
+      "eho_pod": [
+        [
+          "display7"
+        ]
+      ],
+      "virs_rash": [
+        [
+          "display7"
+        ]
+      ],
+      "virs_size": [
+        [
+          "display7"
+        ]
+      ],
+      "sel_vena": [
+        [
+          "display7"
+        ]
+      ],
+      "selez": [
+        []
+      ],
+      "sel_dl": [
+        [
+          "display14"
+        ]
+      ],
+      "sel_tol": [
+        [
+          "display14"
+        ]
+      ],
+      "sel_sh": [
+        [
+          "display14"
+        ]
+      ],
+      "sel_obem": [
+        [
+          "display14"
+        ]
+      ],
+      "sel_kon": [
+        [
+          "display14"
+        ]
+      ],
+      "struktura_sel": [
+        [
+          "display14"
+        ]
+      ],
+      "str_sel": [
+        [
+          "display14"
+        ]
+      ],
+      "eho_sel": [
+        [
+          "display14"
+        ]
+      ],
+      "selez_text": [
+        [
+          "display15"
+        ]
+      ],
+      "r_pochka": [
+        []
+      ],
+      "r_pochka_izm": [
+        [
+          "display8"
+        ]
+      ],
+      "r_razm_poch_1": [
+        [
+          "display9"
+        ]
+      ],
+      "r_razm_poch_2": [
+        [
+          "display9"
+        ]
+      ],
+      "r_kontur_poch": [
+        [
+          "display9"
+        ]
+      ],
+      "r_tolsh_paren_1": [
+        [
+          "display9"
+        ]
+      ],
+      "r_tolsh_paren_2": [
+        [
+          "display9"
+        ]
+      ],
+      "r_tolsh_paren_3": [
+        [
+          "display9"
+        ]
+      ],
+      "r_eho_paren": [
+        [
+          "display9"
+        ]
+      ],
+      "r_differ": [
+        [
+          "display9"
+        ]
+      ],
+      "r_chash": [
+        [
+          "display9"
+        ]
+      ],
+      "r_chash_check": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_chash_local": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_chash_size": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_lohanki": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_lohan_size": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_pochka_text": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_nadpoch": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_nadpoch_text": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "l_pochka": [
+        [
+          "display9"
+        ]
+      ],
+      "l_pochka_izm": [
+        [
+          "display9",
+          "display11"
+        ]
+      ],
+      "l_razm_poch_1": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_razm_poch_2": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_kontur_poch": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_tolsh_paren_1": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_tolsh_paren_2": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_tolsh_paren_3": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_eho_paren": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_differ": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_chash": [
+        [
+          "display9",
+          "display12"
+        ]
+      ],
+      "l_chash_check": [
+        [
+          "display9",
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_chash_local": [
+        [
+          "display9",
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_chash_size": [
+        [
+          "display9",
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_lohanki": [
+        [
+          "display9",
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_lohan_size": [
+        [
+          "display9",
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_pochka_text": [
+        [
+          "display9",
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_nadpoch": [
+        [
+          "display9",
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_nadpoch_text": [
+        [
+          "display9",
+          "display12",
+          "display13"
+        ]
+      ]
+    },
+    "rules": [
+      {
+        "field": "one_o",
+        "checked": true,
+        "defaultValue": "",
+        "outcomes": {
+          "0": {
+            "display2": false
+          },
+          "631": {
+            "display2": true
+          },
+          "": {
+            "display2": false
+          },
+          "__other": {
+            "display2": true
+          }
+        }
+      },
+      {
+        "field": "many_o",
+        "checked": true,
+        "defaultValue": "",
+        "outcomes": {
+          "0": {
+            "display3": false
+          },
+          "632": {
+            "display3": true
+          },
+          "": {
+            "display3": false
+          },
+          "__other": {
+            "display3": true
+          }
+        }
+      },
+      {
+        "field": "struktura",
+        "checked": false,
+        "defaultValue": "124",
+        "outcomes": {
+          "0": {
+            "display1": false
+          },
+          "124": {
+            "display1": false
+          },
+          "125": {
+            "display1": true
+          },
+          "555": {
+            "display1": false
+          },
+          "": {
+            "display1": false
+          },
+          "__other": {
+            "display1": false
+          }
+        }
+      },
+      {
+        "field": "forma_izm",
+        "checked": false,
+        "defaultValue": "654",
+        "outcomes": {
+          "0": {
+            "display4": true,
+            "display5": false
+          },
+          "654": {
+            "display4": false,
+            "display5": true
+          },
+          "655": {
+            "display4": true,
+            "display5": false
+          },
+          "656": {
+            "display4": true,
+            "display5": false
+          },
+          "657": {
+            "display4": true,
+            "display5": false
+          },
+          "": {
+            "display4": true,
+            "display5": false
+          },
+          "__other": {
+            "display4": true,
+            "display5": false
+          }
+        }
+      },
+      {
+        "field": "pod_jel",
+        "checked": false,
+        "defaultValue": "666",
+        "outcomes": {
+          "0": {},
+          "666": {
+            "display6": false,
+            "display7": true
+          },
+          "667": {
+            "display6": true,
+            "display7": false
+          },
+          "668": {
+            "display6": true,
+            "display7": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "selez",
+        "checked": false,
+        "defaultValue": "1016",
+        "outcomes": {
+          "0": {},
+          "1016": {
+            "display14": true,
+            "display15": true
+          },
+          "1017": {
+            "display14": true,
+            "display15": true
+          },
+          "1018": {
+            "display14": false,
+            "display15": true
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "r_pochka",
+        "checked": false,
+        "defaultValue": "670",
+        "outcomes": {
+          "0": {},
+          "670": {
+            "display8": false,
+            "display9": true
+          },
+          "671": {
+            "display8": false,
+            "display9": true
+          },
+          "672": {
+            "display8": false,
+            "display9": true
+          },
+          "673": {
+            "display8": true,
+            "display9": true
+          },
+          "674": {
+            "display8": true,
+            "display9": true
+          },
+          "675": {
+            "display8": true,
+            "display9": true
+          },
+          "676": {
+            "display8": true,
+            "display9": false
+          },
+          "1053": {},
+          "1054": {},
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "l_pochka",
+        "checked": false,
+        "defaultValue": "670",
+        "outcomes": {
+          "0": {},
+          "670": {
+            "display11": false,
+            "display12": true
+          },
+          "671": {
+            "display11": false,
+            "display12": true
+          },
+          "672": {
+            "display11": false,
+            "display12": true
+          },
+          "673": {},
+          "674": {},
+          "675": {
+            "display11": true,
+            "display12": true
+          },
+          "676": {
+            "display11": true,
+            "display12": false
+          },
+          "1053": {
+            "display11": true,
+            "display12": true
+          },
+          "1054": {
+            "display11": true,
+            "display12": true
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "r_chash",
+        "equals": "140",
+        "id": "display10",
+        "defaultValue": "139"
+      },
+      {
+        "field": "l_chash",
+        "equals": "140",
+        "id": "display13",
+        "defaultValue": "139"
+      }
+    ]
+  },
+  "eho_kg_2": {
+    "initial": {},
+    "fields": {
+      "aorta": [
+        []
+      ],
+      "aorta_vos": [
+        []
+      ],
+      "left_p": [
+        []
+      ],
+      "right_p1": [
+        []
+      ],
+      "right_p2": [
+        []
+      ],
+      "kdr": [
+        []
+      ],
+      "right_jel": [
+        []
+      ],
+      "ksr": [
+        []
+      ],
+      "kdo": [
+        []
+      ],
+      "kso": [
+        []
+      ],
+      "fv": [
+        []
+      ],
+      "fy": [
+        []
+      ],
+      "ydar_v": [
+        []
+      ],
+      "mjld_tol": [
+        []
+      ],
+      "mjld_eks": [
+        []
+      ],
+      "zslj_tol": [
+        []
+      ],
+      "zslj_eks": [
+        []
+      ],
+      "massa": [
+        []
+      ],
+      "index_mm": [
+        []
+      ],
+      "trans_mit_v": [
+        []
+      ],
+      "trans_mit_g": [
+        []
+      ],
+      "trans_aort_v": [
+        []
+      ],
+      "trans_aort_g": [
+        []
+      ],
+      "trans_pul_v": [
+        []
+      ],
+      "trans_pul_g": [
+        []
+      ],
+      "trans_trik_v": [
+        []
+      ],
+      "trans_trik_g": [
+        []
+      ],
+      "ea": [
+        []
+      ],
+      "ivrt": [
+        []
+      ],
+      "polost": [
+        []
+      ],
+      "stenki": [
+        []
+      ],
+      "aorta_text": [
+        []
+      ],
+      "stvorki": [
+        []
+      ],
+      "perikard": [
+        []
+      ],
+      "miokard": [
+        []
+      ],
+      "dg": [
+        []
+      ]
+    },
+    "rules": []
+  },
+  "ginekol_11": {
+    "initial": {
+      "display1": false,
+      "display2": false,
+      "display3": false,
+      "display5": false,
+      "display6": false,
+      "display4": false,
+      "display7": false,
+      "display8": false,
+      "display9": false,
+      "display10": false
+    },
+    "fields": {
+      "faza_c": [
+        []
+      ],
+      "payza": [
+        []
+      ],
+      "krov": [
+        []
+      ],
+      "telo_matki": [
+        []
+      ],
+      "del_matka": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_dl": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_tol": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_sh": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_stroi": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_stroi_text": [
+        [
+          "display1"
+        ]
+      ],
+      "cer_kanal": [
+        [
+          "display1"
+        ]
+      ],
+      "matka_neopred": [
+        [
+          "display2"
+        ]
+      ],
+      "matka_dl": [
+        [
+          "display3"
+        ]
+      ],
+      "matka_tol": [
+        [
+          "display3"
+        ]
+      ],
+      "matka_sh": [
+        [
+          "display3"
+        ]
+      ],
+      "matka_ob": [
+        [
+          "display3"
+        ]
+      ],
+      "forma_matka": [
+        [
+          "display3"
+        ]
+      ],
+      "forma_matka_text": [
+        [
+          "display3"
+        ]
+      ],
+      "struct_matka": [
+        [
+          "display3"
+        ]
+      ],
+      "str_miom": [
+        [
+          "display3"
+        ]
+      ],
+      "endometrii": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_soot": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_soot_text": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_tol": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_struct": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_text": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_kontur": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_kontur_text": [
+        [
+          "display3"
+        ]
+      ],
+      "polost_m": [
+        [
+          "display3"
+        ]
+      ],
+      "polost_m_raz": [
+        [
+          "display3"
+        ]
+      ],
+      "polost_m_text": [
+        [
+          "display3"
+        ]
+      ],
+      "sheika_m": [
+        [
+          "display3"
+        ]
+      ],
+      "sheika_dl": [
+        [
+          "display5"
+        ]
+      ],
+      "sheika_sh": [
+        [
+          "display5"
+        ]
+      ],
+      "sheika_forma": [
+        [
+          "display5"
+        ]
+      ],
+      "sheika_str": [
+        [
+          "display5"
+        ]
+      ],
+      "sheika_str_izm": [
+        [
+          "display6"
+        ]
+      ],
+      "sheika_kist": [
+        [
+          "display6"
+        ]
+      ],
+      "sheika_m_net": [
+        [
+          "display4"
+        ]
+      ],
+      "r_ja": [
+        []
+      ],
+      "r_god": [
+        [
+          "display7"
+        ]
+      ],
+      "r_dlina": [
+        [
+          "display8"
+        ]
+      ],
+      "r_tolsh": [
+        [
+          "display8"
+        ]
+      ],
+      "r_shir": [
+        [
+          "display8"
+        ]
+      ],
+      "r_obem": [
+        [
+          "display8"
+        ]
+      ],
+      "r_yvelich": [
+        [
+          "display8"
+        ]
+      ],
+      "r_form": [
+        [
+          "display8"
+        ]
+      ],
+      "r_form_text": [
+        [
+          "display8"
+        ]
+      ],
+      "r_str": [
+        [
+          "display8"
+        ]
+      ],
+      "r_structura": [
+        [
+          "display8"
+        ]
+      ],
+      "r_text": [
+        []
+      ],
+      "l_ja": [
+        []
+      ],
+      "l_god": [
+        [
+          "display9"
+        ]
+      ],
+      "l_dlina": [
+        [
+          "display10"
+        ]
+      ],
+      "l_tolsh": [
+        [
+          "display10"
+        ]
+      ],
+      "l_shir": [
+        [
+          "display10"
+        ]
+      ],
+      "l_obem": [
+        [
+          "display10"
+        ]
+      ],
+      "l_yvelich": [
+        [
+          "display10"
+        ]
+      ],
+      "l_form": [
+        [
+          "display10"
+        ]
+      ],
+      "l_form_text": [
+        [
+          "display10"
+        ]
+      ],
+      "l_str": [
+        [
+          "display10"
+        ]
+      ],
+      "l_structura": [
+        [
+          "display10"
+        ]
+      ],
+      "l_text": [
+        []
+      ],
+      "jidkost": [
+        []
+      ],
+      "svob_jid": [
+        []
+      ],
+      "svob_jid_sel": [
+        []
+      ],
+      "sosud_sel": [
+        []
+      ],
+      "sosud": [
+        []
+      ]
+    },
+    "rules": [
+      {
+        "field": "telo_matki",
+        "checked": false,
+        "defaultValue": "724",
+        "outcomes": {
+          "0": {},
+          "724": {
+            "display1": false,
+            "display2": false,
+            "display3": true,
+            "display4": false,
+            "display5": true,
+            "display6": false
+          },
+          "725": {
+            "display1": false,
+            "display2": false,
+            "display3": true,
+            "display4": false,
+            "display5": true,
+            "display6": false
+          },
+          "726": {
+            "display1": false,
+            "display2": false,
+            "display3": true,
+            "display4": false,
+            "display5": true,
+            "display6": false
+          },
+          "727": {
+            "display1": false,
+            "display2": false,
+            "display3": true,
+            "display4": false,
+            "display5": true,
+            "display6": false
+          },
+          "728": {
+            "display1": true,
+            "display2": false,
+            "display3": false,
+            "display4": false,
+            "display5": false,
+            "display6": false
+          },
+          "729": {
+            "display1": false,
+            "display2": true,
+            "display3": false,
+            "display4": false,
+            "display5": false,
+            "display6": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "sheika_m",
+        "checked": false,
+        "defaultValue": "768",
+        "outcomes": {
+          "0": {},
+          "768": {
+            "display4": true,
+            "display5": true
+          },
+          "769": {
+            "display4": true,
+            "display5": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "sheika_str",
+        "checked": false,
+        "defaultValue": "775",
+        "outcomes": {
+          "0": {
+            "display6": false
+          },
+          "775": {
+            "display6": false
+          },
+          "776": {
+            "display6": true
+          },
+          "": {
+            "display6": false
+          },
+          "__other": {
+            "display6": false
+          }
+        }
+      },
+      {
+        "field": "r_ja",
+        "checked": false,
+        "defaultValue": "312",
+        "outcomes": {
+          "0": {},
+          "312": {
+            "display7": false,
+            "display8": true
+          },
+          "313": {
+            "display7": true,
+            "display8": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "l_ja",
+        "checked": false,
+        "defaultValue": "312",
+        "outcomes": {
+          "0": {},
+          "312": {
+            "display9": false,
+            "display10": true
+          },
+          "313": {
+            "display9": true,
+            "display10": false
+          },
+          "": {},
+          "__other": {}
+        }
+      }
+    ]
+  },
+  "koleno_1": {
+    "initial": {
+      "display5": false,
+      "display3": false,
+      "display4": false,
+      "display1": false,
+      "display6": false,
+      "display7": false,
+      "display2": false,
+      "display10": false,
+      "display11": false,
+      "display12": false,
+      "display13": false,
+      "display14": false,
+      "display15": false,
+      "display16": false
+    },
+    "fields": {
+      "r_opred_gyd": [
+        []
+      ],
+      "r_jid_opred": [
+        [
+          "display5"
+        ]
+      ],
+      "r_gyd_text": [
+        []
+      ],
+      "r_zav_size1": [
+        []
+      ],
+      "r_zav_size2": [
+        []
+      ],
+      "r_sinov": [
+        []
+      ],
+      "r_sinov_size": [
+        [
+          "display3"
+        ]
+      ],
+      "r_suho": [
+        []
+      ],
+      "r_nadkol": [
+        []
+      ],
+      "r_opred_burs": [
+        [],
+        [
+          "display4"
+        ]
+      ],
+      "r_cel": [
+        []
+      ],
+      "r_struc": [
+        []
+      ],
+      "r_ehogen": [
+        []
+      ],
+      "r_eho_po": [
+        [
+          "display4"
+        ]
+      ],
+      "r_tolsh_size": [
+        [
+          "display4"
+        ],
+        [
+          "display4",
+          "display1"
+        ]
+      ],
+      "r_gir_struc": [
+        [
+          "display4"
+        ]
+      ],
+      "r_gipertr": [
+        [
+          "display4"
+        ]
+      ],
+      "r_strucbok": [
+        [
+          "display4"
+        ]
+      ],
+      "r_pov_kost": [
+        [
+          "display4"
+        ]
+      ],
+      "r_opred_razr": [
+        [
+          "display4"
+        ]
+      ],
+      "r_kontur": [
+        [
+          "display4"
+        ]
+      ],
+      "r_tolsh": [
+        [
+          "display4"
+        ]
+      ],
+      "r_n_menisk_forma": [
+        [
+          "display4"
+        ]
+      ],
+      "r_n_menisk_struc": [
+        [
+          "display4"
+        ]
+      ],
+      "r_n_menisk_kon": [
+        [
+          "display4"
+        ]
+      ],
+      "r_n_menisk_frag": [
+        [
+          "display4"
+        ]
+      ],
+      "r_n_frag_opred": [
+        [
+          "display4",
+          "display6"
+        ]
+      ],
+      "r_n_menisk_kal": [
+        [
+          "display4"
+        ]
+      ],
+      "r_n_menisk_para": [
+        [
+          "display4"
+        ]
+      ],
+      "r_v_menisk_forma": [
+        [
+          "display4"
+        ]
+      ],
+      "r_v_menisk_struc": [
+        [
+          "display4"
+        ]
+      ],
+      "r_v_menisk_kon": [
+        [
+          "display4"
+        ]
+      ],
+      "r_v_menisk_frag": [
+        [
+          "display4"
+        ]
+      ],
+      "r_v_frag_opred": [
+        [
+          "display4",
+          "display7"
+        ]
+      ],
+      "r_v_menisk_kal": [
+        [
+          "display4"
+        ]
+      ],
+      "r_v_menisk_para": [
+        [
+          "display4"
+        ]
+      ],
+      "r_beker": [
+        [
+          "display4"
+        ]
+      ],
+      "r_beker_opred": [
+        [
+          "display4",
+          "display2"
+        ]
+      ],
+      "r_beker_size1": [
+        [
+          "display4",
+          "display2"
+        ]
+      ],
+      "r_beker_size2": [
+        [
+          "display4",
+          "display2"
+        ]
+      ],
+      "l_opred_gyd": [
+        [
+          "display4"
+        ]
+      ],
+      "l_jid_opred": [
+        [
+          "display4",
+          "display10"
+        ]
+      ],
+      "l_gyd_text": [
+        [
+          "display4"
+        ]
+      ],
+      "l_zav_size1": [
+        [
+          "display4"
+        ]
+      ],
+      "l_zav_size2": [
+        [
+          "display4"
+        ]
+      ],
+      "l_sinov": [
+        [
+          "display4"
+        ]
+      ],
+      "l_sinov_size": [
+        [
+          "display4",
+          "display11"
+        ]
+      ],
+      "l_suho": [
+        [
+          "display4"
+        ]
+      ],
+      "l_nadkol": [
+        [
+          "display4"
+        ]
+      ],
+      "l_opred_burs": [
+        [
+          "display4"
+        ],
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_cel": [
+        [
+          "display4"
+        ]
+      ],
+      "l_struc": [
+        [
+          "display4"
+        ]
+      ],
+      "l_ehogen": [
+        [
+          "display4"
+        ]
+      ],
+      "l_eho_po": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_tolsh_size": [
+        [
+          "display4",
+          "display12"
+        ],
+        [
+          "display4",
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_gir_struc": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_gipertr": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_strucbok": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_pov_kost": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_opred_razr": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_kontur": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_tolsh": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_n_menisk_forma": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_n_menisk_struc": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_n_menisk_kon": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_n_menisk_frag": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_n_frag_opred": [
+        [
+          "display4",
+          "display12",
+          "display14"
+        ]
+      ],
+      "l_n_menisk_kal": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_n_menisk_para": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_v_menisk_forma": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_v_menisk_struc": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_v_menisk_kon": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_v_menisk_frag": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_v_frag_opred": [
+        [
+          "display4",
+          "display12",
+          "display15"
+        ]
+      ],
+      "l_v_menisk_kal": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_v_menisk_para": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_beker": [
+        [
+          "display4",
+          "display12"
+        ]
+      ],
+      "l_beker_opred": [
+        [
+          "display4",
+          "display12",
+          "display16"
+        ]
+      ],
+      "l_beker_size1": [
+        [
+          "display4",
+          "display12",
+          "display16"
+        ]
+      ],
+      "l_beker_size2": [
+        [
+          "display4",
+          "display12",
+          "display16"
+        ]
+      ]
+    },
+    "rules": [
+      {
+        "field": "r_ehogen",
+        "checked": false,
+        "defaultValue": "362",
+        "outcomes": {
+          "0": {
+            "display4": false
+          },
+          "362": {
+            "display4": false
+          },
+          "363": {
+            "display4": true
+          },
+          "364": {
+            "display4": true
+          },
+          "": {
+            "display4": false
+          },
+          "__other": {
+            "display4": false
+          }
+        }
+      },
+      {
+        "field": "l_ehogen",
+        "checked": false,
+        "defaultValue": "362",
+        "outcomes": {
+          "0": {
+            "display12": false
+          },
+          "362": {
+            "display12": false
+          },
+          "363": {
+            "display12": true
+          },
+          "364": {
+            "display12": true
+          },
+          "": {
+            "display12": false
+          },
+          "__other": {
+            "display12": false
+          }
+        }
+      },
+      {
+        "field": "r_opred_gyd",
+        "equals": "351",
+        "id": "display5",
+        "defaultValue": "350"
+      },
+      {
+        "field": "r_sinov",
+        "equals": "353",
+        "id": "display3",
+        "defaultValue": "352"
+      },
+      {
+        "field": "r_tolsh",
+        "equals": "376",
+        "id": "display1",
+        "defaultValue": "375"
+      },
+      {
+        "field": "r_n_menisk_frag",
+        "equals": "351",
+        "id": "display6",
+        "defaultValue": "350"
+      },
+      {
+        "field": "r_v_menisk_frag",
+        "equals": "351",
+        "id": "display7",
+        "defaultValue": "350"
+      },
+      {
+        "field": "r_beker",
+        "equals": "351",
+        "id": "display2",
+        "defaultValue": "350"
+      },
+      {
+        "field": "l_opred_gyd",
+        "equals": "351",
+        "id": "display10",
+        "defaultValue": "350"
+      },
+      {
+        "field": "l_sinov",
+        "equals": "353",
+        "id": "display11",
+        "defaultValue": "352"
+      },
+      {
+        "field": "l_tolsh",
+        "equals": "376",
+        "id": "display13",
+        "defaultValue": "375"
+      },
+      {
+        "field": "l_n_menisk_frag",
+        "equals": "351",
+        "id": "display14",
+        "defaultValue": "350"
+      },
+      {
+        "field": "l_v_menisk_frag",
+        "equals": "351",
+        "id": "display15",
+        "defaultValue": "350"
+      },
+      {
+        "field": "l_beker",
+        "equals": "351",
+        "id": "display16",
+        "defaultValue": "350"
+      }
+    ]
+  },
+  "pochki_1": {
+    "initial": {
+      "display8": false,
+      "display9": false,
+      "display10": false,
+      "display11": false,
+      "display12": false,
+      "display13": false
+    },
+    "fields": {
+      "r_pochka": [
+        []
+      ],
+      "r_pochka_izm": [
+        [
+          "display8"
+        ]
+      ],
+      "r_razm_poch_1": [
+        [
+          "display9"
+        ]
+      ],
+      "r_razm_poch_2": [
+        [
+          "display9"
+        ]
+      ],
+      "r_kontur_poch": [
+        [
+          "display9"
+        ]
+      ],
+      "r_tolsh_paren_1": [
+        [
+          "display9"
+        ]
+      ],
+      "r_tolsh_paren_2": [
+        [
+          "display9"
+        ]
+      ],
+      "r_tolsh_paren_3": [
+        [
+          "display9"
+        ]
+      ],
+      "r_eho_paren": [
+        [
+          "display9"
+        ]
+      ],
+      "r_differ": [
+        [
+          "display9"
+        ]
+      ],
+      "r_chash": [
+        [
+          "display9"
+        ]
+      ],
+      "r_chash_check": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_chash_local": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_chash_size": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_lohanki": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_lohan_size": [
+        [
+          "display9",
+          "display10"
+        ]
+      ],
+      "r_pochka_text": [
+        [
+          "display9"
+        ]
+      ],
+      "r_nadpoch": [
+        [
+          "display9"
+        ]
+      ],
+      "r_nadpoch_text": [
+        [
+          "display9"
+        ]
+      ],
+      "l_pochka": [
+        []
+      ],
+      "l_pochka_izm": [
+        [
+          "display11"
+        ]
+      ],
+      "l_razm_poch_1": [
+        [
+          "display12"
+        ]
+      ],
+      "l_razm_poch_2": [
+        [
+          "display12"
+        ]
+      ],
+      "l_kontur_poch": [
+        [
+          "display12"
+        ]
+      ],
+      "l_tolsh_paren_1": [
+        [
+          "display12"
+        ]
+      ],
+      "l_tolsh_paren_2": [
+        [
+          "display12"
+        ]
+      ],
+      "l_tolsh_paren_3": [
+        [
+          "display12"
+        ]
+      ],
+      "l_eho_paren": [
+        [
+          "display12"
+        ]
+      ],
+      "l_differ": [
+        [
+          "display12"
+        ]
+      ],
+      "l_chash": [
+        [
+          "display12"
+        ]
+      ],
+      "l_chash_check": [
+        [
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_chash_local": [
+        [
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_chash_size": [
+        [
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_lohanki": [
+        [
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_lohan_size": [
+        [
+          "display12",
+          "display13"
+        ]
+      ],
+      "l_pochka_text": [
+        [
+          "display12"
+        ]
+      ],
+      "l_nadpoch": [
+        [
+          "display12"
+        ]
+      ],
+      "l_nadpoch_text": [
+        [
+          "display12"
+        ]
+      ]
+    },
+    "rules": [
+      {
+        "field": "r_pochka",
+        "checked": false,
+        "defaultValue": "922",
+        "outcomes": {
+          "0": {},
+          "922": {
+            "display8": false,
+            "display9": true
+          },
+          "923": {
+            "display8": false,
+            "display9": true
+          },
+          "924": {
+            "display8": false,
+            "display9": true
+          },
+          "925": {
+            "display8": true,
+            "display9": true
+          },
+          "926": {
+            "display8": true,
+            "display9": true
+          },
+          "927": {
+            "display8": true,
+            "display9": true
+          },
+          "928": {
+            "display8": true,
+            "display9": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "l_pochka",
+        "checked": false,
+        "defaultValue": "922",
+        "outcomes": {
+          "0": {},
+          "922": {
+            "display11": false,
+            "display12": true
+          },
+          "923": {
+            "display11": false,
+            "display12": true
+          },
+          "924": {
+            "display11": false,
+            "display12": true
+          },
+          "925": {
+            "display11": true,
+            "display12": true
+          },
+          "926": {
+            "display11": true,
+            "display12": true
+          },
+          "927": {
+            "display11": true,
+            "display12": true
+          },
+          "928": {
+            "display11": true,
+            "display12": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "r_chash",
+        "equals": "935",
+        "id": "display10",
+        "defaultValue": "934"
+      },
+      {
+        "field": "l_chash",
+        "equals": "935",
+        "id": "display13",
+        "defaultValue": "934"
+      }
+    ]
+  },
+  "moloch_1": {
+    "initial": {
+      "display1": false
+    },
+    "fields": {
+      "moloch_del": [
+        []
+      ],
+      "moloch_god": [
+        []
+      ],
+      "moloch_text": [
+        []
+      ],
+      "moloch_koja": [
+        []
+      ],
+      "moloch_koja_text": [
+        []
+      ],
+      "moloch_sosok": [
+        []
+      ],
+      "moloch_jel": [
+        []
+      ],
+      "moloch_protok": [
+        []
+      ],
+      "m_protok_mm": [
+        [
+          "display1"
+        ]
+      ],
+      "m_protok_ravn": [
+        [
+          "display1"
+        ]
+      ],
+      "m_protok_gde": [
+        [
+          "display1"
+        ]
+      ],
+      "sost_protok": [
+        []
+      ],
+      "moloch_stroma": [
+        []
+      ],
+      "moloch_ochag": [
+        []
+      ],
+      "moloch_obraz": [
+        []
+      ],
+      "moloch_limfou": [
+        []
+      ],
+      "m_limf_mm": [
+        []
+      ],
+      "m_limf_gde": [
+        []
+      ],
+      "m_limf_text": [
+        []
+      ]
+    },
+    "rules": [
+      {
+        "field": "moloch_protok",
+        "equals": "470",
+        "id": "display1",
+        "defaultValue": "471"
+      }
+    ]
+  },
+  "beremen_1": {
+    "initial": {},
+    "fields": {
+      "mens_text": [
+        []
+      ],
+      "srok_ber": [
+        []
+      ],
+      "data_roda": [
+        []
+      ],
+      "plod": [
+        []
+      ],
+      "plod_predl": [
+        []
+      ],
+      "plod_poloj": [
+        []
+      ],
+      "poza": [
+        []
+      ],
+      "vid": [
+        []
+      ],
+      "razm_gol": [
+        []
+      ],
+      "okr_golov": [
+        []
+      ],
+      "lob_zat": [
+        []
+      ],
+      "okr_jiv": [
+        []
+      ],
+      "bed_l": [
+        []
+      ],
+      "bed_r": [
+        []
+      ],
+      "golen_l": [
+        []
+      ],
+      "golen_r": [
+        []
+      ],
+      "plech_l": [
+        []
+      ],
+      "plech_r": [
+        []
+      ],
+      "predp_l": [
+        []
+      ],
+      "predp_r": [
+        []
+      ],
+      "ned_ber": [
+        []
+      ],
+      "bad_srok": [
+        []
+      ],
+      "ves": [
+        []
+      ],
+      "sel_mozg": [
+        []
+      ],
+      "mozg": [
+        []
+      ],
+      "sel_mozj": [
+        []
+      ],
+      "mozj": [
+        []
+      ],
+      "sel_bolsh_c": [
+        []
+      ],
+      "bolsh_c": [
+        []
+      ],
+      "sel_prof": [
+        []
+      ],
+      "prof": [
+        []
+      ],
+      "sel_nos": [
+        []
+      ],
+      "nos": [
+        []
+      ],
+      "sel_glaz": [
+        []
+      ],
+      "glaz": [
+        []
+      ],
+      "sel_pozv": [
+        []
+      ],
+      "pozv": [
+        []
+      ],
+      "sel_legkie": [
+        []
+      ],
+      "legkie": [
+        []
+      ],
+      "sel_serdce": [
+        []
+      ],
+      "serdce": [
+        []
+      ],
+      "sel_jelud": [
+        []
+      ],
+      "jelud": [
+        []
+      ],
+      "sel_kishki": [
+        []
+      ],
+      "kishki": [
+        []
+      ],
+      "sel_pochki": [
+        []
+      ],
+      "pochki": [
+        []
+      ],
+      "sel_mocha": [
+        []
+      ],
+      "mocha": [
+        []
+      ],
+      "plac1": [
+        []
+      ],
+      "plac2": [
+        []
+      ],
+      "tolsh_p": [
+        []
+      ],
+      "tolsh_text": [
+        []
+      ],
+      "zrelost": [
+        []
+      ],
+      "vodi": [
+        []
+      ],
+      "index": [
+        []
+      ],
+      "sosud": [
+        []
+      ],
+      "pp_sd": [
+        []
+      ],
+      "pp_ir": [
+        []
+      ],
+      "pp_norma": [
+        []
+      ],
+      "mp_sd": [
+        []
+      ],
+      "mp_ir": [
+        []
+      ],
+      "mp_norma": [
+        []
+      ],
+      "poroki": [
+        []
+      ],
+      "poroki_text": [
+        []
+      ],
+      "osob_stroi": [
+        []
+      ],
+      "stenki_text": [
+        []
+      ],
+      "obl_pr": [
+        []
+      ],
+      "pridatki": [
+        []
+      ],
+      "vizual": [
+        []
+      ],
+      "viz_text": [
+        []
+      ],
+      "pochki_ber": [
+        []
+      ],
+      "chash": [
+        []
+      ],
+      "chash_gde": [
+        []
+      ],
+      "loh": [
+        []
+      ],
+      "loh_gde": [
+        []
+      ],
+      "pochki_text": [
+        []
+      ],
+      "rek_text": [
+        []
+      ],
+      "kontrol_text": [
+        []
+      ]
+    },
+    "rules": []
+  },
+  "trimestr_1": {
+    "initial": {},
+    "fields": {
+      "mens_text": [
+        []
+      ],
+      "ned_text": [
+        []
+      ],
+      "plod": [
+        []
+      ],
+      "poloj_plod": [
+        []
+      ],
+      "serd": [
+        []
+      ],
+      "bpr": [
+        []
+      ],
+      "sdj": [
+        []
+      ],
+      "og": [
+        []
+      ],
+      "oj": [
+        []
+      ],
+      "dbk": [
+        []
+      ],
+      "dop_iz": [
+        []
+      ],
+      "razmer_p": [
+        []
+      ],
+      "ned_ber": [
+        []
+      ],
+      "massa": [
+        []
+      ],
+      "placenta1": [
+        []
+      ],
+      "placenta2": [
+        []
+      ],
+      "tolsh_p": [
+        []
+      ],
+      "struct_plac": [
+        []
+      ],
+      "okolop_v": [
+        []
+      ],
+      "pp_sd": [
+        []
+      ],
+      "pp_ir": [
+        []
+      ],
+      "pp_norma": [
+        []
+      ],
+      "mp_sd": [
+        []
+      ],
+      "mp_ir": [
+        []
+      ],
+      "mp_norma": [
+        []
+      ],
+      "poch_ber": [
+        []
+      ]
+    },
+    "rules": []
+  },
+  "pos_pojas_1": {
+    "initial": {
+      "display1": false
+    },
+    "fields": {
+      "ekr_disk": [
+        []
+      ],
+      "ekr_disk1": [
+        []
+      ],
+      "ekr_disk2": [
+        []
+      ],
+      "ekr_disk3": [
+        []
+      ],
+      "ekr_disk4": [
+        []
+      ],
+      "ekr_disk5": [
+        []
+      ],
+      "nep_disk": [
+        []
+      ],
+      "nep_disk1": [
+        []
+      ],
+      "nep_disk2": [
+        []
+      ],
+      "nep_disk3": [
+        []
+      ],
+      "nep_disk4": [
+        []
+      ],
+      "nep_disk5": [
+        []
+      ],
+      "izm_disk": [
+        []
+      ],
+      "izm_disk1": [
+        []
+      ],
+      "izm_disk2": [
+        []
+      ],
+      "izm_disk3": [
+        []
+      ],
+      "izm_disk4": [
+        []
+      ],
+      "izm_disk5": [
+        []
+      ],
+      "struk_izm": [
+        []
+      ],
+      "struk1": [
+        []
+      ],
+      "struk2": [
+        []
+      ],
+      "struk3": [
+        []
+      ],
+      "str_disk": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk1": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk2": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk3": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk4": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk5": [
+        [
+          "display1"
+        ]
+      ],
+      "vir_izm": [
+        [
+          "display1"
+        ]
+      ],
+      "kanal_disk": [
+        []
+      ],
+      "kanal_disk1": [
+        []
+      ],
+      "kanal_disk2": [
+        []
+      ],
+      "kanal_disk3": [
+        []
+      ],
+      "kanal_disk4": [
+        []
+      ],
+      "kanal_disk5": [
+        []
+      ],
+      "def_disk": [
+        []
+      ],
+      "def_disk1": [
+        []
+      ],
+      "def_disk2": [
+        []
+      ],
+      "def_disk3": [
+        []
+      ],
+      "def_disk4": [
+        []
+      ],
+      "def_disk5": [
+        []
+      ],
+      "prolab_mm": [
+        []
+      ],
+      "prol_disk": [
+        []
+      ],
+      "prol_disk1": [
+        []
+      ],
+      "prol_disk2": [
+        []
+      ],
+      "prol_disk3": [
+        []
+      ],
+      "prol_disk4": [
+        []
+      ],
+      "prol_disk5": [
+        []
+      ],
+      "raz_vib_mm": [
+        []
+      ],
+      "raz_disk": [
+        []
+      ],
+      "raz_disk1": [
+        []
+      ],
+      "raz_disk2": [
+        []
+      ],
+      "raz_disk3": [
+        []
+      ],
+      "raz_disk4": [
+        []
+      ],
+      "raz_disk5": [
+        []
+      ],
+      "gip_disk": [
+        []
+      ],
+      "gip_disk1": [
+        []
+      ],
+      "gip_disk2": [
+        []
+      ],
+      "gip_disk3": [
+        []
+      ],
+      "gip_disk4": [
+        []
+      ],
+      "gip_disk5": [
+        []
+      ],
+      "rub_disk": [
+        []
+      ],
+      "rub_disk1": [
+        []
+      ],
+      "rub_disk2": [
+        []
+      ],
+      "rub_disk3": [
+        []
+      ],
+      "rub_disk4": [
+        []
+      ],
+      "rub_disk5": [
+        []
+      ],
+      "def_1": [
+        []
+      ],
+      "def_2": [
+        []
+      ],
+      "def_3": [
+        []
+      ],
+      "def_4": [
+        []
+      ],
+      "def_5": [
+        []
+      ],
+      "kost_disk": [
+        []
+      ],
+      "kost_disk1": [
+        []
+      ],
+      "kost_disk2": [
+        []
+      ],
+      "kost_disk3": [
+        []
+      ],
+      "kost_disk4": [
+        []
+      ],
+      "kost_disk5": [
+        []
+      ],
+      "zad_txt": [
+        []
+      ],
+      "grij": [
+        []
+      ],
+      "grij_txt": [
+        []
+      ]
+    },
+    "rules": [
+      {
+        "field": "struk_izm",
+        "checked": true,
+        "defaultValue": "",
+        "outcomes": {
+          "0": {
+            "display1": false
+          },
+          "689": {
+            "display1": true
+          },
+          "": {
+            "display1": false
+          },
+          "__other": {
+            "display1": true
+          }
+        }
+      }
+    ]
+  },
+  "poz_sheja_1": {
+    "initial": {
+      "display1": false,
+      "display2": false
+    },
+    "fields": {
+      "nep_disk": [
+        []
+      ],
+      "nep_disk1": [
+        []
+      ],
+      "nep_disk2": [
+        []
+      ],
+      "nep_disk3": [
+        []
+      ],
+      "nep_disk4": [
+        []
+      ],
+      "nep_disk5": [
+        []
+      ],
+      "izm_disk": [
+        []
+      ],
+      "izm_disk1": [
+        []
+      ],
+      "izm_disk2": [
+        []
+      ],
+      "izm_disk3": [
+        []
+      ],
+      "izm_disk4": [
+        []
+      ],
+      "izm_disk5": [
+        []
+      ],
+      "struk_izm": [
+        []
+      ],
+      "struk1": [
+        []
+      ],
+      "struk2": [
+        []
+      ],
+      "struk3": [
+        []
+      ],
+      "str_disk": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk1": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk2": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk3": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk4": [
+        [
+          "display1"
+        ]
+      ],
+      "str_disk5": [
+        [
+          "display1"
+        ]
+      ],
+      "vir_izm": [
+        [
+          "display1"
+        ]
+      ],
+      "kanal_disk": [
+        []
+      ],
+      "kanal_disk1": [
+        []
+      ],
+      "kanal_disk2": [
+        []
+      ],
+      "kanal_disk3": [
+        []
+      ],
+      "kanal_disk4": [
+        []
+      ],
+      "kanal_disk5": [
+        []
+      ],
+      "def_disk": [
+        []
+      ],
+      "def_disk1": [
+        []
+      ],
+      "def_disk2": [
+        []
+      ],
+      "def_disk3": [
+        []
+      ],
+      "def_disk4": [
+        []
+      ],
+      "def_disk5": [
+        []
+      ],
+      "prolab_mm": [
+        []
+      ],
+      "prol_disk": [
+        []
+      ],
+      "prol_disk1": [
+        []
+      ],
+      "prol_disk2": [
+        []
+      ],
+      "prol_disk3": [
+        []
+      ],
+      "prol_disk4": [
+        []
+      ],
+      "prol_disk5": [
+        []
+      ],
+      "raz_vib_mm": [
+        []
+      ],
+      "raz_disk": [
+        []
+      ],
+      "raz_disk1": [
+        []
+      ],
+      "raz_disk2": [
+        []
+      ],
+      "raz_disk3": [
+        []
+      ],
+      "raz_disk4": [
+        []
+      ],
+      "raz_disk5": [
+        []
+      ],
+      "gip_disk": [
+        []
+      ],
+      "gip_disk1": [
+        []
+      ],
+      "gip_disk2": [
+        []
+      ],
+      "gip_disk3": [
+        []
+      ],
+      "gip_disk4": [
+        []
+      ],
+      "gip_disk5": [
+        []
+      ],
+      "rub_disk": [
+        []
+      ],
+      "rub_disk1": [
+        []
+      ],
+      "rub_disk2": [
+        []
+      ],
+      "rub_disk3": [
+        []
+      ],
+      "rub_disk4": [
+        []
+      ],
+      "rub_disk5": [
+        []
+      ],
+      "def_1": [
+        []
+      ],
+      "def_2": [
+        []
+      ],
+      "def_3": [
+        []
+      ],
+      "def_4": [
+        []
+      ],
+      "def_5": [
+        []
+      ],
+      "kost_disk": [
+        []
+      ],
+      "kost_disk1": [
+        []
+      ],
+      "kost_disk2": [
+        []
+      ],
+      "kost_disk3": [
+        []
+      ],
+      "kost_disk4": [
+        []
+      ],
+      "kost_disk5": [
+        []
+      ],
+      "zad_sel": [
+        []
+      ],
+      "zad_txt": [
+        []
+      ],
+      "f_proba": [
+        []
+      ],
+      "ant_proba": [
+        [
+          "display2"
+        ]
+      ],
+      "ant_disk": [
+        [
+          "display2"
+        ]
+      ],
+      "ant_disk1": [
+        [
+          "display2"
+        ]
+      ],
+      "ant_disk2": [
+        [
+          "display2"
+        ]
+      ],
+      "ant_disk3": [
+        [
+          "display2"
+        ]
+      ],
+      "ant_disk4": [
+        [
+          "display2"
+        ]
+      ],
+      "ant_disk5": [
+        [
+          "display2"
+        ]
+      ],
+      "ret_proba": [
+        [
+          "display2"
+        ]
+      ],
+      "ret_disk": [
+        [
+          "display2"
+        ]
+      ],
+      "ret_disk1": [
+        [
+          "display2"
+        ]
+      ],
+      "ret_disk2": [
+        [
+          "display2"
+        ]
+      ],
+      "ret_disk3": [
+        [
+          "display2"
+        ]
+      ],
+      "ret_disk4": [
+        [
+          "display2"
+        ]
+      ],
+      "ret_disk5": [
+        [
+          "display2"
+        ]
+      ]
+    },
+    "rules": [
+      {
+        "field": "struk_izm",
+        "checked": true,
+        "defaultValue": "",
+        "outcomes": {
+          "0": {
+            "display1": false
+          },
+          "1014": {
+            "display1": true
+          },
+          "": {
+            "display1": false
+          },
+          "__other": {
+            "display1": true
+          }
+        }
+      },
+      {
+        "field": "f_proba",
+        "checked": false,
+        "defaultValue": "1001",
+        "outcomes": {
+          "0": {
+            "display2": false
+          },
+          "1001": {
+            "display2": false
+          },
+          "1002": {
+            "display2": true
+          },
+          "": {
+            "display2": false
+          },
+          "__other": {
+            "display2": false
+          }
+        }
+      }
+    ]
+  },
+  "beremen1_1": {
+    "initial": {},
+    "fields": {
+      "mens_text": [
+        []
+      ],
+      "srok_ber": [
+        []
+      ],
+      "data_roda": [
+        []
+      ],
+      "plod": [
+        []
+      ],
+      "plod_predl": [
+        []
+      ],
+      "plod_poloj": [
+        []
+      ],
+      "poza": [
+        []
+      ],
+      "vid": [
+        []
+      ],
+      "razm_gol": [
+        []
+      ],
+      "okr_golov": [
+        []
+      ],
+      "lob_zat": [
+        []
+      ],
+      "okr_jiv": [
+        []
+      ],
+      "bed_l": [
+        []
+      ],
+      "bed_r": [
+        []
+      ],
+      "golen_l": [
+        []
+      ],
+      "golen_r": [
+        []
+      ],
+      "plech_l": [
+        []
+      ],
+      "plech_r": [
+        []
+      ],
+      "predp_l": [
+        []
+      ],
+      "predp_r": [
+        []
+      ],
+      "ned_ber": [
+        []
+      ],
+      "bad_srok": [
+        []
+      ],
+      "ves": [
+        []
+      ],
+      "sel_mozg": [
+        []
+      ],
+      "mozg": [
+        []
+      ],
+      "sel_mozj": [
+        []
+      ],
+      "mozj": [
+        []
+      ],
+      "sel_bolsh_c": [
+        []
+      ],
+      "bolsh_c": [
+        []
+      ],
+      "sel_prof": [
+        []
+      ],
+      "prof": [
+        []
+      ],
+      "sel_nos": [
+        []
+      ],
+      "nos": [
+        []
+      ],
+      "sel_glaz": [
+        []
+      ],
+      "glaz": [
+        []
+      ],
+      "sel_pozv": [
+        []
+      ],
+      "pozv": [
+        []
+      ],
+      "sel_legkie": [
+        []
+      ],
+      "legkie": [
+        []
+      ],
+      "sel_serdce": [
+        []
+      ],
+      "serdce": [
+        []
+      ],
+      "sel_jelud": [
+        []
+      ],
+      "jelud": [
+        []
+      ],
+      "sel_kishki": [
+        []
+      ],
+      "kishki": [
+        []
+      ],
+      "sel_pochki": [
+        []
+      ],
+      "pochki": [
+        []
+      ],
+      "sel_mocha": [
+        []
+      ],
+      "mocha": [
+        []
+      ],
+      "plac1": [
+        []
+      ],
+      "plac2": [
+        []
+      ],
+      "tolsh_p": [
+        []
+      ],
+      "tolsh_text": [
+        []
+      ],
+      "zrelost": [
+        []
+      ],
+      "vodi": [
+        []
+      ],
+      "index": [
+        []
+      ],
+      "sosud": [
+        []
+      ],
+      "pp_sd": [
+        []
+      ],
+      "pp_ir": [
+        []
+      ],
+      "pp_norma": [
+        []
+      ],
+      "mp_sd": [
+        []
+      ],
+      "mp_ir": [
+        []
+      ],
+      "mp_norma": [
+        []
+      ],
+      "poroki": [
+        []
+      ],
+      "poroki_text": [
+        []
+      ],
+      "osob_stroi": [
+        []
+      ],
+      "stenki_text": [
+        []
+      ],
+      "obl_pr": [
+        []
+      ],
+      "pridatki": [
+        []
+      ],
+      "vizual": [
+        []
+      ],
+      "viz_text": [
+        []
+      ],
+      "pochki_ber": [
+        []
+      ],
+      "chash": [
+        []
+      ],
+      "chash_gde": [
+        []
+      ],
+      "loh": [
+        []
+      ],
+      "loh_gde": [
+        []
+      ],
+      "pochki_text": [
+        []
+      ],
+      "rek_text": [
+        []
+      ],
+      "kontrol_text": [
+        []
+      ]
+    },
+    "rules": []
+  },
+  "beremen14_1": {
+    "initial": {},
+    "fields": {
+      "mens_text": [
+        []
+      ],
+      "srok_ber": [
+        []
+      ],
+      "data_roda": [
+        []
+      ],
+      "plod": [
+        []
+      ],
+      "razm_gol": [
+        []
+      ],
+      "ktr": [
+        []
+      ],
+      "okr_golov": [
+        []
+      ],
+      "lob_zat": [
+        []
+      ],
+      "okr_jiv": [
+        []
+      ],
+      "ac": [
+        []
+      ],
+      "tol_pr": [
+        []
+      ],
+      "dl_nos_kost": [
+        []
+      ],
+      "sel_mozg": [
+        []
+      ],
+      "mozg": [
+        []
+      ],
+      "sel_legkie": [
+        []
+      ],
+      "legkie": [
+        []
+      ],
+      "sel_pozv": [
+        []
+      ],
+      "pozv": [
+        []
+      ],
+      "sel_serdce": [
+        []
+      ],
+      "serdce": [
+        []
+      ],
+      "css": [
+        []
+      ],
+      "sel_jelud": [
+        []
+      ],
+      "jelud": [
+        []
+      ],
+      "sel_mocha": [
+        []
+      ],
+      "mocha": [
+        []
+      ],
+      "stenka": [
+        []
+      ],
+      "kishki": [
+        []
+      ],
+      "pupo": [
+        []
+      ],
+      "pochki": [
+        []
+      ],
+      "poroki": [
+        []
+      ],
+      "poroki_text": [
+        []
+      ],
+      "loc_hor": [
+        []
+      ],
+      "loc_text": [
+        []
+      ],
+      "horion": [
+        []
+      ],
+      "hor_text": [
+        []
+      ],
+      "osob_stroi": [
+        []
+      ],
+      "stenki_text": [
+        []
+      ],
+      "obl_pr": [
+        []
+      ],
+      "pridatki": [
+        []
+      ],
+      "vizual": [
+        []
+      ],
+      "viz_text": [
+        []
+      ],
+      "pochki_ber": [
+        []
+      ],
+      "chash": [
+        []
+      ],
+      "chash_gde": [
+        []
+      ],
+      "loh": [
+        []
+      ],
+      "loh_gde": [
+        []
+      ],
+      "pochki_text": [
+        []
+      ]
+    },
+    "rules": []
+  },
+  "eho_kg_1": {
+    "initial": {},
+    "fields": {
+      "aorta": [
+        []
+      ],
+      "aorta_vos": [
+        []
+      ],
+      "left_p": [
+        []
+      ],
+      "right_p1": [
+        []
+      ],
+      "right_p2": [
+        []
+      ],
+      "kdr": [
+        []
+      ],
+      "right_jel": [
+        []
+      ],
+      "ksr": [
+        []
+      ],
+      "kdo": [
+        []
+      ],
+      "kso": [
+        []
+      ],
+      "fv": [
+        []
+      ],
+      "fy": [
+        []
+      ],
+      "ydar_v": [
+        []
+      ],
+      "mjld_tol": [
+        []
+      ],
+      "mjld_eks": [
+        []
+      ],
+      "zslj_tol": [
+        []
+      ],
+      "zslj_eks": [
+        []
+      ],
+      "massa": [
+        []
+      ],
+      "index_mm": [
+        []
+      ],
+      "trans_mit_v": [
+        []
+      ],
+      "trans_mit_g": [
+        []
+      ],
+      "trans_aort_v": [
+        []
+      ],
+      "trans_aort_g": [
+        []
+      ],
+      "trans_pul_v": [
+        []
+      ],
+      "trans_pul_g": [
+        []
+      ],
+      "trans_trik_v": [
+        []
+      ],
+      "trans_trik_g": [
+        []
+      ],
+      "ea": [
+        []
+      ],
+      "ivrt": [
+        []
+      ],
+      "polost": [
+        []
+      ],
+      "stenki": [
+        []
+      ],
+      "aorta_text": [
+        []
+      ],
+      "stvorki": [
+        []
+      ],
+      "perikard": [
+        []
+      ],
+      "miokard": [
+        []
+      ],
+      "dg": [
+        []
+      ]
+    },
+    "rules": []
+  },
+  "ginekol_1": {
+    "initial": {
+      "display1": false,
+      "display2": false,
+      "display3": false,
+      "display4": false,
+      "display5": false,
+      "display6": false,
+      "display7": false,
+      "display8": false,
+      "display9": false,
+      "display10": false
+    },
+    "fields": {
+      "faza_c": [
+        []
+      ],
+      "payza": [
+        []
+      ],
+      "krov": [
+        []
+      ],
+      "telo_matki": [
+        []
+      ],
+      "del_matka": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_dl": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_tol": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_sh": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_stroi": [
+        [
+          "display1"
+        ]
+      ],
+      "kyl_stroi_text": [
+        [
+          "display1"
+        ]
+      ],
+      "cer_kanal": [
+        [
+          "display1"
+        ]
+      ],
+      "matka_neopred": [
+        [
+          "display2"
+        ]
+      ],
+      "matka_dl": [
+        [
+          "display3"
+        ]
+      ],
+      "matka_tol": [
+        [
+          "display3"
+        ]
+      ],
+      "matka_sh": [
+        [
+          "display3"
+        ]
+      ],
+      "forma_matka": [
+        [
+          "display3"
+        ]
+      ],
+      "forma_matka_text": [
+        [
+          "display3"
+        ]
+      ],
+      "struct_matka": [
+        [
+          "display3"
+        ]
+      ],
+      "str_miom": [
+        [
+          "display3"
+        ]
+      ],
+      "endometrii": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_soot": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_soot_text": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_tol": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_struct": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_text": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_kontur": [
+        [
+          "display3"
+        ]
+      ],
+      "endom_kontur_text": [
+        [
+          "display3"
+        ]
+      ],
+      "polost_m": [
+        [
+          "display3"
+        ]
+      ],
+      "polost_m_raz": [
+        [
+          "display3"
+        ]
+      ],
+      "polost_m_text": [
+        [
+          "display3"
+        ]
+      ],
+      "sheika_m": [
+        [
+          "display3"
+        ]
+      ],
+      "sheika_m_net": [
+        [
+          "display4"
+        ]
+      ],
+      "sheika_dl": [
+        [
+          "display5"
+        ]
+      ],
+      "sheika_sh": [
+        [
+          "display5"
+        ]
+      ],
+      "sheika_forma": [
+        [
+          "display5"
+        ]
+      ],
+      "sheika_str": [
+        [
+          "display5"
+        ]
+      ],
+      "sheika_str_izm": [
+        [
+          "display6"
+        ]
+      ],
+      "sheika_kist": [
+        [
+          "display6"
+        ]
+      ],
+      "r_ja": [
+        []
+      ],
+      "r_god": [
+        [
+          "display7"
+        ]
+      ],
+      "r_dlina": [
+        [
+          "display8"
+        ]
+      ],
+      "r_tolsh": [
+        [
+          "display8"
+        ]
+      ],
+      "r_shir": [
+        [
+          "display8"
+        ]
+      ],
+      "r_obem": [
+        [
+          "display8"
+        ]
+      ],
+      "r_yvelich": [
+        [
+          "display8"
+        ]
+      ],
+      "r_form": [
+        [
+          "display8"
+        ]
+      ],
+      "r_form_text": [
+        [
+          "display8"
+        ]
+      ],
+      "r_str": [
+        [
+          "display8"
+        ]
+      ],
+      "r_structura": [
+        [
+          "display8"
+        ]
+      ],
+      "r_text": [
+        []
+      ],
+      "l_ja": [
+        []
+      ],
+      "l_god": [
+        [
+          "display9"
+        ]
+      ],
+      "l_dlina": [
+        [
+          "display10"
+        ]
+      ],
+      "l_tolsh": [
+        [
+          "display10"
+        ]
+      ],
+      "l_shir": [
+        [
+          "display10"
+        ]
+      ],
+      "l_obem": [
+        [
+          "display10"
+        ]
+      ],
+      "l_yvelich": [
+        [
+          "display10"
+        ]
+      ],
+      "l_form": [
+        [
+          "display10"
+        ]
+      ],
+      "l_form_text": [
+        [
+          "display10"
+        ]
+      ],
+      "l_str": [
+        [
+          "display10"
+        ]
+      ],
+      "l_structura": [
+        [
+          "display10"
+        ]
+      ],
+      "l_text": [
+        []
+      ],
+      "jidkost": [
+        []
+      ],
+      "svob_jid": [
+        []
+      ],
+      "svob_jid_sel": [
+        []
+      ]
+    },
+    "rules": [
+      {
+        "field": "telo_matki",
+        "checked": false,
+        "defaultValue": "724",
+        "outcomes": {
+          "0": {},
+          "724": {
+            "display1": false,
+            "display2": false,
+            "display3": true,
+            "display4": false,
+            "display5": true,
+            "display6": false
+          },
+          "725": {
+            "display1": false,
+            "display2": false,
+            "display3": true,
+            "display4": false,
+            "display5": true,
+            "display6": false
+          },
+          "726": {
+            "display1": false,
+            "display2": false,
+            "display3": true,
+            "display4": false,
+            "display5": true,
+            "display6": false
+          },
+          "727": {
+            "display1": false,
+            "display2": false,
+            "display3": true,
+            "display4": false,
+            "display5": true,
+            "display6": false
+          },
+          "728": {
+            "display1": true,
+            "display2": false,
+            "display3": false,
+            "display4": false,
+            "display5": false,
+            "display6": false
+          },
+          "729": {
+            "display1": false,
+            "display2": true,
+            "display3": false,
+            "display4": false,
+            "display5": false,
+            "display6": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "sheika_m",
+        "checked": false,
+        "defaultValue": "768",
+        "outcomes": {
+          "0": {},
+          "768": {
+            "display4": false,
+            "display5": true
+          },
+          "769": {
+            "display4": true,
+            "display5": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "sheika_str",
+        "checked": false,
+        "defaultValue": "775",
+        "outcomes": {
+          "0": {
+            "display6": false
+          },
+          "775": {
+            "display6": false
+          },
+          "776": {
+            "display6": true
+          },
+          "": {
+            "display6": false
+          },
+          "__other": {
+            "display6": false
+          }
+        }
+      },
+      {
+        "field": "r_ja",
+        "checked": false,
+        "defaultValue": "312",
+        "outcomes": {
+          "0": {},
+          "312": {
+            "display7": false,
+            "display8": true
+          },
+          "313": {
+            "display7": true,
+            "display8": false
+          },
+          "": {},
+          "__other": {}
+        }
+      },
+      {
+        "field": "l_ja",
+        "checked": false,
+        "defaultValue": "312",
+        "outcomes": {
+          "0": {},
+          "312": {
+            "display9": false,
+            "display10": true
+          },
+          "313": {
+            "display9": true,
+            "display10": false
+          },
+          "": {},
+          "__other": {}
+        }
+      }
+    ]
+  }
+}

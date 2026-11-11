@@ -1,0 +1,65 @@
+{
+  "mode": "Browser with mocked IPC and synthetic data; no native database writes",
+  "screens": [
+    {
+      "route": "/",
+      "title": "Пациенты",
+      "opened": true
+    },
+    {
+      "route": "/patients/1",
+      "title": "Тестовый пациент",
+      "opened": true
+    },
+    {
+      "route": "/studies",
+      "title": "Исследования",
+      "opened": true
+    },
+    {
+      "route": "/studies/new/1",
+      "title": "Новое исследование",
+      "opened": true
+    },
+    {
+      "route": "/studies/1",
+      "title": "Редактирование исследования",
+      "opened": true
+    },
+    {
+      "route": "/templates",
+      "title": "Справочник шаблонов",
+      "opened": true
+    },
+    {
+      "route": "/statistics",
+      "title": "Статистика",
+      "opened": true
+    },
+    {
+      "route": "/users",
+      "title": "Пользователи",
+      "opened": true
+    },
+    {
+      "route": "/database",
+      "title": "База и резервные копии",
+      "opened": true
+    },
+    {
+      "route": "/account",
+      "title": "Моя учётная запись",
+      "opened": true
+    },
+    {
+      "route": "/bundles/1",
+      "title": "Тестовый комплект",
+      "opened": true
+    },
+    {
+      "route": "login",
+      "opened": true
+    }
+  ],
+  "pageErrors": []
+}

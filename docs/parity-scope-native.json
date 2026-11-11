@@ -1,0 +1,12 @@
+{
+  "version": "1.1.0",
+  "scopeConfirmedByUser": true,
+  "noGroupAssignmentUi": true,
+  "noGroupReportUi": true,
+  "existingHiddenBindingSurvivesUiSave": true,
+  "typeAndDoctorReportsRemain": true,
+  "detailsMatchIndependentSql": true,
+  "normalCsvExcludesGroupColumn": true,
+  "pageErrors": [],
+  "exeSha256": "71f88c9bcf62a6b79b869d7bc0c1a653878c1e7cf2af4c703cf86e710327cb9d"
+}

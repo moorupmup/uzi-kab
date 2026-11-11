@@ -1,0 +1,18 @@
+{
+  "nativeSqlite": true,
+  "legacyDecisionMigrated": true,
+  "optionalGroupViaUi": true,
+  "freeTextNotClassified": true,
+  "reportAndDetailsViaUi": true,
+  "aggregateCsvAndDetailCsvMatch": true,
+  "historicalCaptionAndPrintedHtmlUnchanged": true,
+  "deletedGroupNewAssignmentRejected": true,
+  "existingDeletedAssignmentRetained": true,
+  "explicitClearDoesNotReviveLegacy": true,
+  "timestampPreservedOnOrdinaryEdit": true,
+  "explicitDayChangeRespected": true,
+  "viewerCanReadAndCannotWrite": true,
+  "migrationBackup": true,
+  "sourceReferenceUntouched": true,
+  "pageErrors": []
+}

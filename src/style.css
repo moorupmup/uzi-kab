@@ -49,3 +49,45 @@ button[data-slot=base]:not([role=checkbox]):not([role=switch]),a[data-slot=base]
 .study-settings .study-template-button{width:100%;justify-content:flex-start;white-space:normal;text-align:start}
 .calculation-units{font-size:14px;color:#65758a;margin-block:0 20px}
 @media(max-width:600px){.study-settings-fields{grid-template-columns:minmax(0,1fr)}}
+
+/* Available updates stay grouped beside the installed version. */
+.app-version{align-items:center;flex-wrap:wrap;gap:6px 10px;min-height:52px}
+.app-version-name{flex:1 1 auto;white-space:nowrap}
+.app-version-actions{display:flex;align-items:center;gap:7px;margin-left:auto;font-variant-numeric:tabular-nums}
+.update-badge{display:inline-flex;align-items:center;min-height:25px;padding:2px 7px;border-radius:6px;background:#d1fae5;color:#065f46;font-size:14px;font-weight:700}
+.update-button{display:grid;place-items:center;position:relative;width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:#fff;cursor:pointer;flex-shrink:0}
+.update-button::before{content:"";position:absolute;inset:6px;border-radius:50%;background:#0f766e;transition:background-color 150ms ease-out}
+.update-button>.iconify{font-size:17px;position:relative}
+.update-button:hover::before{background:#095e57}
+.update-button:focus-visible{outline:2px solid #0f766e;outline-offset:4px}
+.update-button:disabled{cursor:wait;opacity:.65}
+.update-error{width:100%;color:#b91c1c;font-size:14px;line-height:1.5;margin-top:8px;overflow-wrap:anywhere}
+.update-overlay{position:fixed;inset:0;z-index:200;background:rgb(245 247 250 / 96%);display:grid;place-items:center;padding:24px}
+.update-progress-panel{width:min(420px,100%);text-align:center;color:#253449}
+.update-progress-icon{font-size:32px;color:#0f766e;margin-bottom:20px}
+.update-progress-panel h2{font-size:22px;font-weight:600;margin-bottom:12px}
+.update-progress-panel p{font-size:14px;line-height:1.6;color:#526176;margin:12px 0}
+.update-progress-panel progress{width:100%;height:7px;accent-color:#0f766e;border:0;border-radius:8px;overflow:hidden}
+.update-progress-panel progress::-webkit-progress-bar{background:#dfe6ed}
+.update-progress-panel progress::-webkit-progress-value{background:#0f766e;transition:width 150ms ease-out}
+.update-spin{animation:update-spin 1.2s linear infinite}
+@keyframes update-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.update-spin{animation:none}.update-button,.update-progress-panel progress::-webkit-progress-value{transition:none}}
+
+/* Shared spacing for text actions; square icon and pagination controls keep their sizing. */
+.app-text-button{padding-inline:18px;justify-content:center}
+.page-heading-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;min-width:0;max-width:100%}
+.dirty-indicator{min-height:36px;box-sizing:border-box;padding:7px 12px;font-size:14px;line-height:20px;font-weight:500;white-space:nowrap}
+
+.template-card-list{display:grid;gap:10px}
+.template-card{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:4px;padding:12px 14px;border:1px solid #dfe6ed;border-radius:10px;min-width:0}
+.template-card-path{grid-column:1;font-size:14px;line-height:1.5;color:#65758a;overflow-wrap:anywhere}
+.template-card-text{grid-column:1;line-height:1.65}
+.template-card-actions{grid-column:2;grid-row:1 / span 2;display:flex;align-items:flex-start;gap:4px;align-self:start}
+.template-card-actions>button{width:44px;height:44px;padding:0;flex-shrink:0;justify-content:center}
+
+.template-folder-list{max-height:440px;overflow-y:auto;padding:2px}
+
+.print-blocked-notice{display:none}@media print{.study-deleted .document-sheet,.study-deleted .attachment-section,.study-deleted .attachment-print,.bundle-print-blocked .bundle-documents{display:none!important}.study-deleted .print-blocked-notice,.bundle-print-blocked .print-blocked-notice{display:block}}
+
+@media print{.editor-document{display:none!important}.unsaved-print-notice{display:block}}

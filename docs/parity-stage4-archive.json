@@ -1,0 +1,17 @@
+{
+  "realArchiveCopy": true,
+  "legacyBundles": 5,
+  "legacyLinks": 10,
+  "patientAndCompositionValidated": true,
+  "afterCounts": {
+    "studies": 66949,
+    "patients": 22715,
+    "legacy_container": 5,
+    "legacy_research": 10
+  },
+  "agreedEmptyStubsRemoved": 5070,
+  "noStudiesRecreated": true,
+  "migrationIdempotent": true,
+  "sourceSha256Unchanged": true,
+  "backupCreated": true
+}

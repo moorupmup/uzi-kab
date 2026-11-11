@@ -1,0 +1,379 @@
+{
+  "brooho": {
+    "revision": 1,
+    "versions": [
+      "1"
+    ],
+    "editor": {
+      "hideDescription": true
+    },
+    "hiddenFields": [
+      "one_o",
+      "one_obraz1",
+      "eho_obraz1",
+      "str_obraz1",
+      "vkl_obraz1",
+      "kontur_obraz1",
+      "obod_obraz1",
+      "gde_obraz1",
+      "cdk_obraz1",
+      "r1_obraz1",
+      "r2_obraz1",
+      "r3_obraz1",
+      "do_obraz1",
+      "one_obraz2",
+      "eho_obraz2",
+      "str_obraz2",
+      "vkl_obraz2",
+      "kontur_obraz2",
+      "obod_obraz2",
+      "gde_obraz2",
+      "cdk_obraz2",
+      "r1_obraz2",
+      "r2_obraz2",
+      "r3_obraz2",
+      "do_obraz2",
+      "one_obraz3",
+      "eho_obraz3",
+      "str_obraz3",
+      "vkl_obraz3",
+      "kontur_obraz3",
+      "obod_obraz3",
+      "gde_obraz3",
+      "cdk_obraz3",
+      "r1_obraz3",
+      "r2_obraz3",
+      "r3_obraz3",
+      "do_obraz3",
+      "m_seg1",
+      "m_seg2",
+      "m_seg3",
+      "m_seg4",
+      "m_seg5",
+      "m_seg6",
+      "m_seg7",
+      "m_seg8",
+      "m_cdk",
+      "m_razot",
+      "m_razdo",
+      "pechen_str_text",
+      "jel_net"
+    ],
+    "fields": {
+      "kontur": {
+        "options": [
+          {
+            "label": "ровные",
+            "value": "120"
+          },
+          {
+            "label": "неровные",
+            "value": "121"
+          },
+          {
+            "label": "четкие",
+            "value": "preset_brooho_clear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "нечёткие",
+            "value": "preset_brooho_unclear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "бугристые",
+            "value": "122",
+            "hidden": true
+          },
+          {
+            "label": "нечеткие, ровные",
+            "value": "123",
+            "hidden": true
+          }
+        ]
+      },
+      "kontur_pod": {
+        "options": [
+          {
+            "label": "ровные",
+            "value": "120"
+          },
+          {
+            "label": "неровные",
+            "value": "121"
+          },
+          {
+            "label": "четкие",
+            "value": "preset_brooho_clear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "нечёткие",
+            "value": "preset_brooho_unclear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "бугристые",
+            "value": "122",
+            "hidden": true
+          },
+          {
+            "label": "нечеткие, ровные",
+            "value": "123",
+            "hidden": true
+          }
+        ]
+      },
+      "r_kontur_poch": {
+        "options": [
+          {
+            "label": "ровные",
+            "value": "120"
+          },
+          {
+            "label": "неровные",
+            "value": "121"
+          },
+          {
+            "label": "четкие",
+            "value": "preset_brooho_clear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "нечёткие",
+            "value": "preset_brooho_unclear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "бугристые",
+            "value": "122",
+            "hidden": true
+          },
+          {
+            "label": "нечеткие, ровные",
+            "value": "123",
+            "hidden": true
+          }
+        ]
+      },
+      "l_kontur_poch": {
+        "options": [
+          {
+            "label": "ровные",
+            "value": "120"
+          },
+          {
+            "label": "неровные",
+            "value": "121"
+          },
+          {
+            "label": "четкие",
+            "value": "preset_brooho_clear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "нечёткие",
+            "value": "preset_brooho_unclear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "бугристые",
+            "value": "122",
+            "hidden": true
+          },
+          {
+            "label": "нечеткие, ровные",
+            "value": "123",
+            "hidden": true
+          }
+        ]
+      },
+      "struktura": {
+        "options": [
+          {
+            "label": "однородная",
+            "value": "124"
+          },
+          {
+            "label": "диффузно-неоднородная",
+            "value": "555"
+          },
+          {
+            "label": "неоднородная за счет",
+            "value": "125",
+            "inputLabel": "Выбрать из справочника",
+            "referenceKey": "pechen_str_text",
+            "referenceSection": "str_text"
+          }
+        ]
+      },
+      "struktura_pod": {
+        "options": [
+          {
+            "label": "однородная",
+            "value": "124"
+          },
+          {
+            "label": "диффузно-неоднородная",
+            "value": "555"
+          },
+          {
+            "label": "неоднородная за счет",
+            "value": "125",
+            "inputLabel": "Выбрать из справочника",
+            "referenceKey": "str_pod_jel",
+            "referenceSection": "str_text"
+          }
+        ]
+      },
+      "struktura_sel": {
+        "options": [
+          {
+            "label": "однородная",
+            "value": "124"
+          },
+          {
+            "label": "диффузно-неоднородная",
+            "value": "555"
+          },
+          {
+            "label": "неоднородная за счет",
+            "value": "125",
+            "inputLabel": "Выбрать из справочника",
+            "referenceKey": "str_sel",
+            "referenceSection": "str_text"
+          }
+        ]
+      },
+      "forma_izm": {
+        "options": [
+          {
+            "label": "",
+            "value": "654"
+          },
+          {
+            "label": "не визуализируется",
+            "value": "655"
+          },
+          {
+            "label": "сокращен после приема пищи",
+            "value": "656"
+          },
+          {
+            "label": "оперативно удален",
+            "value": "657"
+          },
+          {
+            "label": "Сокращён на тощак",
+            "value": "preset_brooho_fasting",
+            "baseValue": "__text"
+          }
+        ]
+      },
+      "stenki": {
+        "options": [
+          {
+            "label": "не изменены",
+            "value": "129"
+          },
+          {
+            "label": "уплотнены",
+            "value": "130"
+          },
+          {
+            "label": "утолщены",
+            "value": "643"
+          },
+          {
+            "label": "с двойными контурами",
+            "value": "644"
+          }
+        ]
+      },
+      "soderg": {
+        "options": [
+          {
+            "label": "без особенностей",
+            "value": "preset_brooho_normal",
+            "baseValue": "__text"
+          },
+          {
+            "label": "незначительное количество застойного содержимого",
+            "value": "preset_brooho_slight",
+            "baseValue": "__text"
+          },
+          {
+            "label": "умеренное количество застойного содержимого",
+            "value": "preset_brooho_moderate",
+            "baseValue": "__text"
+          },
+          {
+            "label": "выраженное застойное содержимое",
+            "value": "preset_brooho_marked",
+            "baseValue": "__text"
+          },
+          {
+            "label": "",
+            "value": "649",
+            "hidden": true
+          },
+          {
+            "label": "застойное содержимое",
+            "value": "135",
+            "hidden": true
+          },
+          {
+            "label": "незначительное количество",
+            "value": "136",
+            "hidden": true
+          },
+          {
+            "label": "значительное количество застойного содержимого",
+            "value": "650",
+            "hidden": true
+          },
+          {
+            "label": "выраженное застойное содержимое",
+            "value": "651",
+            "hidden": true
+          }
+        ]
+      },
+      "v_polosti": {
+        "referenceKey": "v_polosti"
+      },
+      "sel_kon": {
+        "options": [
+          {
+            "label": "ровные",
+            "value": "120"
+          },
+          {
+            "label": "неровные",
+            "value": "121"
+          },
+          {
+            "label": "четкие",
+            "value": "preset_brooho_clear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "нечёткие",
+            "value": "preset_brooho_unclear",
+            "baseValue": "__text"
+          },
+          {
+            "label": "бугристые",
+            "value": "122",
+            "hidden": true
+          },
+          {
+            "label": "нечеткие, ровные",
+            "value": "123",
+            "hidden": true
+          }
+        ]
+      }
+    }
+  }
+}

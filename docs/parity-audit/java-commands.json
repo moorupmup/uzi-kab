@@ -1,0 +1,284 @@
+[
+  {
+    "command": "AddBookCommand",
+    "source": "WEB-INF/classes/my_pack/commands/AddBookCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "D07",
+    "status": "Нет"
+  },
+  {
+    "command": "AddPacientCommand",
+    "source": "WEB-INF/classes/my_pack/commands/AddPacientCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "P03",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "Command",
+    "source": "WEB-INF/classes/my_pack/commands/Command.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "Z02",
+    "status": "Требует проверки"
+  },
+  {
+    "command": "DeleteFusionProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/DeleteFusionProtocolCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "F04",
+    "status": "Нет"
+  },
+  {
+    "command": "DeleteImageCommand",
+    "source": "WEB-INF/classes/my_pack/commands/DeleteImageCommand.class",
+    "views": [
+      ".jsp",
+      "protocol_view/protocol.jsp"
+    ],
+    "sqlTables": [],
+    "scenario": "F05",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "DeletePacientCommand",
+    "source": "WEB-INF/classes/my_pack/commands/DeletePacientCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "P05",
+    "status": "Изменено"
+  },
+  {
+    "command": "DeleteProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/DeleteProtocolCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "S12",
+    "status": "Нет"
+  },
+  {
+    "command": "DoIdentifyCommand",
+    "source": "WEB-INF/classes/my_pack/commands/DoIdentifyCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "A01",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "EditBookCommand",
+    "source": "WEB-INF/classes/my_pack/commands/EditBookCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "D07",
+    "status": "Нет"
+  },
+  {
+    "command": "FusionProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/FusionProtocolCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "F02",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "NotSavedCommand",
+    "source": "WEB-INF/classes/my_pack/commands/NotSavedCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "S11",
+    "status": "Частично"
+  },
+  {
+    "command": "NullCommand",
+    "source": "WEB-INF/classes/my_pack/commands/NullCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "Z02",
+    "status": "Требует проверки"
+  },
+  {
+    "command": "PrepareAddBookCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareAddBookCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "D07",
+    "status": "Нет"
+  },
+  {
+    "command": "PrepareAddPacientCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareAddPacientCommand.class",
+    "views": [
+      "fio_choice.jsp",
+      "add_pacient.jsp"
+    ],
+    "sqlTables": [],
+    "scenario": "P03",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "PrepareChoiceResearchCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareChoiceResearchCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "S01",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "PrepareDoctorCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareDoctorCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "A02",
+    "status": "Изменено"
+  },
+  {
+    "command": "PrepareEditBookCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareEditBookCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "D07",
+    "status": "Нет"
+  },
+  {
+    "command": "PrepareEditPacientCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareEditPacientCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "P04",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "PrepareEditProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareEditProtocolCommand.class",
+    "views": [
+      ".jsp"
+    ],
+    "sqlTables": [],
+    "scenario": "S14",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "PrepareIdentifyCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareIdentifyCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "A01",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "PrepareNotSavedCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareNotSavedCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "S11",
+    "status": "Частично"
+  },
+  {
+    "command": "PrepareResearchCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareResearchCommand.class",
+    "views": [
+      ".jsp"
+    ],
+    "sqlTables": [],
+    "scenario": "S01",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "PrepareSearchPacientCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareSearchPacientCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "P02",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "prepareViewFusionProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/prepareViewFusionProtocolCommand.class",
+    "views": [
+      ".jsp",
+      "protocol_view/protocol.jsp"
+    ],
+    "sqlTables": [],
+    "scenario": "F03",
+    "status": "Нет"
+  },
+  {
+    "command": "PrepareViewProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/PrepareViewProtocolCommand.class",
+    "views": [
+      ".jsp",
+      "protocol_view/protocol.jsp"
+    ],
+    "sqlTables": [],
+    "scenario": "F01",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "SaveAndPrintProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/SaveAndPrintProtocolCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "S10",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "SaveEditPacientCommand",
+    "source": "WEB-INF/classes/my_pack/commands/SaveEditPacientCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "P04",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "SaveProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/SaveProtocolCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "S10",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "SearchCommand",
+    "source": "WEB-INF/classes/my_pack/commands/SearchCommand.class",
+    "views": [
+      "search/results_fio_search.jsp"
+    ],
+    "sqlTables": [],
+    "scenario": "P02",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "SelectResearchCommand",
+    "source": "WEB-INF/classes/my_pack/commands/SelectResearchCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "S01",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "ViewAllPacientCommand",
+    "source": "WEB-INF/classes/my_pack/commands/ViewAllPacientCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "P01",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "ViewAllProtocolCommand",
+    "source": "WEB-INF/classes/my_pack/commands/ViewAllProtocolCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "S13",
+    "status": "Есть аналог"
+  },
+  {
+    "command": "ViewBookCommand",
+    "source": "WEB-INF/classes/my_pack/commands/ViewBookCommand.class",
+    "views": [],
+    "sqlTables": [],
+    "scenario": "D07",
+    "status": "Нет"
+  }
+]

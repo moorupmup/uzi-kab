@@ -1,0 +1,10 @@
+{
+  "realArchiveCopy": true,
+  "studies": 66949,
+  "signatures": 66949,
+  "signatureMismatches": 0,
+  "unspecifiedDoctorsStayUnspecified": true,
+  "backupCreated": true,
+  "migrationIdempotent": true,
+  "sourceSha256Unchanged": true
+}

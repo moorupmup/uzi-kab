@@ -1,0 +1,32 @@
+{
+  "oldScreenFilesClassified": 457,
+  "phpActionsClassified": 132,
+  "javaCommandsClassified": 33,
+  "formVersionsListed": 187,
+  "unclassifiedScreens": 0,
+  "unclassifiedActions": 0,
+  "baselineDatabaseUnchanged": true,
+  "sourceFilesUnchanged": true,
+  "scenarioStatusCounts": {
+    "Есть аналог": 20,
+    "Изменено": 5,
+    "Частично": 11,
+    "Нет": 19,
+    "Добавлено": 4,
+    "Согласованное изменение": 1,
+    "Требует проверки": 3,
+    "Служебное": 1
+  },
+  "priority1Scenarios": [
+    "S02",
+    "S04",
+    "S05",
+    "S11",
+    "S12",
+    "D04",
+    "D05",
+    "D07",
+    "D08",
+    "F03"
+  ]
+}

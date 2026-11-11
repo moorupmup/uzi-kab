@@ -5,6 +5,7 @@ use std::{path::{Path,Component},sync::Mutex};
 
 pub static MAINTENANCE:Mutex<()>=Mutex::new(());
 impl Database {
+    pub fn update_backup(&self)->Result<String,String>{self.backup_named(&format!("before-app-update-{}.db",chrono::Local::now().format("%Y%m%d-%H%M%S-%f")))}
     pub fn ensure_schema(&self)->Result<(),String>{
         let _lock=MAINTENANCE.lock().map_err(err)?;
         let c=self.open()?;
@@ -16,7 +17,16 @@ impl Database {
             tx.execute_batch(include_str!("../extended.sql")).map_err(err)?;
             tx.pragma_update(None,"user_version",2).map_err(err)?;tx.commit().map_err(err)?;
         }
+        if version<3{
+            // New snapshot/signature metadata must not be silently ignored by an older exe.
+            // Mark before resumable migrations so an interrupted update also rejects old readers.
+            if version==2{self.backup_from(&c,&format!("before-parity-update-{}.db",chrono::Local::now().format("%Y%m%d-%H%M%S-%f")))?;}
+            c.pragma_update(None,"user_version",3).map_err(err)?;
+        }
+        self.migrate_lifecycle(&c)?;
         self.cleanup_empty_orphans(&c)?;
+        self.migrate_doctors(&c)?;
+        self.migrate_decisions(&c)?;
         Ok(())
     }
     fn cleanup_empty_orphans(&self,c:&Connection)->Result<(),String>{
@@ -38,7 +48,7 @@ impl Database {
     fn backup_named(&self,name:&str)->Result<String,String>{
         let c=self.open()?;self.backup_from(&c,name)
     }
-    fn backup_from(&self,c:&Connection,name:&str)->Result<String,String>{
+    pub(crate) fn backup_from(&self,c:&Connection,name:&str)->Result<String,String>{
         let path=self.backup_folder()?.join(name);let temporary=path.with_extension("pending");
         if path.exists()||temporary.exists(){return Err("Файл резервной копии уже существует".into())}
         c.backup("main",&temporary,None).map_err(err)?;
@@ -52,7 +62,7 @@ impl Database {
         let active_schema:i64=c.query_row("SELECT count(*) FROM sqlite_master WHERE type IN('trigger','view')",[],|r|r.get(0)).map_err(err)?;if active_schema!=0{return Err("Копия содержит неподдерживаемые триггеры или представления".into())}
         let integrity:String=c.query_row("PRAGMA integrity_check",[],|r|r.get(0)).map_err(err)?;
         let version:i64=c.pragma_query_value(None,"user_version",|r|r.get(0)).map_err(err)?;
-        if integrity!="ok"||![1,2].contains(&version){return Err("Копия повреждена или имеет неподдерживаемый формат".into())}
+        if integrity!="ok"||![1,2,3].contains(&version){return Err("Копия повреждена или имеет неподдерживаемый формат".into())}
         c.prepare("SELECT p.id,p.name,s.id,s.fields_json,s.legacy_version FROM patients p LEFT JOIN studies s ON s.patient_id=p.id LIMIT 0").map_err(|_|"Файл не является базой Кабинета УЗИ".to_string())?;
         c.prepare("SELECT key,value FROM metadata LIMIT 0").map_err(err)?;
         Ok(())
@@ -92,7 +102,7 @@ impl Database {
         let safety=self.backup_from(&destination,&format!("before-restore-{}.db",chrono::Local::now().format("%Y%m%d-%H%M%S-%f")))?;
         {let backup=rusqlite::backup::Backup::new(&source,&mut destination).map_err(err)?;backup.run_to_completion(256,std::time::Duration::from_millis(10),None).map_err(err)?;}
         destination.execute_batch(include_str!("../extended.sql")).map_err(err)?;
-        destination.pragma_update(None,"user_version",2).map_err(err)?;
+        destination.pragma_update(None,"user_version",if source.pragma_query_value(None,"user_version",|r|r.get::<_,i64>(0)).map_err(err)?==3{3}else{2}).map_err(err)?;
         destination.execute("INSERT INTO access_audit(actor_id,action,details) VALUES(?,'restore',?)",params![actor,name]).map_err(err)?;
         Ok(safety)
     }
@@ -113,12 +123,12 @@ mod tests{
         for id in 2..=19{c.execute("INSERT INTO studies(id,patient_id,date,template_id,doctor_id,title,conclusion,addition,fields_json,origin,status) VALUES(?,0,'2001-01-01',0,1,'Stub','','','{}','legacy','legacy:0')",[id]).unwrap();}
         for (id,fields) in [(2,r#"{"f":{"value":"clinical","type":"text"}}"#),(3,r#"{"f":{"value":"0"}}"#),(4,"[]"),(5,"bad-json"),(6,r#"{"f":{"type":"text"}}"#),(15,r#"{"f":{"value":" "}}"#),(18,r#"{"f":{"value":null}}"#),(19,r#"{"description":{"value":"","type":"text"}}"#)]{c.execute("UPDATE studies SET fields_json=? WHERE id=?",params![fields,id]).unwrap();}
         c.execute_batch("UPDATE studies SET conclusion='Content' WHERE id=7;UPDATE studies SET addition='Content' WHERE id=8;UPDATE studies SET revision=2 WHERE id=10;UPDATE studies SET status='draft' WHERE id=11;UPDATE studies SET patient_id=1 WHERE id=12;UPDATE studies SET template_id=1 WHERE id=13;INSERT INTO attachments(study_id,name,mime,content,sha256) VALUES(9,'test','image/png',X'00','test'),(17,'removed','image/png',X'00','test');UPDATE attachments SET deleted=1 WHERE study_id=17;INSERT INTO audit(entity,entity_id,saved_at) VALUES('study',14,'2001-01-01');INSERT INTO study_bundles(id,patient_id,name) VALUES(1,1,'Protected');INSERT INTO bundle_items VALUES(1,16,0);").unwrap();drop(c);
-        db.ensure_schema().unwrap();db.ensure_schema().unwrap();let c=db.open().unwrap();assert_eq!(c.query_row("SELECT count(*) FROM studies",[],|r|r.get::<_,i64>(0)).unwrap(),17);assert_eq!(c.query_row("SELECT count(*) FROM studies WHERE id IN(1,19)",[],|r|r.get::<_,i64>(0)).unwrap(),0);assert_eq!(c.query_row("SELECT var_part FROM legacy_protocol WHERE id=1",[],|r|r.get::<_,String>(0)).unwrap(),"original empty form");let report:String=c.query_row("SELECT value FROM metadata WHERE key='empty_orphan_cleanup_v1'",[],|r|r.get(0)).unwrap();let report:Value=serde_json::from_str(&report).unwrap();assert_eq!(report["removed"],2);let backup=Connection::open(report["backup"].as_str().unwrap()).unwrap();assert_eq!(backup.query_row("SELECT count(*) FROM studies",[],|r|r.get::<_,i64>(0)).unwrap(),19);assert_eq!(db.backups().unwrap().as_array().unwrap().len(),1);drop(backup);drop(c);std::fs::remove_dir_all(db.path.parent().unwrap()).unwrap();
+        db.ensure_schema().unwrap();db.ensure_schema().unwrap();let c=db.open().unwrap();assert_eq!(c.query_row("SELECT count(*) FROM studies",[],|r|r.get::<_,i64>(0)).unwrap(),17);assert_eq!(c.query_row("SELECT count(*) FROM studies WHERE id IN(1,19)",[],|r|r.get::<_,i64>(0)).unwrap(),0);assert_eq!(c.query_row("SELECT var_part FROM legacy_protocol WHERE id=1",[],|r|r.get::<_,String>(0)).unwrap(),"original empty form");let report:String=c.query_row("SELECT value FROM metadata WHERE key='empty_orphan_cleanup_v1'",[],|r|r.get(0)).unwrap();let report:Value=serde_json::from_str(&report).unwrap();assert_eq!(report["removed"],2);let backup=Connection::open(report["backup"].as_str().unwrap()).unwrap();assert_eq!(backup.query_row("SELECT count(*) FROM studies",[],|r|r.get::<_,i64>(0)).unwrap(),19);assert_eq!(db.backups().unwrap().as_array().unwrap().len(),5);drop(backup);drop(c);std::fs::remove_dir_all(db.path.parent().unwrap()).unwrap();
     }
     #[test]fn cleanup_does_not_delete_without_a_backup(){
         let db=cleanup_fixture();std::fs::write(db.path.parent().unwrap().join("backups"),"blocked path").unwrap();assert!(db.ensure_schema().is_err());let c=db.open().unwrap();assert_eq!(c.query_row("SELECT count(*) FROM studies",[],|r|r.get::<_,i64>(0)).unwrap(),1);assert_eq!(c.query_row("SELECT count(*) FROM metadata WHERE key='empty_orphan_cleanup_v1'",[],|r|r.get::<_,i64>(0)).unwrap(),0);drop(c);std::fs::remove_dir_all(db.path.parent().unwrap()).unwrap();
     }
     #[test]fn restore_keeps_a_safety_copy_and_rejects_traversal(){
-        let root=std::env::temp_dir().join(format!("uzi-restore-{}",std::process::id()));std::fs::create_dir_all(&root).unwrap();let db=Database::new(root.join("uzi.db"));let c=Connection::open(&db.path).unwrap();c.execute_batch(include_str!("../schema.sql")).unwrap();c.execute_batch("PRAGMA user_version=1;INSERT INTO patients(id,name,search_name,gender) VALUES(1,'Test','test','M');").unwrap();drop(c);db.ensure_schema().unwrap();let p=db.backup_named("test.db").unwrap();db.open().unwrap().execute("UPDATE patients SET name='Changed'",[]).unwrap();assert!(db.restore_backup("../test.db",1).is_err());let safety=db.restore_backup(Path::new(&p).file_name().unwrap().to_str().unwrap(),1).unwrap();assert!(Path::new(&safety).exists());assert_eq!(db.open().unwrap().query_row("SELECT name FROM patients",[],|r|r.get::<_,String>(0)).unwrap(),"Test");std::fs::remove_dir_all(root).unwrap();
+        let root=std::env::temp_dir().join(format!("uzi-restore-{}",std::process::id()));std::fs::create_dir_all(&root).unwrap();let db=Database::new(root.join("uzi.db"));let c=Connection::open(&db.path).unwrap();c.execute_batch(include_str!("../schema.sql")).unwrap();c.execute_batch("PRAGMA user_version=1;INSERT INTO patients(id,name,search_name,gender) VALUES(1,'Test','test','M');").unwrap();drop(c);db.ensure_schema().unwrap();let p=db.backup_named("test.db").unwrap();db.open().unwrap().execute("UPDATE patients SET name='Changed'",[]).unwrap();assert!(db.restore_backup("../test.db",1).is_err());let safety=db.restore_backup(Path::new(&p).file_name().unwrap().to_str().unwrap(),1).unwrap();assert!(Path::new(&safety).exists());assert_eq!(db.open().unwrap().pragma_query_value(None,"user_version",|r|r.get::<_,i64>(0)).unwrap(),3);assert_eq!(db.open().unwrap().query_row("SELECT name FROM patients",[],|r|r.get::<_,String>(0)).unwrap(),"Test");std::fs::remove_dir_all(root).unwrap();
     }
 }

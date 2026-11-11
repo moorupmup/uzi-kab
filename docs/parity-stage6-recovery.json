@@ -1,0 +1,10 @@
+{
+  "nativeSqlite": true,
+  "patientWithUnknownBirthdate": true,
+  "lookupById": true,
+  "backupRestoreRetainsFormDecisionAndSignature": true,
+  "restoreRevokesSession": true,
+  "beforeRestoreCopyCreated": true,
+  "doctorCanEditOwnStudy": true,
+  "doctorCannotEditOrDeleteForeignNativeStudy": true
+}

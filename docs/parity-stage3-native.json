@@ -1,0 +1,22 @@
+{
+  "nativeSqlite": true,
+  "createTypeViaUi": true,
+  "customFieldOptionViaUi": true,
+  "newStudyViaUi": true,
+  "compatibleConditions": true,
+  "printLabel": true,
+  "preservedOldPrintAndTitle": true,
+  "preservedSnapshotAfterEdit": true,
+  "newDefaultForm": true,
+  "copyPreservesForm": true,
+  "serviceSections": true,
+  "syncIdempotent": true,
+  "textsPreserved": true,
+  "statistics": true,
+  "adminOnly": true,
+  "pageErrors": [],
+  "optionOrderViaUi": true,
+  "hideOptionViaUi": true,
+  "restoreOptionViaUi": true,
+  "sourceUnchanged": true
+}

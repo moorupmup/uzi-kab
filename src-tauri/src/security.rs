@@ -81,7 +81,7 @@ impl Database{
     pub fn save_account(&self,input:AccountInput,actor:i64)->Result<i64,String>{
         validate(&input)?;let password_hash=match input.password.as_deref(){Some(p) if !p.is_empty()=>Some(hash(p)?),_=>None};
         let mut c=self.open()?;let tx=c.transaction_with_behavior(TransactionBehavior::Immediate).map_err(err)?;
-        if let Some(doctor)=input.doctor_id{let n:i64=tx.query_row("SELECT count(*) FROM doctors WHERE id=? AND hidden=0",[doctor],|r|r.get(0)).map_err(err)?;if n!=1{return Err("Врач не найден.".into())}}
+        if let Some(doctor)=input.doctor_id{let n:i64=tx.query_row("SELECT count(*) FROM doctors WHERE id=? AND hidden=0",[doctor],|r|r.get(0)).map_err(err)?;if n!=1{let retained=input.id.is_some_and(|id|tx.query_row("SELECT count(*) FROM app_users WHERE id=? AND doctor_id=?",params![id,doctor],|r|r.get::<_,i64>(0)).unwrap_or(0)==1);if !retained{return Err("Выберите действующего врача.".into())}}}
         let id=if let Some(id)=input.id{
             let other_admins:i64=tx.query_row("SELECT count(*) FROM app_users WHERE role='admin' AND enabled=1 AND id<>?",[id],|r|r.get(0)).map_err(err)?;
             if other_admins==0&&(!input.enabled||input.role!="admin"){return Err("Нельзя отключить последнего администратора.".into())}

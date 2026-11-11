@@ -1,0 +1,7 @@
+{
+  "source": "C:\\Users\\pumpu\\Documents\\Codex\\2026-11-05\\new-chat\\outputs\\UZI-test\\webapps\\uzi\\WEB-INF\\classes\\my_pack\\handlers\\ProtocolHandler.class",
+  "sha256": "c2ddb0d217d635484abd1e2a6c372f5b32cb386ede2f9f25cd08d5e948cd9bc8",
+  "query": "SELECT protocol_id FROM RESEARCH WHERE container_id=? ORDER BY protocol_id",
+  "newOrder": "legacy_research.protocol_id, legacy_research.id",
+  "evidence": "Exact SQL string in original ProtocolHandler.class constant pool"
+}

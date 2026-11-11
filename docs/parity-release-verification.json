@@ -1,0 +1,12 @@
+{
+  "version": "1.1.0",
+  "scenariosWithExistingEvidence": 64,
+  "versionConsistent": true,
+  "packagedExeMatchesNativeTestedExe": true,
+  "allPackagedHashesMatch": true,
+  "manualSections": 21,
+  "previousExePreserved": true,
+  "workingDatabaseUnchangedDuringPackaging": true,
+  "existingReleaseDatabasePreserved": true,
+  "externalClinicalAndHardwareAcceptancePending": true
+}

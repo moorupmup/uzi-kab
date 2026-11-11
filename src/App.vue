@@ -5,6 +5,7 @@ import { useDatabase } from './stores/database'
 import { desktop } from './api'
 import {useAuth} from './stores/auth'
 import LoginScreen from './components/LoginScreen.vue'
+import AppUpdate from './components/AppUpdate.vue'
 const db=useDatabase(),route=useRoute(),router=useRouter(),auth=useAuth()
 let idle:ReturnType<typeof setTimeout>
 function activity(){clearTimeout(idle);if(auth.user&&desktop)idle=setTimeout(()=>auth.lock(),30*60*1000)}
@@ -28,7 +29,7 @@ const navigation=computed(()=>[{to:'/',label:'Пациенты',icon:'i-lucide-u
             <RouterLink to="/account" class="account-link sidebar-account-action"><UIcon name="i-lucide-circle-user-round"/><span>{{auth.user?.name}}</span></RouterLink>
             <UButton v-if="desktop" variant="ghost" color="neutral" icon="i-lucide-log-out" class="sidebar-account-action" @click="logout">Выйти</UButton>
           </div>
-          <div class="version">Кабинет УЗИ <span>0.1</span></div>
+          <AppUpdate />
         </div>
       </aside>
       <main class="workspace">

@@ -9,7 +9,7 @@ pub struct Database { pub(crate) path: PathBuf }
 pub struct PatientInput { pub id: Option<i64>, pub revision: Option<i64>, pub name: String, pub gender: String, pub birthdate: String, pub city: String, pub street: String, pub house: String, pub flat: String }
 #[derive(Deserialize)]
 #[serde(rename_all="camelCase")]
-pub struct StudyInput { pub id: Option<i64>, pub revision: Option<i64>, pub patient_id:i64, pub template_id:i64, pub doctor_id:i64, pub date:String, pub conclusion:String, pub addition:String, pub fields:Value, pub status:String, pub template_version:Option<String> }
+pub struct StudyInput { pub id: Option<i64>, pub revision: Option<i64>, pub patient_id:i64, pub template_id:i64, pub doctor_id:i64, pub date:String, pub conclusion:String, pub addition:String, pub fields:Value, pub status:String, pub template_version:Option<String>, pub source_id:Option<i64>, pub form_revision:Option<i64>, pub conclusion_group_id:Option<i64> }
 
 pub(crate) fn err(e: impl std::fmt::Display)->String { e.to_string() }
 fn search(s:&str)->String { s.trim().to_lowercase().replace('ё',"е") }
@@ -44,9 +44,16 @@ mod tests {
         c.execute_batch("PRAGMA user_version=1; INSERT INTO doctors VALUES(1,'Тестовый врач',0); INSERT INTO templates VALUES(1,'Тестовый протокол','test'); INSERT INTO patients(id,name,search_name,gender,birthdate) VALUES(1,'Тест Ёлкин','тест елкин','M','2000-01-01');").unwrap();
         db
     }
-    fn study()->StudyInput { StudyInput{id:None,revision:None,patient_id:1,template_id:1,doctor_id:1,date:"2026-11-06".into(),conclusion:"Тестовое заключение".into(),addition:"".into(),fields:json!({"description":{"value":"Тестовый текст","type":"text"}}),status:"draft".into(),template_version:Some("1".into())} }
+    fn study()->StudyInput { StudyInput{conclusion_group_id:None,form_revision:None,source_id:None,id:None,revision:None,patient_id:1,template_id:1,doctor_id:1,date:"2026-11-06".into(),conclusion:"Тестовое заключение".into(),addition:"".into(),fields:json!({"description":{"value":"Тестовый текст","type":"text"}}),status:"draft".into(),template_version:Some("1".into())} }
     fn clean(db:Database){std::fs::remove_dir_all(db.path.parent().unwrap()).unwrap()}
     #[test] fn cyrillic_search_and_wildcards_are_literal(){let db=fixture();assert_eq!(db.patients("ЁЛКИН","",0,30,"name","asc").unwrap()["total"],1);assert_eq!(db.patients("%","",0,30,"name","asc").unwrap()["total"],0);clean(db)}
+    #[test]fn hidden_source_types_block_new_assignments_but_keep_existing_records(){
+        let db=fixture();let id=db.save_study(study()).unwrap();let c=db.open().unwrap();
+        c.execute_batch("CREATE TABLE legacy_book(id,status_hidden);INSERT INTO legacy_book VALUES(1,1);").unwrap();
+        assert!(db.save_study(study()).unwrap_err().contains("скрыт"));
+        let mut edit=study();edit.id=Some(id);edit.revision=Some(1);db.save_study(edit).unwrap();
+        assert_eq!(db.study(id).unwrap()["revision"],2);drop(c);clean(db)
+    }
     #[test] fn study_roundtrip_and_stale_revision(){let db=fixture();let id=db.save_study(study()).unwrap();let saved=db.study(id).unwrap();assert_eq!(saved["fields"]["description"]["value"],"Тестовый текст");assert_eq!(saved["legacy_version"],"1");let mut update=study();update.id=Some(id);update.revision=Some(0);assert!(db.save_study(update).is_err());assert_eq!(db.study(id).unwrap()["revision"],1);clean(db)}
     #[test] fn archive_edit_keeps_previous_values_and_new_study_requires_patient(){let db=fixture();let id=db.save_study(study()).unwrap();db.open().unwrap().execute("UPDATE studies SET origin='legacy' WHERE id=?",[id]).unwrap();let mut edit=study();edit.id=Some(id);edit.revision=Some(1);edit.conclusion="Исправленное заключение".into();db.save_study(edit).unwrap();let saved=db.study(id).unwrap();assert_eq!(saved["conclusion"],"Исправленное заключение");assert_eq!(saved["origin"],"legacy");assert_eq!(saved["legacy_version"],"1");let prior:String=db.open().unwrap().query_row("SELECT previous_json FROM audit WHERE entity='study' AND entity_id=?",[id],|r|r.get(0)).unwrap();assert!(prior.contains("Тестовое заключение"));let mut orphan=study();orphan.patient_id=999;assert!(db.save_study(orphan).is_err());clean(db)}
     #[test] fn legacy_unknown_references_and_raw_fields_survive_edit(){
@@ -82,12 +89,20 @@ impl Database {
         c.pragma_update(None,"foreign_keys","ON").map_err(err)?;
         c.pragma_update(None,"trusted_schema","OFF").map_err(err)?;
         let version:i64=c.pragma_query_value(None,"user_version",|r|r.get(0)).map_err(err)?;
-        if ![1,2].contains(&version) {return Err("Версия базы не поддерживается этой программой.".into())}
+        if ![1,2,3].contains(&version) {return Err("Версия базы не поддерживается этой программой.".into())}
         Ok(c)
+    }
+    pub(crate) fn template_hidden(c:&Connection,id:i64)->Result<bool,String>{if c.query_row("SELECT count(*) FROM templates WHERE id=?",[id],|r|r.get::<_,i64>(0)).map_err(err)?==0{return Self::source_template_hidden(c,id)}Ok(Self::template_settings(c,id)?["hidden"]==true)}
+    pub(crate) fn source_template_hidden(c:&Connection,id:i64)->Result<bool,String>{
+        let source:i64=c.query_row("SELECT count(*) FROM sqlite_master WHERE type='table' AND name='legacy_book'",[],|r|r.get(0)).map_err(err)?;
+        if source==0{return Ok(false)}
+        Ok(c.query_row("SELECT COALESCE(max(status_hidden),0) FROM legacy_book WHERE id=?",[id],|r|r.get::<_,i64>(0)).map_err(err)?!=0)
     }
     pub fn info(&self)->Result<Value,String> {
         let c=self.open()?;
-        Ok(json!({"path":self.path.to_string_lossy(),"patients":c.query_row("SELECT count(*) FROM patients WHERE hidden=0",[],|r|r.get::<_,i64>(0)).map_err(err)?,"studies":c.query_row("SELECT count(*) FROM studies",[],|r|r.get::<_,i64>(0)).map_err(err)?,"templates":rows(&c,"SELECT * FROM templates ORDER BY name",[])?,"doctors":rows(&c,"SELECT id,name FROM doctors WHERE hidden=0 ORDER BY name",[])?,"migration":c.query_row("SELECT value FROM metadata WHERE key='migration'",[],|r|r.get::<_,String>(0)).map_err(err)?}))
+        let mut templates=rows(&c,"SELECT * FROM templates ORDER BY name",[])?;
+        for t in &mut templates{*t=Self::template_settings(&c,t["id"].as_i64().unwrap())?;t["formSnapshot"]=Self::current_form(&c,t["id"].as_i64().unwrap())?;}
+        Ok(json!({"path":self.path.to_string_lossy(),"patients":c.query_row("SELECT count(*) FROM patients WHERE hidden=0",[],|r|r.get::<_,i64>(0)).map_err(err)?,"studies":c.query_row("SELECT count(*) FROM studies",[],|r|r.get::<_,i64>(0)).map_err(err)?,"templates":templates,"doctors":rows(&c,"SELECT id,name FROM doctors WHERE hidden=0 ORDER BY name",[])?,"migration":c.query_row("SELECT value FROM metadata WHERE key='migration'",[],|r|r.get::<_,String>(0)).map_err(err)?}))
     }
     pub fn patients(&self,q:&str,gender:&str,page:i64,page_size:i64,sort:&str,direction:&str)->Result<Value,String> {
         let direction=match direction{"asc"=>"ASC","desc"=>"DESC",_=>return Err("Неизвестное направление сортировки".into())};
@@ -108,9 +123,12 @@ impl Database {
         let studies=rows(&c,&format!("{STUDIES} WHERE s.patient_id=?1 ORDER BY s.date DESC,s.id DESC"),[id])?;
         Ok(json!({"patient":patient,"studies":studies}))
     }
-    pub fn studies(&self,q:&str,page:i64,page_size:i64)->Result<Value,String> {
+    #[cfg(test)]
+    pub fn studies(&self,q:&str,page:i64,page_size:i64)->Result<Value,String>{self.studies_filtered(q,page,page_size,"all")}
+    pub fn studies_filtered(&self,q:&str,page:i64,page_size:i64,status:&str)->Result<Value,String> {
+        let status_filter=match status{"active"=>"s.status NOT IN('deleted','legacy:2')","all"=>"1=1","draft"=>"s.status IN('draft','legacy:0')","final"=>"s.status IN('final','legacy:1')","deleted"=>"s.status IN('deleted','legacy:2')",_=>return Err("Неизвестный фильтр состояния".into())};
         let c=self.open()?;
-        let filter=" LEFT JOIN patients p ON p.id=s.patient_id WHERE (p.hidden=0 OR p.id IS NULL) AND (COALESCE(p.search_name,'') LIKE ?1 ESCAPE '\\' OR CAST(s.id AS TEXT)=?2)";
+        let filter=format!(" LEFT JOIN patients p ON p.id=s.patient_id WHERE (p.hidden=0 OR p.id IS NULL) AND (COALESCE(p.search_name,'') LIKE ?1 ESCAPE '\\' OR CAST(s.id AS TEXT)=?2) AND ({status_filter})");
         let count:i64=c.query_row(&format!("SELECT count(*) FROM studies s{filter}"),params![like(q),q.trim()],|r|r.get(0)).map_err(err)?;
         let sql=format!("SELECT s.id,s.patient_id AS patientId,p.name AS patientName,s.date,s.title,s.origin,s.status,s.revision,s.template_id AS templateId,s.doctor_id AS doctorId,COALESCE(d.name,'Врач не указан') AS doctor FROM studies s LEFT JOIN doctors d ON d.id=s.doctor_id {filter} ORDER BY s.date DESC,s.id DESC LIMIT ?4 OFFSET ?3");
         Ok(json!({"total":count,"items":rows(&c,&sql,params![like(q),q.trim(),page.clamp(0,100000)*page_size.clamp(1,500),page_size.clamp(1,500)])?}))
@@ -118,7 +136,11 @@ impl Database {
     pub fn study(&self,id:i64)->Result<Value,String> {
         let c=self.open()?;
         let mut value=rows(&c,"SELECT s.*,d.name AS doctor,COALESCE(p.name,'Без карточки пациента') AS patientName,p.birthdate AS patientBirthdate,t.code AS templateCode FROM studies s LEFT JOIN patients p ON p.id=s.patient_id LEFT JOIN doctors d ON d.id=s.doctor_id LEFT JOIN templates t ON t.id=s.template_id WHERE s.id=?1",[id])?.pop().ok_or("Исследование не найдено")?;
+        value["decision"]=Self::decision_for(&c,&value)?.unwrap_or(Value::Null);
+        value["doctorCurrentName"]=value["doctor"].clone();
+        if let Some(name)=Self::signature(&c,id,value["doctor_id"].as_i64().unwrap_or(0))?{value["doctor"]=json!(name)}
         value["fields"]=serde_json::from_str(value["fields_json"].as_str().unwrap_or("{}")).map_err(err)?;
+        value["formSnapshot"]=Self::load_form_snapshot(&c,&value["fields"])? .unwrap_or(Self::original_form(&c,&value)?);
         value.as_object_mut().unwrap().remove("fields_json");
         Ok(value)
     }
@@ -140,7 +162,7 @@ impl Database {
         crate::security::audit(&tx,"save_patient",id)?;
         tx.commit().map_err(err)?; Ok(id)
     }
-    pub fn save_study(&self,input:StudyInput)->Result<i64,String> {
+    pub fn save_study(&self,mut input:StudyInput)->Result<i64,String> {
         if !valid_date(&input.date) {return Err("Укажите корректную дату исследования.".into())}
         if !["draft","final"].contains(&input.status.as_str()){return Err("Неизвестный статус исследования.".into())}
         if input.status=="final" && input.conclusion.trim().is_empty(){return Err("Заполните заключение перед завершением.".into())}
@@ -148,11 +170,22 @@ impl Database {
         if input.fields.as_object().unwrap().values().any(|field|field.get("value").and_then(Value::as_str).is_none()||field.get("type").and_then(Value::as_str).is_none()){return Err("Параметры исследования должны содержать строковое значение и тип.".into())}
         if let Some(version)=input.template_version.as_ref(){if version.is_empty()||version.len()>20||!version.chars().all(|c|c.is_ascii_digit()){return Err("Некорректная версия шаблона.".into())}}
         let mut c=self.open()?; let tx=c.transaction().map_err(err)?;
-        let previous=if let Some(id)=input.id{Some(rows(&tx,"SELECT * FROM studies WHERE id=?1",[id])?.pop().ok_or("Исследование не найдено")?)}else{None};
-        let legacy=previous.as_ref().is_some_and(|p|p["origin"]=="legacy");
-        let title:String=if legacy&&previous.as_ref().unwrap()["template_id"]==input.template_id{previous.as_ref().unwrap()["title"].as_str().unwrap_or("").into()}else{tx.query_row("SELECT name FROM templates WHERE id=?1",[input.template_id],|r|r.get(0)).map_err(|_|"Выберите вид исследования".to_string())?};
+        let mut previous=if let Some(id)=input.id{Some(rows(&tx,"SELECT * FROM studies WHERE id=?1",[id])?.pop().ok_or("Исследование не найдено")?)}else{None};
+        if let Some(p)=previous.as_mut(){let doctor=p["doctor_id"].as_i64().unwrap_or(0);p["doctorSignature"]=json!({"doctorId":doctor,"name":Self::signature(&tx,input.id.unwrap(),doctor)?});p["decision"]=Self::decision_for(&tx,p)?.unwrap_or(Value::Null);}
+        if previous.as_ref().is_some_and(|p|crate::lifecycle::deleted(p["status"].as_str().unwrap_or(""))){return Err("Удалённое исследование нужно сначала восстановить.".into())}
+        if Self::template_hidden(&tx,input.template_id)?&&!previous.as_ref().is_some_and(|p|p["template_id"]==input.template_id){return Err("Этот вид исследования скрыт и недоступен для нового назначения.".into())}
+        let title:String=if previous.as_ref().is_some_and(|p|p["template_id"]==input.template_id){previous.as_ref().unwrap()["title"].as_str().unwrap_or("").into()}else{tx.query_row("SELECT name FROM templates WHERE id=?1",[input.template_id],|r|r.get(0)).map_err(|_|"Выберите вид исследования".to_string())?};
         let doctor_count:i64=tx.query_row("SELECT count(*) FROM doctors WHERE id=?1 AND hidden=0",[input.doctor_id],|r|r.get(0)).map_err(err)?;
-        if doctor_count!=1&&!(legacy&&previous.as_ref().unwrap()["doctor_id"]==input.doctor_id){return Err("Выберите врача.".into())}
+        if doctor_count!=1&&!previous.as_ref().is_some_and(|p|p["doctor_id"]==input.doctor_id){return Err("Выберите действующего врача. Скрытый врач недоступен для новых назначений.".into())}
+        let source=if let Some(id)=input.source_id{let p=rows(&tx,"SELECT * FROM studies WHERE id=?",[id])?.pop().ok_or("Исходное исследование не найдено")?;if p["patient_id"]!=input.patient_id||p["template_id"]!=input.template_id{return Err("Исходное исследование не соответствует пациенту и виду.".into())}Some(p)}else{None};
+        let decision=Self::prepare_decision(&tx,input.conclusion_group_id,input.template_id,previous.as_ref(),source.as_ref())?;
+        if let Some(old)=previous.as_ref().and_then(|p|p["date"].as_str()){if old.get(..10)==Some(input.date.as_str()){input.date=old.to_string()}}
+        let basis=previous.as_ref().filter(|p|p["template_id"]==input.template_id).or(source.as_ref());
+        let form=if let Some(p)=basis{let old:Value=serde_json::from_str(p["fields_json"].as_str().unwrap_or("{}")).map_err(err)?;Self::load_form_snapshot(&tx,&old)?.unwrap_or(Self::original_form(&tx,p)?)}else{Self::current_form(&tx,input.template_id)?};
+        if basis.is_none()&&input.form_revision.is_some_and(|v|Some(v)!=form["configurationRevision"].as_i64()){return Err("Настройки формы изменились. Откройте новое исследование заново.".into())}
+        Self::canonical_form_fields(&mut input.fields,&form);
+        input.template_version=Some(form["version"].as_str().unwrap_or("1").into());
+        Self::save_form_snapshot(&tx,&mut input.fields,&form)?;
         let id=if let Some(id)=input.id {
             let prev=previous.unwrap();
             if prev["patient_id"]!=input.patient_id {return Err("Пациент исследования не совпадает.".into())}
@@ -163,6 +196,8 @@ impl Database {
             tx.execute("INSERT INTO studies(patient_id,date,template_id,doctor_id,title,conclusion,addition,fields_json,origin,status,updated_at,legacy_version) VALUES(?,?,?,?,?,?,?,?,'native',?,datetime('now'),?)",params![input.patient_id,input.date,input.template_id,input.doctor_id,title,input.conclusion,input.addition,input.fields.to_string(),input.status,input.template_version]).map_err(err)?;
             tx.last_insert_rowid()
         };
+        Self::save_signature(&tx,id,input.doctor_id)?;
+        Self::store_decision(&tx,id,decision.as_ref())?;
         crate::security::audit(&tx,"save_study",id)?;
         tx.commit().map_err(err)?; Ok(id)
     }

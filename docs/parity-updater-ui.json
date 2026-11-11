@@ -1,0 +1,10 @@
+{
+  "version": "1.1.0",
+  "mockedReleaseOnly": true,
+  "noUpdate": true,
+  "badgeAndTooltip": true,
+  "responsiveFooter": true,
+  "downloadError": true,
+  "unsavedChangesCancellation": true,
+  "pageErrors": []
+}

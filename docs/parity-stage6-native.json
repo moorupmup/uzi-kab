@@ -1,0 +1,19 @@
+{
+  "nativeSqlite": true,
+  "composedPhrasePreviewAndSelection": true,
+  "cancelLeavesTextUnchanged": true,
+  "composedInsertionAppends": true,
+  "persistsAfterReload": true,
+  "noAutomaticGroupAssignment": true,
+  "sourceMode2ComparedInUnitTest": true,
+  "calculationErrorKeepsSavedPrintAvailable": true,
+  "pngRendered": true,
+  "webmPlaybackAndSeek": true,
+  "mediaExportsByteIdentical": true,
+  "selectedImagePrintOnly": true,
+  "attachmentRemovalViaUi": true,
+  "failedSaveBlocksPrintUntilReload": true,
+  "failedLoadBlocksPrint": true,
+  "narrowScreensNoPageOverflow": true,
+  "pageErrors": []
+}

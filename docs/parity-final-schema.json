@@ -1,0 +1,13 @@
+{
+  "appVersion": "1.1.0",
+  "realArchiveCopy": true,
+  "schema": 3,
+  "studies": 66949,
+  "signatures": 66949,
+  "decisionBindings": 66949,
+  "beforeParityBackupSchema": 2,
+  "upgradeIdempotent": true,
+  "sourceSha256Unchanged": true,
+  "previousExeRejectsSchema3": true,
+  "rejectedDatabaseSha256Unchanged": true
+}

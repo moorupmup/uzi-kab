@@ -1,0 +1,926 @@
+[
+  {
+    "action": "main_menu",
+    "source": "php/index.php",
+    "line": 30,
+    "scenario": "P01",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "main_schedule",
+    "source": "php/index.php",
+    "line": 35,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "show_add_schedule",
+    "source": "php/index.php",
+    "line": 40,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "add_schedule",
+    "source": "php/index.php",
+    "line": 47,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "delete_schedule",
+    "source": "php/index.php",
+    "line": 57,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "edit_schedule",
+    "source": "php/index.php",
+    "line": 63,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "save_edit_schedule",
+    "source": "php/index.php",
+    "line": 69,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "main_registratura",
+    "source": "php/index.php",
+    "line": 78,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_registration",
+    "source": "php/index.php",
+    "line": 89,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "get_price",
+    "source": "php/index.php",
+    "line": 104,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "select_research",
+    "source": "php/index.php",
+    "line": 110,
+    "scenario": "S01",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "search_pacient",
+    "source": "php/index.php",
+    "line": 129,
+    "scenario": "P02",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "save_registration",
+    "source": "php/index.php",
+    "line": 148,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "do_add_prihod_rashod",
+    "source": "php/index.php",
+    "line": 167,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_replace",
+    "source": "php/index.php",
+    "line": 173,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "delete_record",
+    "source": "php/index.php",
+    "line": 180,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "show_pacient_list",
+    "source": "php/index.php",
+    "line": 187,
+    "scenario": "P01",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "show_add_pacient",
+    "source": "php/index.php",
+    "line": 203,
+    "scenario": "P03",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "do_add_pacient",
+    "source": "php/index.php",
+    "line": 221,
+    "scenario": "P03",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "show_add_ambulance",
+    "source": "php/index.php",
+    "line": 238,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "show_edit_pacient",
+    "source": "php/index.php",
+    "line": 258,
+    "scenario": "P04",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "save_edit_pacient",
+    "source": "php/index.php",
+    "line": 277,
+    "scenario": "P04",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "add_pacient",
+    "source": "php/index.php",
+    "line": 354,
+    "scenario": "P03",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "prepare_document",
+    "source": "php/index.php",
+    "line": 433,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "choise_document",
+    "source": "php/index.php",
+    "line": 440,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "show_soglasen_document",
+    "source": "php/index.php",
+    "line": 453,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "show_otkaz_document",
+    "source": "php/index.php",
+    "line": 463,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "show_operaciya_document",
+    "source": "php/index.php",
+    "line": 473,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_pay",
+    "source": "php/index.php",
+    "line": 483,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "set_payed",
+    "source": "php/index.php",
+    "line": 490,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "print_karta",
+    "source": "php/index.php",
+    "line": 521,
+    "scenario": "P06",
+    "status": "Нет"
+  },
+  {
+    "action": "show_print_karta",
+    "source": "php/index.php",
+    "line": 526,
+    "scenario": "P06",
+    "status": "Нет"
+  },
+  {
+    "action": "main_administration",
+    "source": "php/index.php",
+    "line": 531,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "edit_cabinets",
+    "source": "php/index.php",
+    "line": 537,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "show_add_cabinets",
+    "source": "php/index.php",
+    "line": 543,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "do_add_cabinet",
+    "source": "php/index.php",
+    "line": 549,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "delete_cabinet",
+    "source": "php/index.php",
+    "line": 554,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "edit_groups",
+    "source": "php/index.php",
+    "line": 561,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "show_add_groups",
+    "source": "php/index.php",
+    "line": 567,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "do_add_group",
+    "source": "php/index.php",
+    "line": 573,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "delete_group",
+    "source": "php/index.php",
+    "line": 578,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "show_edit_group_name",
+    "source": "php/index.php",
+    "line": 585,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "save_edit_group_name",
+    "source": "php/index.php",
+    "line": 592,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "edit_users",
+    "source": "php/index.php",
+    "line": 598,
+    "scenario": "A04",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "show_add_users",
+    "source": "php/index.php",
+    "line": 604,
+    "scenario": "A04",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "do_add_user",
+    "source": "php/index.php",
+    "line": 610,
+    "scenario": "A04",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "delete_user",
+    "source": "php/index.php",
+    "line": 617,
+    "scenario": "A04",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "show_edit_user_name",
+    "source": "php/index.php",
+    "line": 624,
+    "scenario": "A04",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "save_edit_user_name",
+    "source": "php/index.php",
+    "line": 631,
+    "scenario": "A04",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "edit_permits",
+    "source": "php/index.php",
+    "line": 639,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "save_edit_permits",
+    "source": "php/index.php",
+    "line": 645,
+    "scenario": "A03",
+    "status": "Частично"
+  },
+  {
+    "action": "show_lpu",
+    "source": "php/index.php",
+    "line": 659,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "add_lpu",
+    "source": "php/index.php",
+    "line": 667,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "save_edit_lpu",
+    "source": "php/index.php",
+    "line": 675,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "save_edit_lpu_doctor",
+    "source": "php/index.php",
+    "line": 684,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "add_lpu_doctor",
+    "source": "php/index.php",
+    "line": 694,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "delete_lpu_doctor",
+    "source": "php/index.php",
+    "line": 703,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "delete_lpu",
+    "source": "php/index.php",
+    "line": 711,
+    "scenario": "X01",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_po_priemam",
+    "source": "php/index.php",
+    "line": 719,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "preveiw_po_priemam",
+    "source": "php/index.php",
+    "line": 725,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_po_napr",
+    "source": "php/index.php",
+    "line": 733,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "preveiw_po_napr",
+    "source": "php/index.php",
+    "line": 739,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_po_pacient",
+    "source": "php/index.php",
+    "line": 745,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "preveiw_po_pacient",
+    "source": "php/index.php",
+    "line": 754,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_po_doctor",
+    "source": "php/index.php",
+    "line": 761,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "preveiw_po_doctor",
+    "source": "php/index.php",
+    "line": 767,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_po_podrazdel",
+    "source": "php/index.php",
+    "line": 775,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "preveiw_po_podrazdel",
+    "source": "php/index.php",
+    "line": 781,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_po_podrazdel_payed",
+    "source": "php/index.php",
+    "line": 787,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "preveiw_po_podrazdel_payed",
+    "source": "php/index.php",
+    "line": 793,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_line",
+    "source": "php/index.php",
+    "line": 799,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "print_line",
+    "source": "php/index.php",
+    "line": 806,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "update_book_users",
+    "source": "php/index.php",
+    "line": 811,
+    "scenario": "D10",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_edit_decision",
+    "source": "php/index.php",
+    "line": 819,
+    "scenario": "D01",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "show_add_decision",
+    "source": "php/index.php",
+    "line": 827,
+    "scenario": "D02",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "do_add_decision",
+    "source": "php/index.php",
+    "line": 835,
+    "scenario": "D02",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "edit_research_decision",
+    "source": "php/index.php",
+    "line": 844,
+    "scenario": "D03",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "do_save_edit_decision",
+    "source": "php/index.php",
+    "line": 853,
+    "scenario": "D03",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "delete_research_decision",
+    "source": "php/index.php",
+    "line": 863,
+    "scenario": "D03",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "set_position",
+    "source": "php/index.php",
+    "line": 873,
+    "scenario": "D06",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_karta_pacient",
+    "source": "php/index.php",
+    "line": 885,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_search_pacient",
+    "source": "php/index.php",
+    "line": 891,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_user_card",
+    "source": "php/index.php",
+    "line": 898,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_first_request",
+    "source": "php/index.php",
+    "line": 905,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_zakl_list",
+    "source": "php/index.php",
+    "line": 911,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_priviv_list",
+    "source": "php/index.php",
+    "line": 916,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_control_posesch",
+    "source": "php/index.php",
+    "line": 922,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "do_add_control",
+    "source": "php/index.php",
+    "line": 931,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "do_save_edit_control",
+    "source": "php/index.php",
+    "line": 940,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "delete_control_pos",
+    "source": "php/index.php",
+    "line": 950,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_stac_list",
+    "source": "php/index.php",
+    "line": 957,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_invaz_list",
+    "source": "php/index.php",
+    "line": 963,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_disp_list",
+    "source": "php/index.php",
+    "line": 969,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_rentgen_list",
+    "source": "php/index.php",
+    "line": 975,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "karta_issled_list",
+    "source": "php/index.php",
+    "line": 981,
+    "scenario": "X04",
+    "status": "Нет"
+  },
+  {
+    "action": "main_dogovor",
+    "source": "php/index.php",
+    "line": 988,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_search_pacient_dogovor",
+    "source": "php/index.php",
+    "line": 993,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "search_pacient_dogovor",
+    "source": "php/index.php",
+    "line": 998,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "dogovor_pacient_info",
+    "source": "php/index.php",
+    "line": 1005,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "show_create_contract",
+    "source": "php/index.php",
+    "line": 1012,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "main_research",
+    "source": "php/index.php",
+    "line": 1020,
+    "scenario": "D08",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_create_research",
+    "source": "php/index.php",
+    "line": 1028,
+    "scenario": "D08",
+    "status": "Нет"
+  },
+  {
+    "action": "create_research",
+    "source": "php/index.php",
+    "line": 1036,
+    "scenario": "D08",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_edit_book",
+    "source": "php/index.php",
+    "line": 1050,
+    "scenario": "D07",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_copy_replace_data",
+    "source": "php/index.php",
+    "line": 1062,
+    "scenario": "D05",
+    "status": "Нет"
+  },
+  {
+    "action": "insert_records_book",
+    "source": "php/index.php",
+    "line": 1078,
+    "scenario": "D05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_print_check",
+    "source": "php/index.php",
+    "line": 1085,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_delete_pacient",
+    "source": "php/index.php",
+    "line": 1093,
+    "scenario": "P05",
+    "status": "Изменено"
+  },
+  {
+    "action": "do_delete_pacient",
+    "source": "php/index.php",
+    "line": 1100,
+    "scenario": "P05",
+    "status": "Изменено"
+  },
+  {
+    "action": "show_protocols_reg_pacient",
+    "source": "php/index.php",
+    "line": 1110,
+    "scenario": "X02",
+    "status": "Нет"
+  },
+  {
+    "action": "edit_main_book_record",
+    "source": "php/index.php",
+    "line": 1120,
+    "scenario": "D07",
+    "status": "Нет"
+  },
+  {
+    "action": "save_edit_book_record",
+    "source": "php/index.php",
+    "line": 1128,
+    "scenario": "D07",
+    "status": "Нет"
+  },
+  {
+    "action": "replace_temp_price",
+    "source": "php/index.php",
+    "line": 1142,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "show_koresh_document_new",
+    "source": "php/index.php",
+    "line": 1145,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "prinyat_numeraciu",
+    "source": "php/index.php",
+    "line": 1151,
+    "scenario": "X03",
+    "status": "Нет"
+  },
+  {
+    "action": "main_research_user",
+    "source": "php/index.php",
+    "line": 1160,
+    "scenario": "D01",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "prepare_edit_book_user",
+    "source": "php/index.php",
+    "line": 1168,
+    "scenario": "D04",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_copy_replace_data_user",
+    "source": "php/index.php",
+    "line": 1180,
+    "scenario": "D05",
+    "status": "Нет"
+  },
+  {
+    "action": "insert_records_book_user",
+    "source": "php/index.php",
+    "line": 1196,
+    "scenario": "D05",
+    "status": "Нет"
+  },
+  {
+    "action": "main_menu",
+    "source": "php/modules/statistic/index.php",
+    "line": 16,
+    "scenario": "P01",
+    "status": "Есть аналог"
+  },
+  {
+    "action": "prepare_otchet_vyrab",
+    "source": "php/modules/statistic/index.php",
+    "line": 21,
+    "scenario": "R02",
+    "status": "Частично"
+  },
+  {
+    "action": "view_vyrabotka",
+    "source": "php/modules/statistic/index.php",
+    "line": 27,
+    "scenario": "R02",
+    "status": "Частично"
+  },
+  {
+    "action": "prepare_research",
+    "source": "php/modules/statistic/index.php",
+    "line": 35,
+    "scenario": "R01",
+    "status": "Частично"
+  },
+  {
+    "action": "view_research",
+    "source": "php/modules/statistic/index.php",
+    "line": 42,
+    "scenario": "R01",
+    "status": "Частично"
+  },
+  {
+    "action": "prepare_decision",
+    "source": "php/modules/statistic/index.php",
+    "line": 52,
+    "scenario": "R03",
+    "status": "Нет"
+  },
+  {
+    "action": "view_decision",
+    "source": "php/modules/statistic/index.php",
+    "line": 59,
+    "scenario": "R03",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_z_otchet",
+    "source": "php/modules/statistic/index.php",
+    "line": 68,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "show_zett_otchet",
+    "source": "php/modules/statistic/index.php",
+    "line": 74,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_reg_records",
+    "source": "php/modules/statistic/index.php",
+    "line": 83,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "view_reg_records",
+    "source": "php/modules/statistic/index.php",
+    "line": 89,
+    "scenario": "R05",
+    "status": "Нет"
+  },
+  {
+    "action": "prepare_napr_lpu",
+    "source": "php/modules/statistic/index.php",
+    "line": 96,
+    "scenario": "R04",
+    "status": "Нет"
+  },
+  {
+    "action": "view_napr_lpu",
+    "source": "php/modules/statistic/index.php",
+    "line": 102,
+    "scenario": "R04",
+    "status": "Нет"
+  }
+]

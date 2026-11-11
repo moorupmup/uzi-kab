@@ -7,7 +7,19 @@ try {
         npm run desktop:build
         if ($LASTEXITCODE -ne 0) { throw 'Desktop build failed' }
     }
+    $taskVersion = (Get-Content -LiteralPath (Join-Path $taskRoot 'package.json') -Raw | ConvertFrom-Json).version
+    $taskExe = Join-Path $taskRoot 'src-tauri/target/release/uzi-desktop.exe'
+    $taskExeHash = (Get-FileHash -LiteralPath $taskExe -Algorithm SHA256).Hash
+    $taskScopeCheck = Get-Content -LiteralPath (Join-Path $taskRoot 'docs/parity-scope-native.json') -Raw | ConvertFrom-Json
+    if ($taskScopeCheck.version -ne $taskVersion -or $taskScopeCheck.exeSha256 -ne $taskExeHash -or -not $taskScopeCheck.noGroupReportUi -or -not $taskScopeCheck.existingHiddenBindingSurvivesUiSave) { throw 'Native verification does not match the executable or confirmed scope' }
+    $taskManualCheck = Get-Content -LiteralPath (Join-Path $taskRoot 'docs/parity-manual-check.json') -Raw | ConvertFrom-Json
+    if ($taskManualCheck.sections -ne 21 -or $taskManualCheck.screenshots -ne 10 -or -not $taskManualCheck.imagesLoaded -or $taskManualCheck.mobileOverflow -or $taskManualCheck.pageErrors.Count -ne 0) { throw 'Updated manual has not passed verification' }
+    $taskSourceDb = Join-Path $taskRoot 'data/uzi.db'
+    $taskSourceHash = (Get-FileHash -LiteralPath $taskSourceDb -Algorithm SHA256).Hash
     $releasePath = Join-Path $taskRoot 'release/Кабинет УЗИ'
+    $taskReleaseDb = Join-Path $releasePath 'uzi.db'
+    $taskReleaseDbHash = if (Test-Path -LiteralPath $taskReleaseDb) { (Get-FileHash -LiteralPath $taskReleaseDb -Algorithm SHA256).Hash } else { $null }
+
     New-Item -ItemType Directory -Force $releasePath | Out-Null
     Copy-Item -LiteralPath (Join-Path $taskRoot 'src-tauri/target/release/uzi-desktop.exe') -Destination (Join-Path $releasePath 'Кабинет УЗИ — новая версия.exe')
     $databaseTarget = Join-Path $releasePath 'uzi.db'
@@ -26,5 +38,14 @@ try {
         New-Item -ItemType Directory -Force $runtimeFolder | Out-Null
         Copy-Item -LiteralPath $runtime -Destination $runtimeFolder
     }
+    Copy-Item -LiteralPath (Join-Path $taskRoot 'docs/RELEASE-1.1.md') -Destination (Join-Path $releasePath 'Что нового в версии 1.1.md')
+    if ((Get-FileHash -LiteralPath $taskSourceDb -Algorithm SHA256).Hash -ne $taskSourceHash) { throw 'Working database changed while packaging' }
+    if ($taskReleaseDbHash -and (Get-FileHash -LiteralPath $taskReleaseDb -Algorithm SHA256).Hash -ne $taskReleaseDbHash) { throw 'Existing release database changed while packaging' }
+    $taskPackagedExe = Join-Path $releasePath 'Кабинет УЗИ — новая версия.exe'
+    if ((Get-FileHash -LiteralPath $taskPackagedExe -Algorithm SHA256).Hash -ne $taskExeHash) { throw 'Packaged executable differs from verified executable' }
+    $taskManifest = @{version=$taskVersion;exeSha256=$taskExeHash;workingDatabaseUnchanged=$true;existingReleaseDatabasePreserved=[bool]$taskReleaseDbHash;scope='Рабочий кабинет УЗИ; три роли; отчёты по видам и врачам';clinicalAndHardwareAcceptancePending=$true;files=@()}
+    foreach($taskName in @('Кабинет УЗИ — новая версия.exe','Инструкция для врача.html','Инструкция проверки.md','Тестовый протокол.pdf','Что нового в версии 1.1.md')) { $taskFile=Join-Path $releasePath $taskName; $taskManifest.files+=@{name=$taskName;sha256=(Get-FileHash -LiteralPath $taskFile -Algorithm SHA256).Hash} }
+    $taskManifest | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $releasePath 'Версия выпуска.json') -Encoding UTF8
+    $taskManifest | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $taskRoot 'docs/parity-package.json') -Encoding UTF8
     Write-Output "Ready: $releasePath"
 } finally { Pop-Location }

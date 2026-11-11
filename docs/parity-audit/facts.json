@@ -1,0 +1,223 @@
+{
+  "date": "2026-11-08",
+  "oldRoot": "C:\\Users\\pumpu\\Documents\\Codex\\2026-11-05\\new-chat\\outputs\\UZI-test\\webapps\\uzi",
+  "baselineDatabase": "data/uzi.db",
+  "baselineDatabaseSha256": "cb34ce0531de5ba4d251d82c806a638d44225930cae7fd1ab168cb5478acd642",
+  "activeMenu": [
+    {
+      "id": 1,
+      "name": "Администрирование",
+      "action": "index.php?action=main_administration"
+    },
+    {
+      "id": 2,
+      "name": "Работа со справочниками",
+      "action": "index.php?action=prepare_edit_decision"
+    },
+    {
+      "id": 3,
+      "name": "Работа с исследованиями",
+      "action": "index.php?action=main_research"
+    }
+  ],
+  "legacyFusionSets": 5,
+  "legacyFusionLinks": 10,
+  "legacyStatuses": {
+    "0": 5111,
+    "1": 66883,
+    "2": 25
+  },
+  "legacyPicturesDeclared": 0,
+  "legacyVideosDeclared": 0,
+  "configuredTemplates": [
+    {
+      "id": 10,
+      "name": "УЗИ исследование",
+      "code": "universal",
+      "key": "universal_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 0,
+      "printSupported": true
+    },
+    {
+      "id": 18,
+      "name": "УЗИ щитовидной железы",
+      "code": "shit",
+      "key": "shit_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 32,
+      "printSupported": true
+    },
+    {
+      "id": 80,
+      "name": "УЗИ брюшной полости",
+      "code": "BROOHO",
+      "key": "brooho_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 147,
+      "printSupported": true
+    },
+    {
+      "id": 190,
+      "name": "Эхокардиография",
+      "code": "eho_kg",
+      "key": "eho_kg_2",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 36,
+      "printSupported": true
+    },
+    {
+      "id": 248,
+      "name": "УЗИ гинекологическое",
+      "code": "ginekol",
+      "key": "ginekol_11",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 67,
+      "printSupported": true
+    },
+    {
+      "id": 323,
+      "name": "УЗИ коленных суставов",
+      "code": "koleno",
+      "key": "koleno_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 80,
+      "printSupported": true
+    },
+    {
+      "id": 393,
+      "name": "УЗИ почек",
+      "code": "pochki",
+      "key": "pochki_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 37,
+      "printSupported": true
+    },
+    {
+      "id": 451,
+      "name": "УЗИ молочных желез",
+      "code": "moloch",
+      "key": "moloch_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 19,
+      "printSupported": true
+    },
+    {
+      "id": 478,
+      "name": "УЗИ при беременности",
+      "code": "BEREMEN",
+      "key": "beremen_1",
+      "sourceHidden": true,
+      "catalog": true,
+      "fields": 79,
+      "printSupported": true
+    },
+    {
+      "id": 523,
+      "name": "УЗИ во II и III триместрах беременности",
+      "code": "TRIMESTR",
+      "key": "trimestr_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 26,
+      "printSupported": true
+    },
+    {
+      "id": 678,
+      "name": "УЗИ поясничного отдела позвоночника",
+      "code": "POS_POJAS",
+      "key": "pos_pojas_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 81,
+      "printSupported": true
+    },
+    {
+      "id": 976,
+      "name": "УЗИ шейного отдела позвоночника",
+      "code": "POZ_SHEJA",
+      "key": "poz_sheja_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 89,
+      "printSupported": true
+    },
+    {
+      "id": 1063,
+      "name": "УЗИ при беременности",
+      "code": "BEREMEN2",
+      "key": "beremen2_1",
+      "sourceHidden": true,
+      "catalog": false,
+      "fields": 0,
+      "printSupported": false
+    },
+    {
+      "id": 1064,
+      "name": "УЗИ при беременности",
+      "code": "beremen1",
+      "key": "beremen1_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 79,
+      "printSupported": true
+    },
+    {
+      "id": 1152,
+      "name": "УЗИ в 10-14 недель беременностии",
+      "code": "beremen14",
+      "key": "beremen14_1",
+      "sourceHidden": false,
+      "catalog": true,
+      "fields": 47,
+      "printSupported": true
+    }
+  ],
+  "usedVersions": {
+    "beremen_1": 71,
+    "beremen1_1": 799,
+    "beremen14_1": 413,
+    "brooho_1": 19083,
+    "eho_kg_1": 159,
+    "eho_kg_2": 7355,
+    "ginekol_1": 500,
+    "ginekol_11": 15503,
+    "koleno_1": 15,
+    "moloch_1": 7640,
+    "pochki_1": 2804,
+    "pos_pojas_1": 1,
+    "poz_sheja_1": 1,
+    "shit_1": 8012,
+    "trimestr_1": 1,
+    "universal_1": 4592
+  },
+  "sourceFiles": 546,
+  "screenFiles": 457,
+  "commands": 33,
+  "phpActions": 132,
+  "forms": 187,
+  "printCompiled": 174,
+  "fieldCatalogVersions": 187,
+  "filledExtraPatientFields": {},
+  "emptyModuleTables": {
+    "legacy_cabinets": 0,
+    "legacy_lpu": 0,
+    "legacy_lpu_doctor": 0,
+    "legacy_price": 0,
+    "legacy_price_name": 0
+  },
+  "missingModuleTables": [
+    "legacy_schedule",
+    "legacy_registration",
+    "legacy_pay",
+    "legacy_schet"
+  ]
+}

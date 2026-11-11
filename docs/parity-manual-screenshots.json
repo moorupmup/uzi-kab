@@ -1,0 +1,9 @@
+{
+  "nativeApp": true,
+  "version": "1.1.0",
+  "fictionalDatabase": true,
+  "screenshots": 10,
+  "pageErrors": [],
+  "studyId": 4,
+  "abdominalStudyId": 5
+}

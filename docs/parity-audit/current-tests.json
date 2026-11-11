@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-08",
+  "frontend": {
+    "name": "frontend",
+    "chunk_id": "9ea053",
+    "wall_time_seconds": 5.3208348,
+    "exit_code": 0,
+    "original_token_count": 56,
+    "output": "\n> uzi-desktop@0.1.0 test\n> vitest run\n\n\n RUN  v5.1.0 F:/med-stuff/uzi-db\n\n\n Test Files  4 passed (4)\n      Tests  17 passed (17)\n   Start at  22:22:14\n   Duration  809ms (tests 56%, transform 27%, import 16%, worker 2%)\n\n"
+  },
+  "backend": {
+    "name": "backend",
+    "chunk_id": "18256d",
+    "wall_time_seconds": 2.9830553,
+    "exit_code": 0,
+    "original_token_count": 589,
+    "output": "warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `\\\\?\\F:\\med-stuff\\uzi-db\\src-tauri\\target\\debug\\incremental\\uzi_desktop-1d89l0vjrsaux\\s-hnz80ou42e-1pvw1u1-working`\n\nwarning: `uzi-desktop` (bin \"uzi-desktop\" test) generated 1 warning\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.69s\n     Running unittests src\\main.rs (src-tauri\\target\\debug\\deps\\uzi_desktop-8e01d2af3d930321.exe)\n\nrunning 22 tests\ntest instance::tests::one_instance_per_database ... ok\ntest records::tests::media_sniff_does_not_trust_extension ... ok\ntest repository::tests::archive_edit_keeps_previous_values_and_new_study_requires_patient ... ok\ntest repository::tests::cyrillic_search_and_wildcards_are_literal ... ok\ntest repository::tests::backup_can_be_opened_independently ... ok\ntest records::tests::bundles_cannot_mix_patients_drafts_or_duplicate_items ... ok\ntest repository::tests::incomplete_measurements_allow_completion_without_stale_results ... ok\ntest records::tests::report_counts_only_completed_and_includes_date_without_time ... ok\ntest maintenance::tests::restore_keeps_a_safety_copy_and_rejects_traversal ... ok\ntest records::tests::hiding_a_card_does_not_remove_its_history ... ok\ntest maintenance::tests::cleanup_does_not_delete_without_a_backup ... ok\ntest records::tests::attachments_roundtrip_ranges_and_soft_deletion ... ok\ntest repository::tests::legacy_unknown_references_and_raw_fields_survive_edit ... ok\ntest records::template_tests::source_dictionary_decodes_cyrillic_and_preserves_hidden_hierarchy ... ok\ntest updater::tests::compares_versions_numerically ... ok\ntest repository::tests::study_roundtrip_and_stale_revision ... ok\ntest updater::tests::rejects_ambiguous_or_unverified_assets ... ok\ntest updater::tests::failed_replacement_restores_original ... ok\ntest repository::tests::patient_sorting_covers_all_rows_dates_filters_and_stable_pages ... ok\ntest maintenance::tests::cleanup_removes_only_untouched_empty_stubs_and_keeps_a_verified_copy ... ok\ntest security::tests::accounts_permissions_and_revocation ... ok\ntest repository::tests::page_size_controls_limits_and_offsets ... ok\n\ntest result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.62s\n\n"
+  }
+}

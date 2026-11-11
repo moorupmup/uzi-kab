@@ -1,0 +1,10 @@
+{
+  "editPersistsAfterReload": true,
+  "deleteConfirmedAndPersists": true,
+  "cancelDeletePreservesEntry": true,
+  "restore": true,
+  "conflictPreservesInput": true,
+  "viewerReadOnly": true,
+  "noMobileOverflow": true,
+  "pageErrors": []
+}

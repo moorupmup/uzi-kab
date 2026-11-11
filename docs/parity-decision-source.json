@@ -1,0 +1,16 @@
+{
+  "source": "C:\\Users\\pumpu\\Documents\\Codex\\2026-11-05\\new-chat\\outputs\\UZI-test\\webapps\\uzi\\php\\statistic.php",
+  "sha256": "323497b3f4700ff3390f406d1221c4779416c84ea4f28a65e04f2203456513f5",
+  "function": "view_decision",
+  "line": 194,
+  "binding": "protocol.decision_id = book_users.id",
+  "groupBy": "protocol.decision_id",
+  "dateField": "date_end",
+  "status": "1",
+  "archiveCopyRemainingStudies": 66949,
+  "distinctNonzeroGroups": 22,
+  "remainingZeroDecisionIds": 0,
+  "missingUserDictionaryReferences": 0,
+  "oldGroupTypeMismatchesToPreserve": 0,
+  "conclusion": "Keep the original dictionary reference; do not infer classification from conclusion words or bind it to book.id."
+}
