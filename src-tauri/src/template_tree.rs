@@ -4,7 +4,7 @@ use serde::Deserialize;
 use serde_json::{Value,json};
 use std::collections::{HashMap,HashSet};
 #[derive(Deserialize)]#[serde(rename_all="camelCase")]
-pub struct TreeInput{pub action:String,pub id:Option<i64>,pub revision:Option<i64>,pub parent_id:Option<i64>,pub template_id:Option<i64>,pub text:Option<String>,pub folder:Option<bool>,pub direction:Option<String>,pub deleted:Option<bool>}
+pub struct TreeInput{pub action:String,pub id:Option<i64>,pub revision:Option<i64>,pub parent_id:Option<i64>,pub template_id:Option<i64>,pub text:Option<String>,pub folder:Option<bool>,pub direction:Option<String>,pub deleted:Option<bool>,pub include_in_phrase:Option<bool>}
 fn id(e:&Value)->i64{e["id"].as_i64().unwrap()}
 fn parent(e:&Value)->i64{e["parentId"].as_i64().unwrap_or(0)}
 fn revision(e:&Value)->i64{e["revision"].as_i64().unwrap_or(0)}
@@ -37,11 +37,13 @@ impl Database{
     result_id=nodes.iter().map(id).min().unwrap_or(0).min(0)-1;
     let rank=nodes.iter().filter(|e|parent(e)==p).map(position).min().unwrap_or(1)-1;
     if let Some(e)=nodes.iter_mut().find(|e|id(e)==p){if e["folder"]!=true{if !e["key"].as_str().unwrap_or("").is_empty(){return Err("Служебная запись не может стать пользовательским разделом.".into())}e["folder"]=json!(true);changed.insert(p);}}
-    nodes.push(json!({"id":result_id,"templateId":kind,"parentId":p,"name":text,"value":text,"key":"","folder":input.folder.unwrap_or(false),"hidden":false,"deleted":false,"revision":0,"position":rank}));changed.insert(result_id);
+    nodes.push(json!({"id":result_id,"templateId":kind,"parentId":p,"name":text,"value":text,"key":"","folder":input.folder.unwrap_or(false),"hidden":false,"deleted":false,"revision":0,"position":rank}));if input.folder==Some(true){if let Some(include)=input.include_in_phrase{nodes.last_mut().unwrap()["includeInPhrase"]=json!(include)}}
+    changed.insert(result_id);
    }
    "edit"|"delete"|"restore"=>{
     let i=index.ok_or("Выберите запись.")?;
     if input.action=="edit"{nodes[i]["name"]=json!(text);nodes[i]["value"]=json!(text);if let Some(deleted)=input.deleted{nodes[i]["deleted"]=json!(deleted)}}
+    if input.action=="edit"&&nodes[i]["folder"]==true{if let Some(include)=input.include_in_phrase{nodes[i]["includeInPhrase"]=json!(include)}}
     if input.action=="delete"{nodes[i]["deleted"]=json!(true)}
     if input.action=="restore"{nodes[i]["deleted"]=json!(false);nodes[i]["hidden"]=json!(false)}
     changed.insert(id(&nodes[i]));
@@ -105,6 +107,18 @@ impl Database{
   action(&db,json!({"action":"restore","id":3,"revision":1})).unwrap();assert_eq!(node(&db,id(&a))["deleted"],true);assert_eq!(node(&db,4)["deleted"],false);
   assert!(action(&db,json!({"action":"edit","id":1,"revision":0,"text":"Сломать ключ"})).unwrap_err().contains("защищён"));
   let path=db.backup().unwrap();let c=Connection::open(path).unwrap();assert!(c.query_row("SELECT count(*) FROM user_template_tree",[],|r|r.get::<_,i64>(0)).unwrap()>=3);drop(c);clean(db)
+ }
+ #[test]
+ fn phrase_preference_survives_edit_and_copy() {
+  let db=fixture();
+  action(&db,json!({"action":"edit","id":3,"revision":0,"text":"Section","includeInPhrase":false})).unwrap();
+  assert_eq!(node(&db,3)["includeInPhrase"],false);
+  let copy=action(&db,json!({"action":"copy","id":3,"revision":1,"parentId":5,"templateId":18})).unwrap();
+  assert_eq!(node(&db,id(&copy))["includeInPhrase"],false);
+  let created=action(&db,json!({"action":"create","parentId":2,"templateId":80,"text":"New section","folder":true,"includeInPhrase":false})).unwrap();
+  assert_eq!(node(&db,id(&created))["includeInPhrase"],false);
+  assert!(action(&db,json!({"action":"edit","id":2,"revision":0,"text":"Protected","includeInPhrase":false})).is_err());
+  clean(db)
  }
  #[test]fn leaf_can_become_parent_without_changing_its_original_text(){let db=fixture();let child=create(&db,4,"Дочерняя запись",false);assert_eq!(node(&db,4)["folder"],true);assert_eq!(node(&db,4)["value"],"");assert_eq!(node(&db,4)["name"],"Старый текст");assert_eq!(child["parentId"],4);clean(db)}
 }

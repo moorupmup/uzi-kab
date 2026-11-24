@@ -11,6 +11,7 @@ fn tables(c:&Connection)->Result<(),String>{c.execute_batch("CREATE TABLE IF NOT
 fn original_catalog()-> &'static Value{static DATA:std::sync::OnceLock<Value>=std::sync::OnceLock::new();DATA.get_or_init(||serde_json::from_str(include_str!("../../src/catalog.json")).unwrap())}
 fn catalog()-> &'static Value{static DATA:std::sync::OnceLock<Value>=std::sync::OnceLock::new();DATA.get_or_init(||crate::form_revisions::catalog(original_catalog().clone()))}
 fn versions()-> &'static Value{static DATA:std::sync::OnceLock<Value>=std::sync::OnceLock::new();DATA.get_or_init(||serde_json::from_str(include_str!("../../src/legacy-versions.json")).unwrap())}
+fn reference_aliases()-> &'static Value{static DATA:std::sync::OnceLock<Value>=std::sync::OnceLock::new();DATA.get_or_init(||serde_json::from_str(include_str!("../../src/legacy-reference-aliases.json")).unwrap())}
 fn supported(code:&str,version:&str)->bool{code=="universal"&&version=="1"||{static DATA:std::sync::OnceLock<Value>=std::sync::OnceLock::new();DATA.get_or_init(||serde_json::from_str(include_str!("../../src/editor-conditions.json")).unwrap()).get(format!("{code}_{version}")).is_some()}}
 fn source_gender(c:&Connection,code:&str)->Result<String,String>{
  if !exists(c,"legacy_book")?{return Ok(String::new())}
@@ -37,6 +38,9 @@ fn source_gender(c:&Connection,code:&str)->Result<String,String>{
  #[test]fn new_types_have_real_forms_and_service_sections_sync_idempotently(){
   let db=fixture();let created=save(&db,json!({"id":null,"revision":0,"name":"Новый вид","formCode":"brooho","version":"1","gender":"F","hidden":false,"options":{}})).unwrap();let kind=created["id"].as_i64().unwrap();let code=created["code"].as_str().unwrap();assert!(code.starts_with("custom_"));let saved=study(&db,None,kind,json!({}),None);assert_eq!(db.study(saved).unwrap()["formSnapshot"]["code"],"brooho");let nodes=db.user_templates().unwrap();assert!(nodes.as_array().unwrap().iter().any(|n|n["key"]==format!("CONFIG.USERS_PARAMS.{code}.pechen_text")));
   db.sync_catalog_sections().unwrap();let once=db.user_templates().unwrap();db.sync_catalog_sections().unwrap();assert_eq!(db.user_templates().unwrap(),once);assert_eq!(once.as_array().unwrap().iter().filter(|n|n["key"].as_str().is_some_and(|k|k.eq_ignore_ascii_case("BASE.DECISION.brooho"))).count(),1);assert!(nodes.as_array().unwrap().iter().any(|n|n["name"]=="Текст врача"));assert!(nodes.as_array().unwrap().iter().any(|n|n["key"]==format!("CONFIG.USERS_PARAMS.{code}.str_text")));
+  let nodes=nodes.as_array().unwrap();
+  assert_eq!(nodes.iter().filter(|n|n["key"]==format!("CONFIG.USERS_PARAMS.{code}.pochka_text")).count(),1);
+  assert!(nodes.iter().any(|n|n["key"]==format!("CONFIG.USERS_PARAMS.{code}.description")));
   let c=db.open().unwrap();assert_eq!(c.query_row("SELECT count(*) FROM legacy_book_users",[],|r|r.get::<_,i64>(0)).unwrap(),3);drop(c);
   let mut bad=created.clone();bad["formCode"]=json!("missing");assert!(save(&db,bad).unwrap_err().contains("ещё не перенесена"));let mut hidden=created;hidden["hidden"]=json!(true);save(&db,hidden).unwrap();assert!(Database::template_hidden(&db.open().unwrap(),kind).unwrap());clean(db)
  }
@@ -121,7 +125,29 @@ impl Database{
   for (key,label) in [("BASE.DECISION","Заключительные признаки"),("CONFIG.ADDITION","Дополнения и рекомендации"),("CONFIG.USERS_PARAMS","Параметры протокола")]{
    let root=service_node(c,&mut nodes,0,0,key,label)?;
    let branch=format!("{key}.{code}");let parent=service_node(c,&mut nodes,kind,root,&branch,name)?;
-   if key=="CONFIG.USERS_PARAMS"{let form=Self::current_form(c,kind)?;if let Some(defs)=form["definitions"].as_array(){for d in defs{let field=d["key"].as_str().unwrap_or("");let field_kind=d["kind"].as_str().unwrap_or("");if field_kind=="get"||field_kind.contains("TextArea"){service_node(c,&mut nodes,kind,parent,&format!("{branch}.{field}"),d["label"].as_str().unwrap_or(field))?;}if let Some(options)=d["options"].as_array(){for option in options{if let Some(section)=option["referenceSection"].as_str(){service_node(c,&mut nodes,kind,parent,&format!("{branch}.{section}"),d["label"].as_str().unwrap_or(section))?;}}}}}}
+   if key=="CONFIG.USERS_PARAMS"{
+    let form=Self::current_form(c,kind)?;
+    let form_key=format!("{}_{}",form["code"].as_str().unwrap_or(""),form["version"].as_str().unwrap_or("1"));
+    let aliases=&reference_aliases()[form_key];
+    service_node(c,&mut nodes,kind,parent,&format!("{branch}.description"),"Свободное описание")?;
+    if let Some(defs)=form["definitions"].as_array(){
+     for d in defs{
+      let field=d["key"].as_str().unwrap_or("");
+      let field_kind=d["kind"].as_str().unwrap_or("");
+      if field_kind=="get"||field_kind.contains("TextArea"){
+       let section=aliases[field].as_str().unwrap_or(field);
+       service_node(c,&mut nodes,kind,parent,&format!("{branch}.{section}"),d["label"].as_str().unwrap_or(section))?;
+      }
+      if let Some(options)=d["options"].as_array(){
+       for option in options{
+        if let Some(section)=option["referenceSection"].as_str(){
+         service_node(c,&mut nodes,kind,parent,&format!("{branch}.{section}"),d["label"].as_str().unwrap_or(section))?;
+        }
+       }
+      }
+     }
+    }
+   }
   }Ok(())
  }
  pub(crate) fn current_form(c:&Connection,id:i64)->Result<Value,String>{let config=Self::template_settings(c,id)?;Self::form_from_config(&config)}

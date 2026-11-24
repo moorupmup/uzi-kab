@@ -1,5 +1,6 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-18",
+  "defaultSourceLayout": true,
   "newForm": true,
   "hiddenFields": true,
   "dictionarySections": true,
@@ -8,7 +9,9 @@
   "oldFormPreserved": true,
   "widths": [
     1440,
-    960
+    960,
+    600
   ],
+  "sourceVersions": 16,
   "pageErrors": []
 }

@@ -14,7 +14,7 @@ watch(()=>auth.user,user=>{if(user){db.load();activity()}})
 onMounted(()=>{auth.init();window.addEventListener('uzi-auth-required',required);window.addEventListener('pointerdown',activity);window.addEventListener('keydown',activity)})
 onBeforeUnmount(()=>{clearTimeout(idle);window.removeEventListener('uzi-auth-required',required);window.removeEventListener('pointerdown',activity);window.removeEventListener('keydown',activity)})
 async function logout(){const result=await router.push('/');if(isNavigationFailure(result))return;await auth.logout();window.location.reload()}
-const navigation=computed(()=>[{to:'/',label:'Пациенты',icon:'i-lucide-users-round'},{to:'/studies',label:'Исследования',icon:'i-lucide-files'},{to:'/templates',label:'Справочник шаблонов',icon:'i-lucide-book-open'},{to:'/statistics',label:'Статистика',icon:'i-lucide-chart-no-axes-combined'},...(auth.admin?[{to:'/database',label:'База и копии',icon:'i-lucide-database'},{to:'/users',label:'Пользователи',icon:'i-lucide-user-round-cog'}]:[])])
+const navigation=computed(()=>[{to:'/',label:'Пациенты',icon:'i-lucide-users-round'},{to:'/studies',label:'Исследования',icon:'i-lucide-files'},{to:'/templates',label:'Справочник шаблонов',icon:'i-lucide-book-open'},{to:'/statistics',label:'Статистика',icon:'i-lucide-chart-no-axes-combined'},...(auth.admin?[{to:'/database',label:'Настройки',icon:'i-lucide-settings'},{to:'/users',label:'Пользователи',icon:'i-lucide-user-round-cog'}]:[])])
 </script>
 <template>
   <UApp>

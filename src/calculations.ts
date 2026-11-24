@@ -40,3 +40,36 @@ export function calculateLegacy(code:string,fields:Record<string,FieldValue>):Re
   if(!Object.keys(result).length)throw new Error('Заполните размеры для расчёта.')
   return result
 }
+
+// Recalculate independent measurements as in the original onchange handlers.
+export function recalculateAutomatic(code:string,fields:Record<string,FieldValue>,changedKey?:string,version?:string){
+  code=code.toLowerCase()
+  const groups:Record<string,string[][]>={
+    shit:[['r_dolya_1','r_dolya_2','r_dolya_3'],['l_dolya_1','l_dolya_2','l_dolya_3']],
+    brooho:[['jelch_dl','jelch_tol','jelch_sh'],['sel_dl','sel_tol','sel_sh']],
+    ginekol:[['r_dlina','r_tolsh','r_shir'],['l_dlina','l_tolsh','l_shir'],['matka_dl','matka_tol','matka_sh']],
+    eho_kg:[['kdr'],['ksr'],['kdr','ksr'],['kdr','mjld_tol','zslj_tol']]
+  }
+  let activeGroups=groups[code]||[]
+  let outputs=calculatedKeys[code]||[]
+  if(code==='ginekol'&&version==='1'){
+    // This version computes ovarian volumes only.
+    activeGroups=activeGroups.slice(0,2)
+    outputs=outputs.filter(key=>key!=='matka_ob')
+  }
+  if(code==='brooho'&&changedKey){
+    // Each original onchange handler updates only its own organ.
+    outputs=outputs.filter((_,index)=>activeGroups[index].includes(changedKey))
+    activeGroups=activeGroups.filter(keys=>keys.includes(changedKey))
+  }
+  for(const key of outputs)delete fields[key]
+  delete fields._calculation_pending
+  for(const keys of activeGroups){
+    if(!keys.every(key=>fields[key]?.value.trim()))continue
+    const input=Object.fromEntries(keys.map(key=>[key,fields[key]]))
+    try{Object.assign(fields,calculateLegacy(code,input))}catch{
+      // Incomplete or invalid measurements leave their derived fields empty.
+    }
+  }
+  if(code==='shit'&&fields.v1&&fields.v2)fields.sum={type:'string',value:String(Math.round((Number(fields.v1.value)+Number(fields.v2.value))*100)/100)}
+}

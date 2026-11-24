@@ -1,0 +1,33 @@
+{
+  "brooho_1": {
+    "pechen_str_text": "str_text",
+    "str_pod_jel": "str_text",
+    "str_sel": "str_text",
+    "r_pochka_izm": "pochka_izm",
+    "r_pochka_text": "pochka_text",
+    "r_nadpoch_text": "nadpoch_text",
+    "l_pochka_izm": "pochka_izm",
+    "l_pochka_text": "pochka_text",
+    "l_nadpoch_text": "nadpoch_text"
+  },
+  "ginekol_1": {
+    "r_structura": "structura",
+    "r_text": "text",
+    "l_structura": "structura",
+    "l_text": "text"
+  },
+  "ginekol_11": {
+    "r_structura": "structura",
+    "r_text": "text",
+    "l_structura": "structura",
+    "l_text": "text"
+  },
+  "pochki_1": {
+    "r_pochka_izm": "pochka_izm",
+    "r_pochka_text": "pochka_text",
+    "r_nadpoch_text": "nadpoch_text",
+    "l_pochka_izm": "pochka_izm",
+    "l_pochka_text": "pochka_text",
+    "l_nadpoch_text": "nadpoch_text"
+  }
+}

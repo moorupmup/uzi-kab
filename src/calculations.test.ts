@@ -1,5 +1,5 @@
 import {describe,it,expect} from 'vitest'
-import {calculateLegacy,invalidateCalculations} from './calculations'
+import {calculateLegacy,invalidateCalculations,recalculateAutomatic} from './calculations'
 import type {FieldValue} from './types'
 import {readFileSync} from 'node:fs'
 import {runInNewContext} from 'node:vm'
@@ -64,5 +64,33 @@ describe('Explicit calculations',()=>{
         for(const [key,field] of Object.entries(result))expect(field.value).toBe(String(protocol[key].value))
       }
     }
+  })
+})
+
+describe('Automatic calculations',()=>{
+  it('calculates complete organs independently and clears stale results after edits',()=>{
+    const input=fields({jelch_dl:'60',jelch_tol:'20',jelch_sh:'30',sel_dl:'90',sel_obem:'999'})
+    recalculateAutomatic('brooho',input)
+    expect(input.jelch_ob.value).toBe('18.83')
+    expect(input.sel_obem).toBeUndefined()
+    input.jelch_sh.value=''
+    recalculateAutomatic('brooho',input)
+    expect(input.jelch_ob).toBeUndefined()
+    expect(input._calculation_pending).toBeUndefined()
+  })
+  it('does not overwrite a saved spleen result when only gallbladder measurements change',()=>{
+    const input=fields({jelch_dl:'60',jelch_tol:'20',jelch_sh:'30',sel_dl:'90',sel_obem:'7'})
+    recalculateAutomatic('brooho',input,'jelch_sh')
+    expect(input.jelch_ob.value).toBe('18.83')
+    expect(input.sel_obem.value).toBe('7')
+  })
+  it('updates thyroid totals and leaves invalid measurements empty',()=>{
+    const input=fields({r_dolya_1:'50',r_dolya_2:'20',r_dolya_3:'20',l_dolya_1:'50',l_dolya_2:'20',l_dolya_3:'20'})
+    recalculateAutomatic('shit',input)
+    expect(input.sum.value).toBe('19.16')
+    input.r_dolya_1.value='bad'
+    recalculateAutomatic('shit',input)
+    expect(input.v1).toBeUndefined();expect(input.sum).toBeUndefined()
+    expect(input.v2.value).toBe('9.58')
   })
 })

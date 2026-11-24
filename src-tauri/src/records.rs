@@ -135,14 +135,14 @@ impl Database {
         Ok(entries)
     }
     pub fn create_user_template(&self,template_id:i64,parent_id:i64,text:&str)->Result<Value,String>{
-        let result=self.mutate_template_tree(crate::template_tree::TreeInput{action:"create".into(),id:None,revision:None,parent_id:Some(parent_id),template_id:Some(template_id),text:Some(text.into()),folder:Some(false),direction:None,deleted:None})?;
+        let result=self.mutate_template_tree(crate::template_tree::TreeInput{action:"create".into(),id:None,revision:None,parent_id:Some(parent_id),template_id:Some(template_id),text:Some(text.into()),folder:Some(false),direction:None,deleted:None,include_in_phrase:None})?;
         Ok(result["entry"].clone())
     }
     pub fn save_user_template(&self,id:i64,revision:i64,text:&str,deleted:bool)->Result<Value,String>{
         let entries=Self::user_templates_from(&self.open()?)?;
         let node=entries.iter().find(|e|e["id"]==id).ok_or("Заготовка не найдена")?;
         if node["folder"]==true{return Err("Разделы изменяются в управлении разделами.".into())}
-        let result=self.mutate_template_tree(crate::template_tree::TreeInput{action:"edit".into(),id:Some(id),revision:Some(revision),parent_id:None,template_id:None,text:Some(text.into()),folder:None,direction:None,deleted:Some(deleted)})?;
+        let result=self.mutate_template_tree(crate::template_tree::TreeInput{action:"edit".into(),id:Some(id),revision:Some(revision),parent_id:None,template_id:None,text:Some(text.into()),folder:None,direction:None,deleted:Some(deleted),include_in_phrase:None})?;
         Ok(json!({"id":id,"text":result["entry"]["value"],"deleted":result["entry"]["deleted"],"revision":result["entry"]["revision"]}))
     }
 

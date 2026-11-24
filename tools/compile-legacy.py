@@ -118,6 +118,7 @@ def main():
     children={}
     for row in sorted(book,key=lambda r:(r['position'],r['id'])):children.setdefault(row['level_id'],[]).append(row)
     templates={};failures={};hashes={};catalog=json.loads((ROOT/'src/catalog.json').read_text(encoding='utf-8'))
+    reference_aliases={}
     labels=json.loads((DEST/'labels.json').read_text(encoding='utf-8')) if (DEST/'labels.json').exists() else {}
     for path in (DEST/'views').glob('*.jsp'):
         key=path.stem.lower();hashes[key]=hashlib.sha256(path.read_bytes()).hexdigest()
@@ -165,6 +166,8 @@ def main():
         definitions[:]=ordered
         for field in definitions:
             meta=metadata.get(field['key'],['string']);field['valueType']=meta[0]
+            if meta[0]=='textarea_users' and len(meta)>1 and meta[1] and meta[1]!=field['key']:
+                reference_aliases.setdefault(key,{})[field['key']]=meta[1]
             if meta[0] in ['select','checkbox']:
                 location=meta[1] if len(meta)>1 else field['key']
                 parent=roots.get(('CONFIG.PARAMS.'+code+'.'+location).lower())
@@ -182,6 +185,7 @@ def main():
     (ROOT/'src/legacy-dictionary.json').write_text(json.dumps(dictionary,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
     (ROOT/'src/legacy-versions.json').write_text(json.dumps(versions,ensure_ascii=False,indent=2),encoding='utf-8')
     (ROOT/'src/catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf-8')
+    (ROOT/'src/legacy-reference-aliases.json').write_text(json.dumps(reference_aliases,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     report={'compiled':sorted(templates),'unsupported':failures,'source_sha256':hashes}
     (ROOT/'docs/template-compilation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Compiled:',len(templates),'Unsupported:',len(failures))
